@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		65F885172A2EA62000D151F1 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65F885162A2EA62000D151F1 /* Colors.xcassets */; };
+		65F885232A2EA91B00D151F1 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65F8851A2A2EA91B00D151F1 /* Pretendard-ExtraBold.otf */; };
+		65F885242A2EA91B00D151F1 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65F8851B2A2EA91B00D151F1 /* Pretendard-Thin.otf */; };
+		65F885252A2EA91B00D151F1 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65F8851C2A2EA91B00D151F1 /* Pretendard-Medium.otf */; };
+		65F885262A2EA91B00D151F1 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65F8851D2A2EA91B00D151F1 /* Pretendard-SemiBold.otf */; };
+		65F885272A2EA91B00D151F1 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65F8851E2A2EA91B00D151F1 /* Pretendard-Light.otf */; };
+		65F885282A2EA91B00D151F1 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65F8851F2A2EA91B00D151F1 /* Pretendard-ExtraLight.otf */; };
+		65F885292A2EA91B00D151F1 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65F885202A2EA91B00D151F1 /* Pretendard-Regular.otf */; };
+		65F8852A2A2EA91B00D151F1 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65F885212A2EA91B00D151F1 /* Pretendard-Black.otf */; };
+		65F8852B2A2EA91B00D151F1 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65F885222A2EA91B00D151F1 /* Pretendard-Bold.otf */; };
+		65F885302A2EAB3900D151F1 /* Font+Pretendard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F8852F2A2EAB3900D151F1 /* Font+Pretendard.swift */; };
 		A526DDC32A092B0300B682BF /* DiningCoachApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526DDC22A092B0300B682BF /* DiningCoachApp.swift */; };
 		A526DDC52A092B0300B682BF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526DDC42A092B0300B682BF /* ContentView.swift */; };
 		A526DDC72A092B0400B682BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A526DDC62A092B0400B682BF /* Assets.xcassets */; };
@@ -16,6 +26,17 @@
 
 /* Begin PBXFileReference section */
 		65F885162A2EA62000D151F1 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		65F8851A2A2EA91B00D151F1 /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
+		65F8851B2A2EA91B00D151F1 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
+		65F8851C2A2EA91B00D151F1 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
+		65F8851D2A2EA91B00D151F1 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		65F8851E2A2EA91B00D151F1 /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
+		65F8851F2A2EA91B00D151F1 /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
+		65F885202A2EA91B00D151F1 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		65F885212A2EA91B00D151F1 /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
+		65F885222A2EA91B00D151F1 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		65F8852C2A2EA96400D151F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		65F8852F2A2EAB3900D151F1 /* Font+Pretendard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Pretendard.swift"; sourceTree = "<group>"; };
 		A526DDBF2A092B0300B682BF /* DiningCoach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiningCoach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A526DDC22A092B0300B682BF /* DiningCoachApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningCoachApp.swift; sourceTree = "<group>"; };
 		A526DDC42A092B0300B682BF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,6 +55,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		65F885182A2EA85D00D151F1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				65F885192A2EA86700D151F1 /* Fonts */,
+				A526DDC62A092B0400B682BF /* Assets.xcassets */,
+				65F885162A2EA62000D151F1 /* Colors.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		65F885192A2EA86700D151F1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				65F8851A2A2EA91B00D151F1 /* Pretendard-ExtraBold.otf */,
+				65F885222A2EA91B00D151F1 /* Pretendard-Bold.otf */,
+				65F8851D2A2EA91B00D151F1 /* Pretendard-SemiBold.otf */,
+				65F8851C2A2EA91B00D151F1 /* Pretendard-Medium.otf */,
+				65F885202A2EA91B00D151F1 /* Pretendard-Regular.otf */,
+				65F8851F2A2EA91B00D151F1 /* Pretendard-ExtraLight.otf */,
+				65F8851E2A2EA91B00D151F1 /* Pretendard-Light.otf */,
+				65F885212A2EA91B00D151F1 /* Pretendard-Black.otf */,
+				65F8851B2A2EA91B00D151F1 /* Pretendard-Thin.otf */,
+				65F8852F2A2EAB3900D151F1 /* Font+Pretendard.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		A526DDB62A092B0300B682BF = {
 			isa = PBXGroup;
 			children = (
@@ -53,10 +101,10 @@
 		A526DDC12A092B0300B682BF /* DiningCoach */ = {
 			isa = PBXGroup;
 			children = (
+				65F8852C2A2EA96400D151F1 /* Info.plist */,
 				A526DDC22A092B0300B682BF /* DiningCoachApp.swift */,
 				A526DDC42A092B0300B682BF /* ContentView.swift */,
-				A526DDC62A092B0400B682BF /* Assets.xcassets */,
-				65F885162A2EA62000D151F1 /* Colors.xcassets */,
+				65F885182A2EA85D00D151F1 /* Resources */,
 				A526DDC82A092B0400B682BF /* Preview Content */,
 			);
 			path = DiningCoach;
@@ -128,9 +176,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65F885282A2EA91B00D151F1 /* Pretendard-ExtraLight.otf in Resources */,
+				65F8852B2A2EA91B00D151F1 /* Pretendard-Bold.otf in Resources */,
 				A526DDCA2A092B0400B682BF /* Preview Assets.xcassets in Resources */,
+				65F885272A2EA91B00D151F1 /* Pretendard-Light.otf in Resources */,
+				65F885242A2EA91B00D151F1 /* Pretendard-Thin.otf in Resources */,
+				65F885262A2EA91B00D151F1 /* Pretendard-SemiBold.otf in Resources */,
 				A526DDC72A092B0400B682BF /* Assets.xcassets in Resources */,
+				65F8852A2A2EA91B00D151F1 /* Pretendard-Black.otf in Resources */,
+				65F885232A2EA91B00D151F1 /* Pretendard-ExtraBold.otf in Resources */,
+				65F885292A2EA91B00D151F1 /* Pretendard-Regular.otf in Resources */,
 				65F885172A2EA62000D151F1 /* Colors.xcassets in Resources */,
+				65F885252A2EA91B00D151F1 /* Pretendard-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65F885302A2EAB3900D151F1 /* Font+Pretendard.swift in Sources */,
 				A526DDC52A092B0300B682BF /* ContentView.swift in Sources */,
 				A526DDC32A092B0300B682BF /* DiningCoachApp.swift in Sources */,
 			);
@@ -273,6 +331,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"DiningCoach/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DiningCoach/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -301,6 +360,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"DiningCoach/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DiningCoach/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
