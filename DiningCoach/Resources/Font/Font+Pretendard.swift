@@ -5,6 +5,7 @@
 //  Created by chamsol kim on 2023/06/06.
 //
 
+import UIKit
 import SwiftUI
 
 extension Font {
@@ -28,6 +29,11 @@ extension Font {
     static func pretendard(weight: PretendardWeight, size: CGFloat) -> Font {
         let fontName = fontName(with: weight)
         return .custom(fontName, fixedSize: size)
+    }
+    
+    static func pretendardUIFont(weight: PretendardWeight, size: CGFloat) -> UIFont {
+        let fontName = fontName(with: weight)
+        return UIFont(name: fontName, size: size) ?? .systemFont(ofSize: size)
     }
     
     private static func fontName(with weight: PretendardWeight) -> String {
