@@ -58,14 +58,14 @@
 		65F885182A2EA85D00D151F1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				65F885192A2EA86700D151F1 /* Fonts */,
+				65F885192A2EA86700D151F1 /* Font */,
 				A526DDC62A092B0400B682BF /* Assets.xcassets */,
 				65F885162A2EA62000D151F1 /* Colors.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		65F885192A2EA86700D151F1 /* Fonts */ = {
+		65F885192A2EA86700D151F1 /* Font */ = {
 			isa = PBXGroup;
 			children = (
 				65F8851A2A2EA91B00D151F1 /* Pretendard-ExtraBold.otf */,
@@ -79,7 +79,7 @@
 				65F8851B2A2EA91B00D151F1 /* Pretendard-Thin.otf */,
 				65F8852F2A2EAB3900D151F1 /* Font+Pretendard.swift */,
 			);
-			path = Fonts;
+			path = Font;
 			sourceTree = "<group>";
 		};
 		65F885312A2EAD8600D151F1 /* Supporting Files */ = {
