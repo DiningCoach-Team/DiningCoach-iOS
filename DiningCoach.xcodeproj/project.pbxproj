@@ -90,6 +90,15 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		65F8853B2A326CB400D151F1 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A526DDC22A092B0300B682BF /* DiningCoachApp.swift */,
+				A526DDC42A092B0300B682BF /* ContentView.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		A526DDB62A092B0300B682BF = {
 			isa = PBXGroup;
 			children = (
@@ -109,8 +118,7 @@
 		A526DDC12A092B0300B682BF /* DiningCoach */ = {
 			isa = PBXGroup;
 			children = (
-				A526DDC22A092B0300B682BF /* DiningCoachApp.swift */,
-				A526DDC42A092B0300B682BF /* ContentView.swift */,
+				65F8853B2A326CB400D151F1 /* Sources */,
 				65F885182A2EA85D00D151F1 /* Resources */,
 				65F885312A2EAD8600D151F1 /* Supporting Files */,
 				A526DDC82A092B0400B682BF /* Preview Content */,
