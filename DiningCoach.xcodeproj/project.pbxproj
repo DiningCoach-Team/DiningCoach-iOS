@@ -57,12 +57,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6562204C2A354A7B0082840A /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				A526DDC62A092B0400B682BF /* Assets.xcassets */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
 		65F885182A2EA85D00D151F1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6562204C2A354A7B0082840A /* Image */,
 				65F8854A2A32759C00D151F1 /* Color */,
 				65F885192A2EA86700D151F1 /* Font */,
-				A526DDC62A092B0400B682BF /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
