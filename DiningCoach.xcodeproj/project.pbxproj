@@ -22,6 +22,8 @@
 		65F8852B2A2EA91B00D151F1 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65F885222A2EA91B00D151F1 /* Pretendard-Bold.otf */; };
 		65F885302A2EAB3900D151F1 /* Font+Pretendard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F8852F2A2EAB3900D151F1 /* Font+Pretendard.swift */; };
 		65F8854C2A3275B000D151F1 /* Color+Primary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F8854B2A3275B000D151F1 /* Color+Primary.swift */; };
+		65F8854F2A32764900D151F1 /* View+LineHeightFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F8854E2A32764900D151F1 /* View+LineHeightFont.swift */; };
+		65F885532A327AF700D151F1 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F885522A327AF700D151F1 /* SplashView.swift */; };
 		65F885592A341B6000D151F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65F885582A341B6000D151F1 /* LaunchScreen.storyboard */; };
 		A526DDC32A092B0300B682BF /* DiningCoachApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526DDC22A092B0300B682BF /* DiningCoachApp.swift */; };
 		A526DDC52A092B0300B682BF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526DDC42A092B0300B682BF /* ContentView.swift */; };
@@ -46,6 +48,8 @@
 		65F8852C2A2EA96400D151F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65F8852F2A2EAB3900D151F1 /* Font+Pretendard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Pretendard.swift"; sourceTree = "<group>"; };
 		65F8854B2A3275B000D151F1 /* Color+Primary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Primary.swift"; sourceTree = "<group>"; };
+		65F8854E2A32764900D151F1 /* View+LineHeightFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+LineHeightFont.swift"; sourceTree = "<group>"; };
+		65F885522A327AF700D151F1 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		65F885582A341B6000D151F1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A526DDBF2A092B0300B682BF /* DiningCoach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiningCoach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A526DDC22A092B0300B682BF /* DiningCoachApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningCoachApp.swift; sourceTree = "<group>"; };
@@ -125,6 +129,8 @@
 			children = (
 				A526DDC22A092B0300B682BF /* DiningCoachApp.swift */,
 				A526DDC42A092B0300B682BF /* ContentView.swift */,
+				65F885502A327AE200D151F1 /* Scene */,
+				65F8854D2A32761E00D151F1 /* Helper */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -136,6 +142,30 @@
 				65F8854B2A3275B000D151F1 /* Color+Primary.swift */,
 			);
 			path = Color;
+			sourceTree = "<group>";
+		};
+		65F8854D2A32761E00D151F1 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				65F8854E2A32764900D151F1 /* View+LineHeightFont.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		65F885502A327AE200D151F1 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				65F885512A327AE800D151F1 /* Splash */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		65F885512A327AE800D151F1 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				65F885522A327AF700D151F1 /* SplashView.swift */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 		A526DDB62A092B0300B682BF = {
@@ -260,7 +290,9 @@
 				65F8854C2A3275B000D151F1 /* Color+Primary.swift in Sources */,
 				65F885302A2EAB3900D151F1 /* Font+Pretendard.swift in Sources */,
 				A526DDC52A092B0300B682BF /* ContentView.swift in Sources */,
+				65F8854F2A32764900D151F1 /* View+LineHeightFont.swift in Sources */,
 				A526DDC32A092B0300B682BF /* DiningCoachApp.swift in Sources */,
+				65F885532A327AF700D151F1 /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
