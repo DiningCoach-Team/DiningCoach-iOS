@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UserNotifications
 
 struct SplashView: View {
     var body: some View {
@@ -16,6 +17,14 @@ struct SplashView: View {
                 .foregroundColor(.white)
         }
         .ignoresSafeArea()
+        .onAppear(perform: showRequestUserNotificationAlert)
+    }
+    
+    func showRequestUserNotificationAlert() {
+        UNUserNotificationCenter.current()
+            .requestAuthorization(options: [.alert, .sound, .badge]) { hasAllowed, error in
+                // TODO: 알림 권한을 획득하지 않았을 때 처리 필요
+            }
     }
 }
 
