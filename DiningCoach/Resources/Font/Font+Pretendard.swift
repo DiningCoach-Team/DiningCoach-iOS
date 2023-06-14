@@ -24,20 +24,18 @@ extension Font {
         var name: String {
             rawValue.capitalized
         }
+        
+        var fontName: String {
+            "Pretendard-\(name)"
+        }
     }
     
     static func pretendard(weight: PretendardWeight, size: CGFloat) -> Font {
-        let fontName = fontName(with: weight)
-        return .custom(fontName, fixedSize: size)
+        .custom(weight.fontName, fixedSize: size)
     }
     
     static func pretendardUIFont(weight: PretendardWeight, size: CGFloat) -> UIFont {
-        let fontName = fontName(with: weight)
-        return UIFont(name: fontName, size: size) ?? .systemFont(ofSize: size)
-    }
-    
-    private static func fontName(with weight: PretendardWeight) -> String {
-        "Pretendard-\(weight.name)"
+        UIFont(name: weight.fontName, size: size) ?? .systemFont(ofSize: size)
     }
 }
 
