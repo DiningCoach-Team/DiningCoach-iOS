@@ -9,43 +9,23 @@ import SwiftUI
 
 extension Color {
     
-    static var primary50: Color {
-        Color("primary-050")
-    }
+    static let primary50 = Color("primary-050")
     
-    static var primary100: Color {
-        Color("primary-100")
-    }
+    static let primary100 = Color("primary-100")
     
-    static var primary200: Color {
-        Color("primary-200")
-    }
+    static let primary200 = Color("primary-200")
     
-    static var primary300: Color {
-        Color("primary-300")
-    }
+    static let primary300 = Color("primary-300")
     
-    static var primary400: Color {
-        Color("primary-400")
-    }
+    static let primary400 = Color("primary-400")
     
-    static var primary500: Color {
-        Color("primary-500")
-    }
+    static let primary500 = Color("primary-500")
     
-    static var primary600: Color {
-        Color("primary-600")
-    }
+    static let primary600 = Color("primary-600")
     
-    static var primary700: Color {
-        Color("primary-700")
-    }
+    static let primary700 = Color("primary-700")
     
-    static var primary800: Color {
-        Color("primary-800")
-    }
+    static let primary800 = Color("primary-800")
     
-    static var primary900: Color {
-        Color("primary-900")
-    }
+    static let primary900 = Color("primary-900")
 }
