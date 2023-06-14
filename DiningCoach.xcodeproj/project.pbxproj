@@ -11,6 +11,9 @@
 		655D9B752A354C03005E133E /* launchScreenLogo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 655D9B722A354C03005E133E /* launchScreenLogo@3x.png */; };
 		655D9B762A354C03005E133E /* launchScreenLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 655D9B732A354C03005E133E /* launchScreenLogo.png */; };
 		655D9B8E2A39D815005E133E /* Color+Neutral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655D9B8D2A39D815005E133E /* Color+Neutral.swift */; };
+		655D9B922A39DA0C005E133E /* DCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655D9B912A39DA0C005E133E /* DCButton.swift */; };
+		655D9B942A39DA47005E133E /* DCButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655D9B932A39DA47005E133E /* DCButtonStyle.swift */; };
+		655D9B962A39DBED005E133E /* DCButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655D9B952A39DBED005E133E /* DCButton+Style.swift */; };
 		65F885172A2EA62000D151F1 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65F885162A2EA62000D151F1 /* Colors.xcassets */; };
 		65F885232A2EA91B00D151F1 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65F8851A2A2EA91B00D151F1 /* Pretendard-ExtraBold.otf */; };
 		65F885242A2EA91B00D151F1 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65F8851B2A2EA91B00D151F1 /* Pretendard-Thin.otf */; };
@@ -37,6 +40,9 @@
 		655D9B722A354C03005E133E /* launchScreenLogo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchScreenLogo@3x.png"; sourceTree = "<group>"; };
 		655D9B732A354C03005E133E /* launchScreenLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchScreenLogo.png; sourceTree = "<group>"; };
 		655D9B8D2A39D815005E133E /* Color+Neutral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Neutral.swift"; sourceTree = "<group>"; };
+		655D9B912A39DA0C005E133E /* DCButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCButton.swift; sourceTree = "<group>"; };
+		655D9B932A39DA47005E133E /* DCButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCButtonStyle.swift; sourceTree = "<group>"; };
+		655D9B952A39DBED005E133E /* DCButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DCButton+Style.swift"; sourceTree = "<group>"; };
 		65F885162A2EA62000D151F1 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		65F8851A2A2EA91B00D151F1 /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
 		65F8851B2A2EA91B00D151F1 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
@@ -80,6 +86,24 @@
 				65F885582A341B6000D151F1 /* LaunchScreen.storyboard */,
 			);
 			path = "Launch Screen";
+			sourceTree = "<group>";
+		};
+		655D9B8F2A39D9FF005E133E /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				655D9B902A39DA06005E133E /* Button */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		655D9B902A39DA06005E133E /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				655D9B912A39DA0C005E133E /* DCButton.swift */,
+				655D9B952A39DBED005E133E /* DCButton+Style.swift */,
+				655D9B932A39DA47005E133E /* DCButtonStyle.swift */,
+			);
+			path = Button;
 			sourceTree = "<group>";
 		};
 		6562204C2A354A7B0082840A /* Image */ = {
@@ -132,6 +156,7 @@
 				A526DDC22A092B0300B682BF /* DiningCoachApp.swift */,
 				A526DDC42A092B0300B682BF /* ContentView.swift */,
 				65F885502A327AE200D151F1 /* Scene */,
+				655D9B8F2A39D9FF005E133E /* Component */,
 				65F8854D2A32761E00D151F1 /* Helper */,
 			);
 			path = Sources;
@@ -292,11 +317,14 @@
 			files = (
 				65F8854C2A3275B000D151F1 /* Color+Primary.swift in Sources */,
 				65F885302A2EAB3900D151F1 /* Font+Pretendard.swift in Sources */,
+				655D9B962A39DBED005E133E /* DCButton+Style.swift in Sources */,
 				A526DDC52A092B0300B682BF /* ContentView.swift in Sources */,
 				65F8854F2A32764900D151F1 /* View+LineHeightFont.swift in Sources */,
+				655D9B922A39DA0C005E133E /* DCButton.swift in Sources */,
 				655D9B8E2A39D815005E133E /* Color+Neutral.swift in Sources */,
 				A526DDC32A092B0300B682BF /* DiningCoachApp.swift in Sources */,
 				65F885532A327AF700D151F1 /* SplashView.swift in Sources */,
+				655D9B942A39DA47005E133E /* DCButtonStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
