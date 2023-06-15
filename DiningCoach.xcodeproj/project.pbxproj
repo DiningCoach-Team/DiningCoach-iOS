@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		655D9B742A354C03005E133E /* launchScreenLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 655D9B712A354C03005E133E /* launchScreenLogo@2x.png */; };
+		655D9B752A354C03005E133E /* launchScreenLogo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 655D9B722A354C03005E133E /* launchScreenLogo@3x.png */; };
+		655D9B762A354C03005E133E /* launchScreenLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 655D9B732A354C03005E133E /* launchScreenLogo.png */; };
 		65F885172A2EA62000D151F1 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65F885162A2EA62000D151F1 /* Colors.xcassets */; };
 		65F885232A2EA91B00D151F1 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65F8851A2A2EA91B00D151F1 /* Pretendard-ExtraBold.otf */; };
 		65F885242A2EA91B00D151F1 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65F8851B2A2EA91B00D151F1 /* Pretendard-Thin.otf */; };
@@ -18,6 +21,10 @@
 		65F8852A2A2EA91B00D151F1 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65F885212A2EA91B00D151F1 /* Pretendard-Black.otf */; };
 		65F8852B2A2EA91B00D151F1 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65F885222A2EA91B00D151F1 /* Pretendard-Bold.otf */; };
 		65F885302A2EAB3900D151F1 /* Font+Pretendard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F8852F2A2EAB3900D151F1 /* Font+Pretendard.swift */; };
+		65F8854C2A3275B000D151F1 /* Color+Primary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F8854B2A3275B000D151F1 /* Color+Primary.swift */; };
+		65F8854F2A32764900D151F1 /* View+LineHeightFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F8854E2A32764900D151F1 /* View+LineHeightFont.swift */; };
+		65F885532A327AF700D151F1 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F885522A327AF700D151F1 /* SplashView.swift */; };
+		65F885592A341B6000D151F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65F885582A341B6000D151F1 /* LaunchScreen.storyboard */; };
 		A526DDC32A092B0300B682BF /* DiningCoachApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526DDC22A092B0300B682BF /* DiningCoachApp.swift */; };
 		A526DDC52A092B0300B682BF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526DDC42A092B0300B682BF /* ContentView.swift */; };
 		A526DDC72A092B0400B682BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A526DDC62A092B0400B682BF /* Assets.xcassets */; };
@@ -25,6 +32,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		655D9B712A354C03005E133E /* launchScreenLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchScreenLogo@2x.png"; sourceTree = "<group>"; };
+		655D9B722A354C03005E133E /* launchScreenLogo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchScreenLogo@3x.png"; sourceTree = "<group>"; };
+		655D9B732A354C03005E133E /* launchScreenLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchScreenLogo.png; sourceTree = "<group>"; };
 		65F885162A2EA62000D151F1 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		65F8851A2A2EA91B00D151F1 /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
 		65F8851B2A2EA91B00D151F1 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
@@ -37,6 +47,10 @@
 		65F885222A2EA91B00D151F1 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		65F8852C2A2EA96400D151F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65F8852F2A2EAB3900D151F1 /* Font+Pretendard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Pretendard.swift"; sourceTree = "<group>"; };
+		65F8854B2A3275B000D151F1 /* Color+Primary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Primary.swift"; sourceTree = "<group>"; };
+		65F8854E2A32764900D151F1 /* View+LineHeightFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+LineHeightFont.swift"; sourceTree = "<group>"; };
+		65F885522A327AF700D151F1 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		65F885582A341B6000D151F1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A526DDBF2A092B0300B682BF /* DiningCoach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiningCoach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A526DDC22A092B0300B682BF /* DiningCoachApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningCoachApp.swift; sourceTree = "<group>"; };
 		A526DDC42A092B0300B682BF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,17 +69,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		655D9B702A354BF9005E133E /* Launch Screen */ = {
+			isa = PBXGroup;
+			children = (
+				655D9B732A354C03005E133E /* launchScreenLogo.png */,
+				655D9B712A354C03005E133E /* launchScreenLogo@2x.png */,
+				655D9B722A354C03005E133E /* launchScreenLogo@3x.png */,
+				65F885582A341B6000D151F1 /* LaunchScreen.storyboard */,
+			);
+			path = "Launch Screen";
+			sourceTree = "<group>";
+		};
+		6562204C2A354A7B0082840A /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				A526DDC62A092B0400B682BF /* Assets.xcassets */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
 		65F885182A2EA85D00D151F1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				65F885192A2EA86700D151F1 /* Fonts */,
-				A526DDC62A092B0400B682BF /* Assets.xcassets */,
-				65F885162A2EA62000D151F1 /* Colors.xcassets */,
+				655D9B702A354BF9005E133E /* Launch Screen */,
+				6562204C2A354A7B0082840A /* Image */,
+				65F8854A2A32759C00D151F1 /* Color */,
+				65F885192A2EA86700D151F1 /* Font */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		65F885192A2EA86700D151F1 /* Fonts */ = {
+		65F885192A2EA86700D151F1 /* Font */ = {
 			isa = PBXGroup;
 			children = (
 				65F8851A2A2EA91B00D151F1 /* Pretendard-ExtraBold.otf */,
@@ -79,7 +113,7 @@
 				65F8851B2A2EA91B00D151F1 /* Pretendard-Thin.otf */,
 				65F8852F2A2EAB3900D151F1 /* Font+Pretendard.swift */,
 			);
-			path = Fonts;
+			path = Font;
 			sourceTree = "<group>";
 		};
 		65F885312A2EAD8600D151F1 /* Supporting Files */ = {
@@ -88,6 +122,50 @@
 				65F8852C2A2EA96400D151F1 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		65F8853B2A326CB400D151F1 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A526DDC22A092B0300B682BF /* DiningCoachApp.swift */,
+				A526DDC42A092B0300B682BF /* ContentView.swift */,
+				65F885502A327AE200D151F1 /* Scene */,
+				65F8854D2A32761E00D151F1 /* Helper */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		65F8854A2A32759C00D151F1 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				65F885162A2EA62000D151F1 /* Colors.xcassets */,
+				65F8854B2A3275B000D151F1 /* Color+Primary.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		65F8854D2A32761E00D151F1 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				65F8854E2A32764900D151F1 /* View+LineHeightFont.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		65F885502A327AE200D151F1 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				65F885512A327AE800D151F1 /* Splash */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		65F885512A327AE800D151F1 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				65F885522A327AF700D151F1 /* SplashView.swift */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 		A526DDB62A092B0300B682BF = {
@@ -109,8 +187,7 @@
 		A526DDC12A092B0300B682BF /* DiningCoach */ = {
 			isa = PBXGroup;
 			children = (
-				A526DDC22A092B0300B682BF /* DiningCoachApp.swift */,
-				A526DDC42A092B0300B682BF /* ContentView.swift */,
+				65F8853B2A326CB400D151F1 /* Sources */,
 				65F885182A2EA85D00D151F1 /* Resources */,
 				65F885312A2EAD8600D151F1 /* Supporting Files */,
 				A526DDC82A092B0400B682BF /* Preview Content */,
@@ -187,15 +264,19 @@
 				65F885282A2EA91B00D151F1 /* Pretendard-ExtraLight.otf in Resources */,
 				65F8852B2A2EA91B00D151F1 /* Pretendard-Bold.otf in Resources */,
 				A526DDCA2A092B0400B682BF /* Preview Assets.xcassets in Resources */,
+				655D9B762A354C03005E133E /* launchScreenLogo.png in Resources */,
 				65F885272A2EA91B00D151F1 /* Pretendard-Light.otf in Resources */,
 				65F885242A2EA91B00D151F1 /* Pretendard-Thin.otf in Resources */,
 				65F885262A2EA91B00D151F1 /* Pretendard-SemiBold.otf in Resources */,
 				A526DDC72A092B0400B682BF /* Assets.xcassets in Resources */,
+				655D9B752A354C03005E133E /* launchScreenLogo@3x.png in Resources */,
 				65F8852A2A2EA91B00D151F1 /* Pretendard-Black.otf in Resources */,
 				65F885232A2EA91B00D151F1 /* Pretendard-ExtraBold.otf in Resources */,
 				65F885292A2EA91B00D151F1 /* Pretendard-Regular.otf in Resources */,
+				655D9B742A354C03005E133E /* launchScreenLogo@2x.png in Resources */,
 				65F885172A2EA62000D151F1 /* Colors.xcassets in Resources */,
 				65F885252A2EA91B00D151F1 /* Pretendard-Medium.otf in Resources */,
+				65F885592A341B6000D151F1 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,9 +287,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65F8854C2A3275B000D151F1 /* Color+Primary.swift in Sources */,
 				65F885302A2EAB3900D151F1 /* Font+Pretendard.swift in Sources */,
 				A526DDC52A092B0300B682BF /* ContentView.swift in Sources */,
+				65F8854F2A32764900D151F1 /* View+LineHeightFont.swift in Sources */,
 				A526DDC32A092B0300B682BF /* DiningCoachApp.swift in Sources */,
+				65F885532A327AF700D151F1 /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
