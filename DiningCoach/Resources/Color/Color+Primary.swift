@@ -29,3 +29,39 @@ extension Color {
     
     static let primary900 = Color("primary-900")
 }
+
+
+// MARK: - Test
+
+fileprivate struct PrimaryColorTestView: View {
+    
+    private let colors = [
+        Color.primary50,
+        Color.primary100,
+        Color.primary200,
+        Color.primary300,
+        Color.primary400,
+        Color.primary500,
+        Color.primary600,
+        Color.primary700,
+        Color.primary800,
+        Color.primary900,
+    ]
+    
+    var body: some View {
+        VStack {
+            ForEach(colors, id: \.self) { color in
+                Rectangle()
+                    .fill(color)
+                    .frame(width: 200, height: 48)
+                    .border(.black)
+            }
+        }
+    }
+}
+
+struct PrimaryColorTestView_Previews: PreviewProvider {
+    static var previews: some View {
+        PrimaryColorTestView()
+    }
+}
