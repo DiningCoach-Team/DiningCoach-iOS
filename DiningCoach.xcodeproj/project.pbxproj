@@ -29,6 +29,11 @@
 		65F8854F2A32764900D151F1 /* View+LineHeightFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F8854E2A32764900D151F1 /* View+LineHeightFont.swift */; };
 		65F885532A327AF700D151F1 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F885522A327AF700D151F1 /* SplashView.swift */; };
 		65F885592A341B6000D151F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65F885582A341B6000D151F1 /* LaunchScreen.storyboard */; };
+		A51E1C372A405DDF00E4EBA3 /* LoginStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E1C362A405DDF00E4EBA3 /* LoginStore.swift */; };
+		A51E1C3A2A40606800E4EBA3 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = A51E1C392A40606800E4EBA3 /* KakaoSDK */; };
+		A51E1C3D2A4061C800E4EBA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E1C3C2A4061C800E4EBA3 /* AppDelegate.swift */; };
+		A51E1C432A406A4800E4EBA3 /* RegistrationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E1C422A406A4800E4EBA3 /* RegistrationStore.swift */; };
+		A51E1C462A406BAC00E4EBA3 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E1C452A406BAC00E4EBA3 /* Validation.swift */; };
 		A526DDC32A092B0300B682BF /* DiningCoachApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526DDC22A092B0300B682BF /* DiningCoachApp.swift */; };
 		A526DDC52A092B0300B682BF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526DDC42A092B0300B682BF /* ContentView.swift */; };
 		A526DDC72A092B0400B682BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A526DDC62A092B0400B682BF /* Assets.xcassets */; };
@@ -59,6 +64,11 @@
 		65F8854E2A32764900D151F1 /* View+LineHeightFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+LineHeightFont.swift"; sourceTree = "<group>"; };
 		65F885522A327AF700D151F1 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		65F885582A341B6000D151F1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A51E1C362A405DDF00E4EBA3 /* LoginStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStore.swift; sourceTree = "<group>"; };
+		A51E1C3C2A4061C800E4EBA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A51E1C402A4066D100E4EBA3 /* DiningCoach.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DiningCoach.entitlements; sourceTree = "<group>"; };
+		A51E1C422A406A4800E4EBA3 /* RegistrationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationStore.swift; sourceTree = "<group>"; };
+		A51E1C452A406BAC00E4EBA3 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		A526DDBF2A092B0300B682BF /* DiningCoach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiningCoach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A526DDC22A092B0300B682BF /* DiningCoachApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningCoachApp.swift; sourceTree = "<group>"; };
 		A526DDC42A092B0300B682BF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A51E1C3A2A40606800E4EBA3 /* KakaoSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +164,10 @@
 		65F8853B2A326CB400D151F1 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				A51E1C442A406B9900E4EBA3 /* Validation */,
+				A51E1C412A406A3300E4EBA3 /* Registration */,
+				A51E1C3B2A4061B900E4EBA3 /* API */,
+				A51E1C352A405DD200E4EBA3 /* Login */,
 				A526DDC22A092B0300B682BF /* DiningCoachApp.swift */,
 				A526DDC42A092B0300B682BF /* ContentView.swift */,
 				65F885502A327AE200D151F1 /* Scene */,
@@ -196,6 +211,38 @@
 			path = Splash;
 			sourceTree = "<group>";
 		};
+		A51E1C352A405DD200E4EBA3 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A51E1C362A405DDF00E4EBA3 /* LoginStore.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		A51E1C3B2A4061B900E4EBA3 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				A51E1C3C2A4061C800E4EBA3 /* AppDelegate.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		A51E1C412A406A3300E4EBA3 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				A51E1C422A406A4800E4EBA3 /* RegistrationStore.swift */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		A51E1C442A406B9900E4EBA3 /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				A51E1C452A406BAC00E4EBA3 /* Validation.swift */,
+			);
+			path = Validation;
+			sourceTree = "<group>";
+		};
 		A526DDB62A092B0300B682BF = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +262,7 @@
 		A526DDC12A092B0300B682BF /* DiningCoach */ = {
 			isa = PBXGroup;
 			children = (
+				A51E1C402A4066D100E4EBA3 /* DiningCoach.entitlements */,
 				65F8853B2A326CB400D151F1 /* Sources */,
 				65F885182A2EA85D00D151F1 /* Resources */,
 				65F885312A2EAD8600D151F1 /* Supporting Files */,
@@ -247,6 +295,9 @@
 			dependencies = (
 			);
 			name = DiningCoach;
+			packageProductDependencies = (
+				A51E1C392A40606800E4EBA3 /* KakaoSDK */,
+			);
 			productName = DiningCoach;
 			productReference = A526DDBF2A092B0300B682BF /* DiningCoach.app */;
 			productType = "com.apple.product-type.application";
@@ -275,6 +326,9 @@
 				Base,
 			);
 			mainGroup = A526DDB62A092B0300B682BF;
+			packageReferences = (
+				A51E1C382A40606800E4EBA3 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+			);
 			productRefGroup = A526DDC02A092B0300B682BF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -315,15 +369,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A51E1C3D2A4061C800E4EBA3 /* AppDelegate.swift in Sources */,
 				65F8854C2A3275B000D151F1 /* Color+Primary.swift in Sources */,
 				65F885302A2EAB3900D151F1 /* Font+Pretendard.swift in Sources */,
 				655D9B962A39DBED005E133E /* DCButton+Style.swift in Sources */,
+				A51E1C372A405DDF00E4EBA3 /* LoginStore.swift in Sources */,
 				A526DDC52A092B0300B682BF /* ContentView.swift in Sources */,
+				A51E1C432A406A4800E4EBA3 /* RegistrationStore.swift in Sources */,
 				65F8854F2A32764900D151F1 /* View+LineHeightFont.swift in Sources */,
 				655D9B922A39DA0C005E133E /* DCButton.swift in Sources */,
 				655D9B8E2A39D815005E133E /* Color+Neutral.swift in Sources */,
 				A526DDC32A092B0300B682BF /* DiningCoachApp.swift in Sources */,
 				65F885532A327AF700D151F1 /* SplashView.swift in Sources */,
+				A51E1C462A406BAC00E4EBA3 /* Validation.swift in Sources */,
 				655D9B942A39DA47005E133E /* DCButtonStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,6 +508,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DiningCoach/DiningCoach.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DiningCoach/Preview Content\"";
@@ -459,6 +518,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -482,6 +542,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DiningCoach/DiningCoach.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DiningCoach/Preview Content\"";
@@ -491,6 +552,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -531,6 +593,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A51E1C382A40606800E4EBA3 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A51E1C392A40606800E4EBA3 /* KakaoSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A51E1C382A40606800E4EBA3 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A526DDB72A092B0300B682BF /* Project object */;
 }
