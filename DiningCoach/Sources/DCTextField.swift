@@ -16,10 +16,12 @@ struct DCTextField: View {
             TextField(placeHolder, text: $text)
                 .fontWeight(.bold)
                 .multilineTextAlignment(text.isEmpty ? .trailing : .center)
+                .tint(Color.primary500)
+                .keyboardType(.numberPad)
             
             Rectangle()
                 .frame(height: 2)
-                .foregroundColor(text.isEmpty ? Color(uiColor: .systemGray5) : Color(uiColor: .systemMint))
+                .foregroundColor(text.isEmpty ? Color(uiColor: .systemGray5) : Color.primary500)
         }
     }
 }

@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct GenderBirthdayInputView: View {
-    @State private var manSelected = false
-    @State private var womanSelected = false
+    @State private var maleSelected = false
+    @State private var femaleSelected = false
+    @State private var isCompleted = false
     
     @State private var year: String = ""
     @State private var month: String = ""
@@ -17,64 +18,93 @@ struct GenderBirthdayInputView: View {
     
     var body: some View {
         VStack {
-            HStack {
-                Text("성별은 어떻게 되시나요?")
-                    .font(.headline)
-                    .fontWeight(.bold)
+            ProgressView(value: 1, total: 6)
+                .tint(Color.primary500)
+            
+            VStack {
+                HStack {
+                    Text("성별은 어떻게 되시나요?")
+                        .font(.bold, size: 22, lineHeight: 28)
+                        .padding(.vertical, 20)
+                    
+                    Spacer()
+                }
+                
+                HStack {
+                    Button {
+                        maleSelected = true
+                        femaleSelected = false
+                    } label: {
+                        if maleSelected {
+                            Image("Property=male, State=selected, version=ios")
+                                .frame(width: 164, height: 164)
+                        } else {
+                            Image("Property=male, State=unselected, version=ios")
+                                .frame(width: 164, height: 164)
+                        }
+                    }
+                    
+                    Spacer()
+                    
+                    Button {
+                        maleSelected = false
+                        femaleSelected = true
+                    } label: {
+                        if femaleSelected {
+                            Image("Property=female, State=selected, version=ios")
+                                .frame(width: 164, height: 164)
+                        } else {
+                            Image("Property=female, State=unselected, version=ios")
+                                .frame(width: 164, height: 164)
+                        }
+                    }
+                }
                 
                 Spacer()
-            }
-            
-            HStack {
-                Button {
-                    manSelected = true
-                    womanSelected = false
-                } label: {
-                    Image(systemName: "heart")
-                        .frame(width: 164, height: 164)
-                        .background(.gray)
-                        .tint(manSelected ? Color(uiColor: .systemMint) : Color.gray)
+                    .frame(height: 20)
+                
+                HStack {
+                    Text("생년월일을 알려주세요")
+                        .font(.bold, size: 22, lineHeight: 28)
+                        .padding(.vertical, 20)
+                    
+                    Spacer()
+                }
+                
+                HStack {
+                    DCTextField(placeHolder: "년", text: $year)
+                    Text(".")
+                    DCTextField(placeHolder: "월", text: $month)
+                    Text(".")
+                    DCTextField(placeHolder: "일", text: $day)
                 }
                 
                 Spacer()
                 
-                Button {
-                    manSelected = false
-                    womanSelected = true
-                } label: {
-                    Image(systemName: "heart")
-                        .frame(width: 164, height: 164)
-                        .background(.gray)
-                        .tint(womanSelected ? Color(uiColor: .systemMint) : Color.gray)
+                if !(maleSelected || femaleSelected) || year.isEmpty || month.isEmpty || day.isEmpty {
+                    DCButton("다음", style: .primary) {
+                    }
+                    .disabled(true)
+                } else {
+                    DCButton("다음", style: .primary) {
+                        // action
+                        isCompleted = true
+                    }
+                    .navigationDestination(isPresented: $isCompleted) {
+                        HeightWeightInputView()
+                    }
                 }
-            }
-            
-            Spacer()
-                .frame(height: 50)
-            
-            HStack {
-                Text("생년월일을 알려주세요")
-                    .font(.headline)
-                    .fontWeight(.bold)
                 
                 Spacer()
+                    .frame(height: 10)
             }
+            .padding(.horizontal, 20)
             
-            HStack {
-                DCTextField(placeHolder: "년", text: $year)
-                Text(".")
-                DCTextField(placeHolder: "월", text: $month)
-                Text(".")
-                DCTextField(placeHolder: "일", text: $day)
-            }
             
-            Spacer()
-            
-            DCButton("다음", style: .primary) {
-                // action
-            }
         }
-        .padding()
+        .onTapGesture {
+            hideKeyboard()
+        }
     }
 }
 
