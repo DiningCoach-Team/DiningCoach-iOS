@@ -72,11 +72,11 @@ struct GenderBirthdayInputView: View {
                 }
                 
                 HStack {
-                    DCTextField(placeHolder: "년", text: $year)
+                    birthdayTextField(placeHolder: "년", text: $year)
                     Text(".")
-                    DCTextField(placeHolder: "월", text: $month)
+                    birthdayTextField(placeHolder: "월", text: $month)
                     Text(".")
-                    DCTextField(placeHolder: "일", text: $day)
+                    birthdayTextField(placeHolder: "일", text: $day)
                 }
                 
                 Spacer()
@@ -107,6 +107,26 @@ struct GenderBirthdayInputView: View {
         }
     }
 }
+
+struct birthdayTextField: View {
+    var placeHolder: String
+    @Binding var text: String
+    
+    var body: some View {
+        VStack {
+            TextField(placeHolder, text: $text)
+                .fontWeight(.bold)
+                .multilineTextAlignment(text.isEmpty ? .trailing : .center)
+                .tint(Color.primary500)
+                .keyboardType(.numberPad)
+            
+            Rectangle()
+                .frame(height: 2)
+                .foregroundColor(text.isEmpty ? Color(uiColor: .systemGray5) : Color.primary500)
+        }
+    }
+}
+
 
 struct GenderBirthdayInputView_Previews: PreviewProvider {
     static var previews: some View {
