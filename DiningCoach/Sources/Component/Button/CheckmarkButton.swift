@@ -57,7 +57,7 @@ struct CheckmarkButton: View {
                     }
                 }
             }
-            .frame(width: 343, height: 64)
+            .frame(height: 64)
             .cornerRadius(12)
             .shadow(color: .black.opacity(0.06), radius: 10, x: 0, y: 0)
         }

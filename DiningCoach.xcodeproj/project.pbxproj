@@ -31,7 +31,7 @@
 		65F885592A341B6000D151F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65F885582A341B6000D151F1 /* LaunchScreen.storyboard */; };
 		8FE516732A455F0F0059D720 /* GenderBirthdayInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE516722A455F0F0059D720 /* GenderBirthdayInputView.swift */; };
 		8FE516752A455F220059D720 /* HeightWeightInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE516742A455F220059D720 /* HeightWeightInputView.swift */; };
-		8FE516772A455F280059D720 /* WeeklyExerciseInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE516762A455F280059D720 /* WeeklyExerciseInputView.swift */; };
+		8FE516772A455F280059D720 /* ExerciseSleepInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE516762A455F280059D720 /* ExerciseSleepInputView.swift */; };
 		8FE516792A455F310059D720 /* PreferredFoodInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE516782A455F310059D720 /* PreferredFoodInputView.swift */; };
 		8FE5167B2A455F370059D720 /* EatingHabitInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE5167A2A455F370059D720 /* EatingHabitInputView.swift */; };
 		8FE5167D2A455F3D0059D720 /* MedicalConditionsInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE5167C2A455F3D0059D720 /* MedicalConditionsInputView.swift */; };
@@ -75,7 +75,7 @@
 		65F885582A341B6000D151F1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8FE516722A455F0F0059D720 /* GenderBirthdayInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderBirthdayInputView.swift; sourceTree = "<group>"; };
 		8FE516742A455F220059D720 /* HeightWeightInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightWeightInputView.swift; sourceTree = "<group>"; };
-		8FE516762A455F280059D720 /* WeeklyExerciseInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyExerciseInputView.swift; sourceTree = "<group>"; };
+		8FE516762A455F280059D720 /* ExerciseSleepInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSleepInputView.swift; sourceTree = "<group>"; };
 		8FE516782A455F310059D720 /* PreferredFoodInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferredFoodInputView.swift; sourceTree = "<group>"; };
 		8FE5167A2A455F370059D720 /* EatingHabitInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatingHabitInputView.swift; sourceTree = "<group>"; };
 		8FE5167C2A455F3D0059D720 /* MedicalConditionsInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalConditionsInputView.swift; sourceTree = "<group>"; };
@@ -237,7 +237,7 @@
 			children = (
 				8FE516722A455F0F0059D720 /* GenderBirthdayInputView.swift */,
 				8FE516742A455F220059D720 /* HeightWeightInputView.swift */,
-				8FE516762A455F280059D720 /* WeeklyExerciseInputView.swift */,
+				8FE516762A455F280059D720 /* ExerciseSleepInputView.swift */,
 				8FE516782A455F310059D720 /* PreferredFoodInputView.swift */,
 				8FE5167A2A455F370059D720 /* EatingHabitInputView.swift */,
 				8FE5167C2A455F3D0059D720 /* MedicalConditionsInputView.swift */,
@@ -405,7 +405,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A51E1C3D2A4061C800E4EBA3 /* AppDelegate.swift in Sources */,
-				8FE516772A455F280059D720 /* WeeklyExerciseInputView.swift in Sources */,
+				8FE516772A455F280059D720 /* ExerciseSleepInputView.swift in Sources */,
 				8FE516732A455F0F0059D720 /* GenderBirthdayInputView.swift in Sources */,
 				8FE516752A455F220059D720 /* HeightWeightInputView.swift in Sources */,
 				65F8854C2A3275B000D151F1 /* Color+Primary.swift in Sources */,
