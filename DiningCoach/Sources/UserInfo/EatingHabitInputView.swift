@@ -39,7 +39,7 @@ struct EatingHabitInputView: View {
                     
                     VStack(spacing: 16) {
                         ForEach(EatingHabit.allCases, id: \.self) { habit in
-                            CheckmarkButton(title: habit.rawValue, state: selectedHabit.contains(habit) ? .selected : .unselected) {
+                            CheckButton(title: habit.rawValue, state: selectedHabit.contains(habit) ? .selected : .unselected) {
                                 if selectedHabit.contains(habit) {
                                     selectedHabit.remove(habit)
                                 } else {
@@ -55,21 +55,18 @@ struct EatingHabitInputView: View {
                 }
             }
             
-//            if selectedExerciseButton == nil || selectedSleepButton == nil {
-//                DCButton("다음", style: .primary) { }
-//                    .disabled(true)
-//            } else {
-//                DCButton("다음", style: .primary) {
-//                    isCompleted = true
-//                    // send data
-//                }
-//            }
-            DCButton("다음", style: .primary) {
-                isCompleted = true
+            VStack {
+                if selectedHabit.isEmpty {
+                    DCButton("다음", style: .primary) { }
+                        .disabled(true)
+                } else {
+                    DCButton("다음", style: .primary) {
+                        isCompleted = true
+                        // send data
+                    }
+                }
             }
-            
-            Spacer()
-                .frame(height: 10)
+            .padding(16)
         }
         .padding(.horizontal, 16)
         .navigationDestination(isPresented: $isCompleted) {

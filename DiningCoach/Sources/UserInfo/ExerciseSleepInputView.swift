@@ -43,7 +43,7 @@ struct ExerciseSleepInputView: View {
                     
                     VStack(spacing: 16) {
                         ForEach(0..<exercise.count, id: \.self) { index in
-                            CheckmarkButton(title: exercise[index], state: selectedExerciseButton == index ? .selected : .unselected) {
+                            CheckButton(title: exercise[index], state: selectedExerciseButton == index ? .selected : .unselected) {
                                 if selectedExerciseButton == index {
                                     selectedExerciseButton = nil
                                 } else {
@@ -74,7 +74,7 @@ struct ExerciseSleepInputView: View {
                     
                     VStack(spacing: 16) {
                         ForEach(0..<sleep.count, id: \.self) { index in
-                            CheckmarkButton(title: sleep[index], state: selectedSleepButton == index ? .selected : .unselected) {
+                            CheckButton(title: sleep[index], state: selectedSleepButton == index ? .selected : .unselected) {
                                 if selectedSleepButton == index {
                                     selectedSleepButton = nil
                                 } else {

@@ -1,5 +1,5 @@
 //
-//  CheckmarkButton.swift
+//  CheckButton.swift
 //  DiningCoach
 //
 //  Created by 심현석 on 2023/06/24.
@@ -12,7 +12,7 @@ enum ButtonState {
     case unselected
 }
 
-struct CheckmarkButton: View {
+struct CheckButton: View {
     @Environment(\.isEnabled) var isEnabled: Bool
     
     private let title: String
@@ -75,11 +75,11 @@ struct CheckmarkButton: View {
     }
 }
 
-struct CheckmarkButton_Previews: PreviewProvider {
+struct CheckButton_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            CheckmarkButton(title: "1시간 미만", state: .selected) { }
-            CheckmarkButton(title: "1시간 미만", state: .unselected) { }
+            CheckButton(title: "1시간 미만", state: .selected) { }
+            CheckButton(title: "1시간 미만", state: .unselected) { }
         }
     }
 }

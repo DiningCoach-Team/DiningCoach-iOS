@@ -15,11 +15,11 @@ struct PreferredFoodInputView: View {
     @State private var isCompleted: Bool = false
     
     // Error: LazyVGrid에 바로 지정해주지 않으면 다음페이지로 이동이 안된다.
-//    let columns = [
-//        GridItem(.flexible()),
-//        GridItem(.flexible()),
-//        GridItem(.flexible())
-//    ]
+    //    let columns = [
+    //        GridItem(.flexible()),
+    //        GridItem(.flexible()),
+    //        GridItem(.flexible())
+    //    ]
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -50,7 +50,7 @@ struct PreferredFoodInputView: View {
             VStack {
                 LazyVGrid(columns: [GridItem(), GridItem(), GridItem()], spacing: 16) {
                     ForEach(Food.allCases, id: \.self) { food in
-                        FoodButton(food: food, state: selectedFoods.contains(food) ? .selected : .unselected) {
+                        SelectButton(element: food, state: selectedFoods.contains(food) ? .selected : .unselected) {
                             if selectedFoods.contains(food) {
                                 selectedFoods.remove(food)
                             } else if selectedFoods.count < 5 {
@@ -66,17 +66,14 @@ struct PreferredFoodInputView: View {
             Spacer()
             
             VStack {
-//                if selectedFoods.isEmpty {
-//                    DCButton("다음", style: .primary) { }
-//                        .disabled(true)
-//                } else {
-//                    DCButton("다음", style: .primary) {
-//                        isCompleted = true
-//                        // send data
-//                    }
-//                }
-                DCButton("다음", style: .primary) {
-                    isCompleted = true
+                if selectedFoods.isEmpty {
+                    DCButton("다음", style: .primary) { }
+                        .disabled(true)
+                } else {
+                    DCButton("다음", style: .primary) {
+                        isCompleted = true
+                        // send data
+                    }
                 }
             }
             .padding(.vertical, 16)
@@ -114,3 +111,75 @@ struct PreferredFoodInputView_Previews: PreviewProvider {
     }
 }
 
+enum Food: SelectButtonElement ,CaseIterable {
+    case convenience
+    case livestock
+    case cooking
+    case noodles
+    case seafood
+    case bread
+    case snack
+    case agriculture
+    case dairy
+    case beverage
+    case health
+    case alcohol
+    
+    var name: String {
+        switch self {
+        case .convenience:
+            return "간편식"
+        case .livestock:
+            return "축산물"
+        case .cooking:
+            return "조리식"
+        case .noodles:
+            return "면류"
+        case .seafood:
+            return "수산물"
+        case .bread:
+            return "빵/떡"
+        case .snack:
+            return "간식"
+        case .agriculture:
+            return "농산물"
+        case .dairy:
+            return "유제품"
+        case .beverage:
+            return "음료"
+        case .health:
+            return "건강식품"
+        case .alcohol:
+            return "주류"
+        }
+    }
+    
+    var imageString: String {
+        switch self {
+        case .convenience:
+            return "Property=간편식"
+        case .livestock:
+            return "Property=고기류"
+        case .cooking:
+            return "Property=국"
+        case .noodles:
+            return "Property=면류"
+        case .seafood:
+            return "Property=해산물"
+        case .bread:
+            return "Property=베이커리"
+        case .snack:
+            return "Property=간식"
+        case .agriculture:
+            return "Property=샐러드"
+        case .dairy:
+            return "Property=유제품"
+        case .beverage:
+            return "Property=음료"
+        case .health:
+            return "Property=건강식품"
+        case .alcohol:
+            return "Property=주류"
+        }
+    }
+}

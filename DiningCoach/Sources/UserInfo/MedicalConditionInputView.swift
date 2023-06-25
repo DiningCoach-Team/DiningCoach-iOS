@@ -39,7 +39,7 @@ struct MedicalConditionInputView: View {
                     
                     VStack(spacing: 16) {
                         ForEach(MedicalCondition.allCases, id: \.self) { condition in
-                            CheckmarkButton(title: condition.rawValue, state: selectedHabit.contains(condition) ? .selected : .unselected) {
+                            CheckButton(title: condition.rawValue, state: selectedHabit.contains(condition) ? .selected : .unselected) {
                                 if selectedHabit.contains(condition) {
                                     selectedHabit.remove(condition)
                                 } else {
@@ -55,21 +55,18 @@ struct MedicalConditionInputView: View {
                 }
             }
             
-            //            if selectedExerciseButton == nil || selectedSleepButton == nil {
-            //                DCButton("다음", style: .primary) { }
-            //                    .disabled(true)
-            //            } else {
-            //                DCButton("다음", style: .primary) {
-            //                    isCompleted = true
-            //                    // send data
-            //                }
-            //            }
-            DCButton("다음", style: .primary) {
-                isCompleted = true
+            VStack {
+                if selectedHabit.isEmpty {
+                    DCButton("다음", style: .primary) { }
+                        .disabled(true)
+                } else {
+                    DCButton("다음", style: .primary) {
+                        isCompleted = true
+                        // send data
+                    }
+                }
             }
-            
-            Spacer()
-                .frame(height: 10)
+            .padding(16)
         }
         .padding(.horizontal, 16)
         .navigationDestination(isPresented: $isCompleted) {
