@@ -27,7 +27,7 @@ struct PreferredFoodInputView: View {
                 .frame(height: 10)
             
             VStack {
-                ProgressView(value: 4, total: 6)
+                ProgressView(value: 4, total: 7)
                     .tint(Color.primary500)
             }
             .padding(.vertical, 8)

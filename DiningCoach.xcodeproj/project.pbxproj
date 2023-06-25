@@ -35,11 +35,12 @@
 		8FE516792A455F310059D720 /* PreferredFoodInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE516782A455F310059D720 /* PreferredFoodInputView.swift */; };
 		8FE5167B2A455F370059D720 /* EatingHabitInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE5167A2A455F370059D720 /* EatingHabitInputView.swift */; };
 		8FE5167D2A455F3D0059D720 /* MedicalConditionInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE5167C2A455F3D0059D720 /* MedicalConditionInputView.swift */; };
-		8FE5167F2A455F430059D720 /* AllergiesInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE5167E2A455F430059D720 /* AllergiesInputView.swift */; };
+		8FE5167F2A455F430059D720 /* AllergyInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE5167E2A455F430059D720 /* AllergyInputView.swift */; };
 		8FE516832A45BF460059D720 /* View+hideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE516822A45BF460059D720 /* View+hideKeyboard.swift */; };
 		8FE516852A468A790059D720 /* CheckmarkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE516842A468A790059D720 /* CheckmarkButton.swift */; };
 		8FE516872A46D72D0059D720 /* FoodButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE516862A46D72D0059D720 /* FoodButton.swift */; };
 		8FE516892A46D7480059D720 /* AllergyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE516882A46D7480059D720 /* AllergyButton.swift */; };
+		8FE5168B2A481B4E0059D720 /* UserInfoCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE5168A2A481B4E0059D720 /* UserInfoCompleteView.swift */; };
 		A51E1C372A405DDF00E4EBA3 /* LoginStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E1C362A405DDF00E4EBA3 /* LoginStore.swift */; };
 		A51E1C3A2A40606800E4EBA3 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = A51E1C392A40606800E4EBA3 /* KakaoSDK */; };
 		A51E1C3D2A4061C800E4EBA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E1C3C2A4061C800E4EBA3 /* AppDelegate.swift */; };
@@ -81,11 +82,12 @@
 		8FE516782A455F310059D720 /* PreferredFoodInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferredFoodInputView.swift; sourceTree = "<group>"; };
 		8FE5167A2A455F370059D720 /* EatingHabitInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatingHabitInputView.swift; sourceTree = "<group>"; };
 		8FE5167C2A455F3D0059D720 /* MedicalConditionInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalConditionInputView.swift; sourceTree = "<group>"; };
-		8FE5167E2A455F430059D720 /* AllergiesInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergiesInputView.swift; sourceTree = "<group>"; };
+		8FE5167E2A455F430059D720 /* AllergyInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergyInputView.swift; sourceTree = "<group>"; };
 		8FE516822A45BF460059D720 /* View+hideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+hideKeyboard.swift"; sourceTree = "<group>"; };
 		8FE516842A468A790059D720 /* CheckmarkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckmarkButton.swift; sourceTree = "<group>"; };
 		8FE516862A46D72D0059D720 /* FoodButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodButton.swift; sourceTree = "<group>"; };
 		8FE516882A46D7480059D720 /* AllergyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergyButton.swift; sourceTree = "<group>"; };
+		8FE5168A2A481B4E0059D720 /* UserInfoCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoCompleteView.swift; sourceTree = "<group>"; };
 		A51E1C362A405DDF00E4EBA3 /* LoginStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStore.swift; sourceTree = "<group>"; };
 		A51E1C3C2A4061C800E4EBA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A51E1C402A4066D100E4EBA3 /* DiningCoach.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DiningCoach.entitlements; sourceTree = "<group>"; };
@@ -247,7 +249,8 @@
 				8FE516782A455F310059D720 /* PreferredFoodInputView.swift */,
 				8FE5167A2A455F370059D720 /* EatingHabitInputView.swift */,
 				8FE5167C2A455F3D0059D720 /* MedicalConditionInputView.swift */,
-				8FE5167E2A455F430059D720 /* AllergiesInputView.swift */,
+				8FE5167E2A455F430059D720 /* AllergyInputView.swift */,
+				8FE5168A2A481B4E0059D720 /* UserInfoCompleteView.swift */,
 			);
 			path = UserInfo;
 			sourceTree = "<group>";
@@ -426,7 +429,7 @@
 				65F8854F2A32764900D151F1 /* View+LineHeightFont.swift in Sources */,
 				655D9B922A39DA0C005E133E /* DCButton.swift in Sources */,
 				8FE516832A45BF460059D720 /* View+hideKeyboard.swift in Sources */,
-				8FE5167F2A455F430059D720 /* AllergiesInputView.swift in Sources */,
+				8FE5167F2A455F430059D720 /* AllergyInputView.swift in Sources */,
 				8FE5167D2A455F3D0059D720 /* MedicalConditionInputView.swift in Sources */,
 				8FE516892A46D7480059D720 /* AllergyButton.swift in Sources */,
 				655D9B8E2A39D815005E133E /* Color+Neutral.swift in Sources */,
@@ -434,6 +437,7 @@
 				65F885532A327AF700D151F1 /* SplashView.swift in Sources */,
 				A51E1C462A406BAC00E4EBA3 /* Validation.swift in Sources */,
 				655D9B942A39DA47005E133E /* DCButtonStyle.swift in Sources */,
+				8FE5168B2A481B4E0059D720 /* UserInfoCompleteView.swift in Sources */,
 				8FE516872A46D72D0059D720 /* FoodButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

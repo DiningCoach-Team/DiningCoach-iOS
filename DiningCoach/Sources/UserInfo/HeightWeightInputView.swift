@@ -20,7 +20,7 @@ struct HeightWeightInputView: View {
             Spacer()
                 .frame(height: 10)
             
-            ProgressView(value: 2, total: 6)
+            ProgressView(value: 2, total: 7)
                 .tint(Color.primary500)
                         
             VStack(spacing: 0) {

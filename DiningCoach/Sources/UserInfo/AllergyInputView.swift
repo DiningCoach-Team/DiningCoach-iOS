@@ -1,5 +1,5 @@
 //
-//  AllergiesInputView.swift
+//  AllergyInputView.swift
 //  DiningCoach
 //
 //  Created by 심현석 on 2023/06/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AllergiesInputView: View {
+struct AllergyInputView: View {
     @Environment(\.dismiss) var dismiss
     
     @State private var selectedAllergy = Set<Allergy>()
@@ -20,7 +20,7 @@ struct AllergiesInputView: View {
                 .frame(height: 10)
             
             VStack {
-                ProgressView(value: 4, total: 6)
+                ProgressView(value: 7, total: 7)
                     .tint(Color.primary500)
             }
             .padding(.vertical, 8)
@@ -32,12 +32,14 @@ struct AllergiesInputView: View {
             }
             .padding(.vertical, 16)
             
-            VStack {
+            ScrollView {
                 LazyVGrid(columns: [GridItem(), GridItem(), GridItem()], spacing: 16) {
                     ForEach(Allergy.allCases, id: \.self) { allergy in
                         AllergyButton(allergy: allergy, state: selectedAllergy.contains(allergy) ? .selected : .unselected) {
                             if selectedAllergy.contains(allergy) {
                                 selectedAllergy.remove(allergy)
+                            } else {
+                                selectedAllergy.insert(allergy)
                             }
                         }
                     }
@@ -66,7 +68,7 @@ struct AllergiesInputView: View {
         }
         .padding(.horizontal, 16)
         .navigationDestination(isPresented: $isCompleted) {
-            EatingHabitInputView()
+            UserInfoCompleteView()
         }
         .navigationBarBackButtonHidden(true)
         .toolbar {
@@ -91,8 +93,8 @@ struct AllergiesInputView: View {
     }
 }
     
-struct AllergiesInputView_Previews: PreviewProvider {
+struct AllergyInputView_Previews: PreviewProvider {
     static var previews: some View {
-        AllergiesInputView()
+        AllergyInputView()
     }
 }

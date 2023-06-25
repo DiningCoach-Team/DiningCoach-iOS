@@ -25,7 +25,7 @@ struct GenderBirthdayInputView: View {
                 Spacer()
                     .frame(height: 10)
                 
-                ProgressView(value: 1, total: 6)
+                ProgressView(value: 1, total: 7)
                     .tint(Color.primary500)
                 
                 VStack(spacing: 0) {

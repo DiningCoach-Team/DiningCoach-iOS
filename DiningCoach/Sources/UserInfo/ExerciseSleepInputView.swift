@@ -23,7 +23,7 @@ struct ExerciseSleepInputView: View {
             Spacer()
                 .frame(height: 10)
             
-            ProgressView(value: 3, total: 6)
+            ProgressView(value: 3, total: 7)
                 .tint(Color.primary500)
             
             Spacer()
@@ -43,7 +43,7 @@ struct ExerciseSleepInputView: View {
                     
                     VStack(spacing: 16) {
                         ForEach(0..<exercise.count, id: \.self) { index in
-                            CheckmarkButton(exercise[index], state: selectedExerciseButton == index ? .selected : .unselected) {
+                            CheckmarkButton(title: exercise[index], state: selectedExerciseButton == index ? .selected : .unselected) {
                                 if selectedExerciseButton == index {
                                     selectedExerciseButton = nil
                                 } else {
@@ -74,7 +74,7 @@ struct ExerciseSleepInputView: View {
                     
                     VStack(spacing: 16) {
                         ForEach(0..<sleep.count, id: \.self) { index in
-                            CheckmarkButton(sleep[index], state: selectedSleepButton == index ? .selected : .unselected) {
+                            CheckmarkButton(title: sleep[index], state: selectedSleepButton == index ? .selected : .unselected) {
                                 if selectedSleepButton == index {
                                     selectedSleepButton = nil
                                 } else {

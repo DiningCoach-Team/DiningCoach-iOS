@@ -7,11 +7,16 @@
 
 import SwiftUI
 
+enum ButtonState {
+    case selected
+    case unselected
+}
+
 struct CheckmarkButton: View {
     @Environment(\.isEnabled) var isEnabled: Bool
     
     private let title: String
-    private let state: State
+    private let state: ButtonState
     private let action: () -> Void
     
     var body: some View {
@@ -63,25 +68,18 @@ struct CheckmarkButton: View {
         }
     }
     
-    init(_ title: String, state: State, action: @escaping () -> Void) {
+    init(title: String, state: ButtonState, action: @escaping () -> Void) {
         self.title = title
         self.state = state
         self.action = action
     }
 }
 
-extension CheckmarkButton {
-    enum State {
-        case selected
-        case unselected
-    }
-}
-
 struct CheckmarkButton_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            CheckmarkButton("1시간 미만", state: .selected) { }
-            CheckmarkButton("1시간 미만", state: .unselected) { }
+            CheckmarkButton(title: "1시간 미만", state: .selected) { }
+            CheckmarkButton(title: "1시간 미만", state: .unselected) { }
         }
     }
 }

@@ -8,15 +8,96 @@
 import SwiftUI
 
 struct MedicalConditionInputView: View {
+    @Environment(\.dismiss) var dismiss
     
+    @State private var selectedHabit = Set<MedicalCondition>()
+    
+    @State private var isCompleted: Bool = false
     
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
+            Spacer()
+                .frame(height: 10)
             
+            ProgressView(value: 6, total: 7)
+                .tint(Color.primary500)
+            
+            Spacer()
+                .frame(height: 24)
+            
+            ScrollView(showsIndicators: false) {
+                VStack(spacing: 0) {
+                    HStack {
+                        Text("질병 정보를 선택해 주세요")
+                            .font(.bold, size: 22, lineHeight: 28)
+                        
+                        Spacer()
+                    }
+                    
+                    Spacer()
+                        .frame(height: 24)
+                    
+                    VStack(spacing: 16) {
+                        ForEach(MedicalCondition.allCases, id: \.self) { condition in
+                            CheckmarkButton(title: condition.rawValue, state: selectedHabit.contains(condition) ? .selected : .unselected) {
+                                if selectedHabit.contains(condition) {
+                                    selectedHabit.remove(condition)
+                                } else {
+                                    selectedHabit.insert(condition)
+                                }
+                                // input data
+                            }
+                        }
+                    }
+                    
+                    Spacer()
+                        .frame(height: 10)
+                }
+            }
+            
+            //            if selectedExerciseButton == nil || selectedSleepButton == nil {
+            //                DCButton("다음", style: .primary) { }
+            //                    .disabled(true)
+            //            } else {
+            //                DCButton("다음", style: .primary) {
+            //                    isCompleted = true
+            //                    // send data
+            //                }
+            //            }
+            DCButton("다음", style: .primary) {
+                isCompleted = true
+            }
+            
+            Spacer()
+                .frame(height: 10)
+        }
+        .padding(.horizontal, 16)
+        .navigationDestination(isPresented: $isCompleted) {
+            AllergyInputView()
+        }
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItemGroup(placement: .navigationBarLeading) {
+                Button {
+                    dismiss()
+                } label: {
+                    Image(systemName: "chevron.backward")
+                        .tint(.black)
+                }
+            }
+            
+            ToolbarItemGroup(placement: .navigationBarTrailing) {
+                Button {
+                    dismiss()
+                } label: {
+                    Image(systemName: "xmark")
+                        .tint(.black)
+                }
+            }
         }
     }
 }
-    
+
 struct MedicalConditionsInputView_Previews: PreviewProvider {
     static var previews: some View {
         MedicalConditionInputView()
