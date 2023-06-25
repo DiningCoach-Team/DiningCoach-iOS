@@ -9,50 +9,39 @@ import SwiftUI
 
 struct MedicalConditionInputView: View {
     @Environment(\.dismiss) var dismiss
+    @State private var isCompleted: Bool = false
     
     @State private var selectedHabit = Set<MedicalCondition>()
     
-    @State private var isCompleted: Bool = false
-    
     var body: some View {
         VStack(spacing: 0) {
-            Spacer()
-                .frame(height: 10)
+            VStack {
+                ProgressView(value: 6, total: 7)
+                    .tint(Color.primary500)
+            }
+            .padding(.vertical, 8)
             
-            ProgressView(value: 6, total: 7)
-                .tint(Color.primary500)
-            
-            Spacer()
-                .frame(height: 24)
+            VStack(alignment: .leading) {
+                Text("질병 정보를 선택해 주세요")
+                    .font(.bold, size: 22, lineHeight: 28)
+                    .frame(height: 28)
+            }
+            .padding(.vertical, 16)
             
             ScrollView(showsIndicators: false) {
-                VStack(spacing: 0) {
-                    HStack {
-                        Text("질병 정보를 선택해 주세요")
-                            .font(.bold, size: 22, lineHeight: 28)
-                        
-                        Spacer()
-                    }
-                    
-                    Spacer()
-                        .frame(height: 24)
-                    
-                    VStack(spacing: 16) {
-                        ForEach(MedicalCondition.allCases, id: \.self) { condition in
-                            CheckButton(title: condition.rawValue, state: selectedHabit.contains(condition) ? .selected : .unselected) {
-                                if selectedHabit.contains(condition) {
-                                    selectedHabit.remove(condition)
-                                } else {
-                                    selectedHabit.insert(condition)
-                                }
-                                // input data
+                VStack(spacing: 16) {
+                    ForEach(MedicalCondition.allCases, id: \.self) { condition in
+                        CheckButton(element: condition, state: selectedHabit.contains(condition) ? .selected : .unselected) {
+                            if selectedHabit.contains(condition) {
+                                selectedHabit.remove(condition)
+                            } else {
+                                selectedHabit.insert(condition)
                             }
+                            // input data
                         }
                     }
-                    
-                    Spacer()
-                        .frame(height: 10)
                 }
+                .padding(.vertical, 8)
             }
             
             VStack {
@@ -66,7 +55,7 @@ struct MedicalConditionInputView: View {
                     }
                 }
             }
-            .padding(16)
+            .padding(.vertical, 16)
         }
         .padding(.horizontal, 16)
         .navigationDestination(isPresented: $isCompleted) {
@@ -101,7 +90,7 @@ struct MedicalConditionsInputView_Previews: PreviewProvider {
     }
 }
 
-enum MedicalCondition: String, CaseIterable {
+enum MedicalCondition: String, CheckButtonElement,CaseIterable {
     case none = "해당없음"
     case diabetes = "당뇨병"
     case hypertension = "고혈압"
@@ -113,4 +102,8 @@ enum MedicalCondition: String, CaseIterable {
     case gout = "통풍"
     case skinDisease = "피부병"
     case menieresDisease = "메니에르병"
+    
+    var type: String {
+        return rawValue
+    }
 }

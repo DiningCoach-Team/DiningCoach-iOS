@@ -9,16 +9,12 @@ import SwiftUI
 
 struct AllergyInputView: View {
     @Environment(\.dismiss) var dismiss
+    @State private var isCompleted: Bool = false
     
     @State private var selectedAllergy = Set<Allergy>()
     
-    @State private var isCompleted: Bool = false
-    
     var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            Spacer()
-                .frame(height: 10)
-            
+        VStack(spacing: 0) {
             VStack {
                 ProgressView(value: 7, total: 7)
                     .tint(Color.primary500)
@@ -33,22 +29,22 @@ struct AllergyInputView: View {
             .padding(.vertical, 16)
             
             ScrollView {
-                LazyVGrid(columns: [GridItem(), GridItem(), GridItem()], spacing: 16) {
-                    ForEach(Allergy.allCases, id: \.self) { allergy in
-                        SelectButton(element: allergy, state: selectedAllergy.contains(allergy) ? .selected : .unselected) {
-                            if selectedAllergy.contains(allergy) {
-                                selectedAllergy.remove(allergy)
-                            } else {
-                                selectedAllergy.insert(allergy)
+                VStack {
+                    LazyVGrid(columns: [GridItem(), GridItem(), GridItem()], spacing: 16) {
+                        ForEach(Allergy.allCases, id: \.self) { allergy in
+                            SelectButton(element: allergy, state: selectedAllergy.contains(allergy) ? .selected : .unselected) {
+                                if selectedAllergy.contains(allergy) {
+                                    selectedAllergy.remove(allergy)
+                                } else {
+                                    selectedAllergy.insert(allergy)
+                                }
+                                // input data
                             }
                         }
                     }
                 }
+                .padding(.vertical, 8)
             }
-            .padding(.top, 8)
-            .padding(.bottom, 3)
-            
-            Spacer()
             
             VStack {
                 if selectedAllergy.isEmpty {

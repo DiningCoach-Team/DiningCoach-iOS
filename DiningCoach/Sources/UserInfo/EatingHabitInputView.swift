@@ -9,50 +9,40 @@ import SwiftUI
 
 struct EatingHabitInputView: View {
     @Environment(\.dismiss) var dismiss
+    @State private var isCompleted: Bool = false
     
     @State private var selectedHabit = Set<EatingHabit>()
     
-    @State private var isCompleted: Bool = false
-    
     var body: some View {
         VStack(spacing: 0) {
-            Spacer()
-                .frame(height: 10)
             
-            ProgressView(value: 5, total: 7)
-                .tint(Color.primary500)
+            VStack {
+                ProgressView(value: 5, total: 7)
+                    .tint(Color.primary500)
+            }
+            .padding(.vertical, 8)
             
-            Spacer()
-                .frame(height: 24)
+            VStack(alignment: .leading) {
+                Text("해당하는 식습관을 선택해 주세요")
+                    .font(.bold, size: 22, lineHeight: 28)
+                    .frame(height: 28)
+            }
+            .padding(.vertical, 16)
             
             ScrollView(showsIndicators: false) {
-                VStack(spacing: 0) {
-                    HStack {
-                        Text("해당하는 식습관을 선택해 주세요")
-                            .font(.bold, size: 22, lineHeight: 28)
-                        
-                        Spacer()
-                    }
-                    
-                    Spacer()
-                        .frame(height: 24)
-                    
-                    VStack(spacing: 16) {
-                        ForEach(EatingHabit.allCases, id: \.self) { habit in
-                            CheckButton(title: habit.rawValue, state: selectedHabit.contains(habit) ? .selected : .unselected) {
-                                if selectedHabit.contains(habit) {
-                                    selectedHabit.remove(habit)
-                                } else {
-                                    selectedHabit.insert(habit)
-                                }
-                                // input data
+                VStack(spacing: 15) {
+                    ForEach(EatingHabit.allCases, id: \.self) { habit in
+                        CheckButton(element: habit, state: selectedHabit.contains(habit) ? .selected : .unselected) {
+                            if selectedHabit.contains(habit) {
+                                selectedHabit.remove(habit)
+                            } else {
+                                selectedHabit.insert(habit)
                             }
+                            // input data
                         }
                     }
-                    
-                    Spacer()
-                        .frame(height: 10)
                 }
+                .padding(.vertical, 8)
             }
             
             VStack {
@@ -66,7 +56,7 @@ struct EatingHabitInputView: View {
                     }
                 }
             }
-            .padding(16)
+            .padding(.vertical, 16)
         }
         .padding(.horizontal, 16)
         .navigationDestination(isPresented: $isCompleted) {
@@ -94,19 +84,38 @@ struct EatingHabitInputView: View {
         }
     }
 }
-    
+
 struct EatingHabitInputView_Previews: PreviewProvider {
     static var previews: some View {
         EatingHabitInputView()
     }
 }
 
-enum EatingHabit: String, CaseIterable {
-    case none = "해당없음"
-    case lowSalt = "저염 식단"
-    case iodineLimitation = "요오드 제한 식단"
-    case fiberLimited = "섬유질을 많이 먹지 못해요"
-    case hardFoodLimited = "딱딱한 음식 잘 먹지 못해요"
-    case vegan = "비건 식단 지향"
-    case halal = "할랄음식 먹어요"
+enum EatingHabit: CheckButtonElement, CaseIterable {
+    case none
+    case lowSalt
+    case iodineLimitation
+    case fiberLimited
+    case hardFoodLimited
+    case vegan
+    case halal
+    
+    var type: String {
+        switch self {
+        case .none:
+            return "해당없음"
+        case .lowSalt:
+            return "저염 식단"
+        case .iodineLimitation:
+            return "요오드 제한 식단"
+        case .fiberLimited:
+            return "섬유질을 많이 먹지 못해요"
+        case .hardFoodLimited:
+            return "딱딱한 음식 잘 먹지 못해요"
+        case .vegan:
+            return "비건 식단 지향"
+        case .halal:
+            return "할랄음식 먹어요"
+        }
+    }
 }

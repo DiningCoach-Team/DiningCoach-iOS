@@ -7,16 +7,20 @@
 
 import SwiftUI
 
-enum ButtonState {
-    case selected
-    case unselected
+protocol CheckButtonElement {
+    var type: String { get }
 }
 
-struct CheckButton: View {
+struct CheckButton<Element: CheckButtonElement>: View {
+    enum State {
+        case selected
+        case unselected
+    }
+    
     @Environment(\.isEnabled) var isEnabled: Bool
     
-    private let title: String
-    private let state: ButtonState
+    private let element: Element
+    private let state: State
     private let action: () -> Void
     
     var body: some View {
@@ -30,7 +34,7 @@ struct CheckButton: View {
                     HStack {
                         Spacer()
                             .frame(width: 16)
-                        Text(title)
+                        Text(element.type)
                             .font(.bold, size: 16, lineHeight: 24)
                             .foregroundColor(Color.neutral900)
                         Spacer()
@@ -48,7 +52,7 @@ struct CheckButton: View {
                     HStack {
                         Spacer()
                             .frame(width: 16)
-                        Text(title)
+                        Text(element.type)
                             .font(.bold, size: 18, lineHeight: 24)
                             .foregroundColor(Color.primary500)
                         Spacer()
@@ -68,8 +72,8 @@ struct CheckButton: View {
         }
     }
     
-    init(title: String, state: ButtonState, action: @escaping () -> Void) {
-        self.title = title
+    init(element: Element, state: State, action: @escaping () -> Void) {
+        self.element = element
         self.state = state
         self.action = action
     }
@@ -78,8 +82,8 @@ struct CheckButton: View {
 struct CheckButton_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            CheckButton(title: "1시간 미만", state: .selected) { }
-            CheckButton(title: "1시간 미만", state: .unselected) { }
+            CheckButton(element: Exercise.between1And5Hours, state: .selected){ }
+            CheckButton(element: Exercise.between1And5Hours, state: .unselected) { }
         }
     }
 }

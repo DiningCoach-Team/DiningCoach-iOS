@@ -9,10 +9,9 @@ import SwiftUI
 
 struct PreferredFoodInputView: View {
     @Environment(\.dismiss) var dismiss
+    @State private var isCompleted: Bool = false
     
     @State private var selectedFoods = Set<Food>()
-    
-    @State private var isCompleted: Bool = false
     
     // Error: LazyVGrid에 바로 지정해주지 않으면 다음페이지로 이동이 안된다.
     //    let columns = [
@@ -22,17 +21,14 @@ struct PreferredFoodInputView: View {
     //    ]
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            Spacer()
-                .frame(height: 10)
-            
+        VStack(spacing: 0) {
             VStack {
                 ProgressView(value: 4, total: 7)
                     .tint(Color.primary500)
             }
             .padding(.vertical, 8)
             
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 0) {
                 Text("선호하시는 음식을 선택해 주세요")
                     .font(.bold, size: 22, lineHeight: 28)
                     .frame(height: 28)
@@ -56,12 +52,12 @@ struct PreferredFoodInputView: View {
                             } else if selectedFoods.count < 5 {
                                 selectedFoods.insert(food)
                             }
+                            // input data
                         }
                     }
                 }
             }
-            .padding(.top, 8)
-            .padding(.bottom, 3)
+            .padding(.vertical, 8)
             
             Spacer()
             

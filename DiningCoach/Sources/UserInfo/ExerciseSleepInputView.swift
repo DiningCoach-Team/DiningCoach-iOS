@@ -9,45 +9,37 @@ import SwiftUI
 
 struct ExerciseSleepInputView: View {
     @Environment(\.dismiss) var dismiss
-    
-    @State private var selectedExerciseButton: Int?
-    @State private var selectedSleepButton: Int?
-    
     @State private var isCompleted: Bool = false
-    
-    var exercise = ["1시간 미만", "1시간 ~ 5시간", "5시간 ~ 10시간", "10시간 이상"]
-    var sleep = ["6시간 미만", "6시간 ~ 10시간", "10시간 이상"]
+
+    @State private var selectedExercise = Set<Exercise>()
+    @State private var selectedSleep = Set<Sleep>()
     
     var body: some View {
         VStack(spacing: 0) {
-            Spacer()
-                .frame(height: 10)
-            
-            ProgressView(value: 3, total: 7)
-                .tint(Color.primary500)
-            
-            Spacer()
-                .frame(height: 24)
+            VStack {
+                ProgressView(value: 3, total: 7)
+                    .tint(Color.primary500)
+            }
+            .padding(.vertical, 8)
             
             ScrollView(showsIndicators: false) {
-                VStack(spacing: 0) {
-                    HStack {
+                VStack {
+                    VStack(alignment: .leading, spacing: 0) {
                         Text("일주일에 몇 시간 운동하시나요?")
                             .font(.bold, size: 22, lineHeight: 28)
+                            .frame(height: 28)
                         
                         Spacer()
-                    }
-                    
-                    Spacer()
-                        .frame(height: 24)
-                    
-                    VStack(spacing: 16) {
-                        ForEach(0..<exercise.count, id: \.self) { index in
-                            CheckButton(title: exercise[index], state: selectedExerciseButton == index ? .selected : .unselected) {
-                                if selectedExerciseButton == index {
-                                    selectedExerciseButton = nil
-                                } else {
-                                    selectedExerciseButton = index
+                            .frame(height: 24)
+                        
+                        VStack(spacing: 16) {
+                            ForEach(Exercise.allCases, id: \.self) { exercise in
+                                CheckButton(element: exercise, state: selectedExercise.contains(exercise) ? .selected : .unselected) {
+                                    if selectedExercise.contains(exercise) {
+                                        selectedExercise.remove(exercise)
+                                    } else if selectedExercise.isEmpty {
+                                        selectedExercise.insert(exercise)
+                                    }
                                     // input data
                                 }
                             }
@@ -55,53 +47,46 @@ struct ExerciseSleepInputView: View {
                     }
                     
                     Spacer()
-                        .frame(height: 10)
-                }
-                
-                Spacer()
-                    .frame(height: 48)
-                
-                VStack(spacing: 0) {
-                    HStack {
+                        .frame(height: 48)
+                    
+                    VStack(alignment: .leading, spacing: 0) {
                         Text("하루에 몇 시간 주무시나요?")
                             .font(.bold, size: 22, lineHeight: 28)
+                            .frame(height: 28)
                         
                         Spacer()
-                    }
-                    
-                    Spacer()
-                        .frame(height: 24)
-                    
-                    VStack(spacing: 16) {
-                        ForEach(0..<sleep.count, id: \.self) { index in
-                            CheckButton(title: sleep[index], state: selectedSleepButton == index ? .selected : .unselected) {
-                                if selectedSleepButton == index {
-                                    selectedSleepButton = nil
-                                } else {
-                                    selectedSleepButton = index
+                            .frame(height: 24)
+                        
+                        VStack(spacing: 16) {
+                            ForEach(Sleep.allCases, id: \.self) { sleep in
+                                CheckButton(element: sleep, state: selectedSleep.contains(sleep) ? .selected : .unselected) {
+                                    if selectedSleep.contains(sleep) {
+                                        selectedSleep.remove(sleep)
+                                    } else if selectedSleep.isEmpty {
+                                        selectedSleep.insert(sleep)
+                                    }
                                     // input data
                                 }
                             }
                         }
                     }
                 }
+                .padding(.vertical, 8)
             }
+            .padding(.top, 16)
             
-//            if selectedExerciseButton == nil || selectedSleepButton == nil {
-//                DCButton("다음", style: .primary) { }
-//                    .disabled(true)
-//            } else {
-//                DCButton("다음", style: .primary) {
-//                    isCompleted = true
-//                    // send data
-//                }
-//            }
-            DCButton("다음", style: .primary) {
-                isCompleted = true
+            VStack {
+                if selectedExercise.isEmpty || selectedSleep.isEmpty {
+                    DCButton("다음", style: .primary) { }
+                        .disabled(true)
+                } else {
+                    DCButton("다음", style: .primary) {
+                        isCompleted = true
+                        // send data
+                    }
+                }
             }
-            
-            Spacer()
-                .frame(height: 10)
+            .padding(.vertical, 16)
         }
         .padding(.horizontal, 16)
         .navigationDestination(isPresented: $isCompleted) {
@@ -136,3 +121,39 @@ struct WeeklyExerciseInputView_Previews: PreviewProvider {
     }
 }
 
+enum Exercise: CheckButtonElement, CaseIterable {
+    case under1Hour
+    case between1And5Hours
+    case between5And10Hours
+    case over10Hours
+    
+    var type: String {
+        switch self {
+        case .under1Hour:
+            return "1시간 미만"
+        case .between1And5Hours:
+            return "1시간 ~ 5시간"
+        case .between5And10Hours:
+            return "5시간 ~ 10시간"
+        case .over10Hours:
+            return "5시간 ~ 10시간"
+        }
+    }
+}
+
+enum Sleep: CheckButtonElement, CaseIterable {
+    case under6Hours
+    case between6And10Hours
+    case over10Hours
+    
+    var type: String {
+        switch self {
+        case .under6Hours:
+            return "6시간 미만"
+        case .between6And10Hours:
+            return "6시간 ~ 10시간"
+        case .over10Hours:
+            return "10시간 이상"
+        }
+    }
+}

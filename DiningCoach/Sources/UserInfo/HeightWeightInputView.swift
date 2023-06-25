@@ -9,88 +9,75 @@ import SwiftUI
 
 struct HeightWeightInputView: View {
     @Environment(\.dismiss) var dismiss
+    @State private var isCompleted = false
     
     @State private var height: String = ""
     @State private var weight: String = ""
     
-    @State private var isCompleted = false
-    
     var body: some View {
         VStack(spacing: 0) {
-            Spacer()
-                .frame(height: 10)
+            VStack {
+                ProgressView(value: 2, total: 7)
+                    .tint(Color.primary500)
+            }
+            .padding(.vertical, 8)
             
-            ProgressView(value: 2, total: 7)
-                .tint(Color.primary500)
-                        
-            VStack(spacing: 0) {
-                Spacer()
-                    .frame(height: 24)
-                
-                HStack {
+            ScrollView(showsIndicators: false) {
+                VStack(alignment: .leading, spacing: 0) {
                     Text("키를 알려주세요")
                         .font(.bold, size: 22, lineHeight: 28)
                     
                     Spacer()
-                }
-                
-                Spacer()
-                    .frame(height: 24)
-                
-                HStack {
-                    HeightWeightTextField(text: $height)
+                        .frame(height: 24)
                     
-                    Text("cm")
-                        .font(.bold, size: 20, lineHeight: 24)
-                        .foregroundColor(height.isEmpty ? Color.neutral300 : Color.neutral900)
-                        .padding(.horizontal, 8)
+                    HStack {
+                        HeightWeightTextField(text: $height)
+                        
+                        Text("cm")
+                            .font(.bold, size: 20, lineHeight: 24)
+                            .foregroundColor(height.isEmpty ? Color.neutral300 : Color.neutral900)
+                            .padding(.horizontal, 8)
+                    }
                 }
-            }
-            
-            Spacer()
-                .frame(height: 132)
-            
-            VStack(spacing: 0) {
-                Spacer()
-                    .frame(height: 24)
+                .padding(.vertical, 16)
                 
-                HStack {
+                Spacer()
+                    .frame(height: 132)
+                
+                VStack(alignment: .leading, spacing: 0) {
                     Text("몸무게를 알려주세요")
                         .font(.bold, size: 22, lineHeight: 28)
+                        .frame(height: 28)
                     
                     Spacer()
+                        .frame(height: 24)
+                    
+                    HStack {
+                        HeightWeightTextField(text: $weight)
+                        
+                        Text("kg")
+                            .font(.bold, size: 20, lineHeight: 24)
+                            .foregroundColor(weight.isEmpty ? Color.neutral300 : Color.neutral900)
+                            .padding(.horizontal, 8)
+                    }
                 }
+                .padding(.vertical, 16)
                 
                 Spacer()
-                    .frame(height: 24)
-                
-                HStack {
-                    HeightWeightTextField(text: $weight)
-                    
-                    Text("kg")
-                        .font(.bold, size: 20, lineHeight: 24)
-                        .foregroundColor(weight.isEmpty ? Color.neutral300 : Color.neutral900)
-                        .padding(.horizontal, 8)
+            }
+            
+            VStack {
+                if height.isEmpty || weight.isEmpty {
+                    DCButton("다음", style: .primary) { }
+                        .disabled(true)
+                } else {
+                    DCButton("다음", style: .primary) {
+                        isCompleted = true
+                        // send data
+                    }
                 }
             }
-            
-            Spacer()
-            
-//            if height.isEmpty || weight.isEmpty {
-//                DCButton("다음", style: .primary) { }
-//                    .disabled(true)
-//            } else {
-//                DCButton("다음", style: .primary) {
-//                    isCompleted = true
-//                    // send data
-//                }
-//            }
-            DCButton("다음", style: .primary) {
-                isCompleted = true
-            }
-            
-            Spacer()
-            .frame(height: 10)
+            .padding(.vertical, 16)
         }
         .padding(.horizontal, 16)
         .onTapGesture {
@@ -119,6 +106,7 @@ struct HeightWeightInputView: View {
                 }
             }
         }
+        .ignoresSafeArea(.keyboard, edges: .bottom)
     }
 }
 
