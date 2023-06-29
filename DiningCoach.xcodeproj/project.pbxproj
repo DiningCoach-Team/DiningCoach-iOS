@@ -168,10 +168,10 @@
 				65F8851D2A2EA91B00D151F1 /* Pretendard-SemiBold.otf */,
 				65F8851C2A2EA91B00D151F1 /* Pretendard-Medium.otf */,
 				65F885202A2EA91B00D151F1 /* Pretendard-Regular.otf */,
-				65F8851F2A2EA91B00D151F1 /* Pretendard-ExtraLight.otf */,
 				65F8851E2A2EA91B00D151F1 /* Pretendard-Light.otf */,
 				65F885212A2EA91B00D151F1 /* Pretendard-Black.otf */,
 				65F8851B2A2EA91B00D151F1 /* Pretendard-Thin.otf */,
+				65F8851F2A2EA91B00D151F1 /* Pretendard-ExtraLight.otf */,
 				65F8852F2A2EAB3900D151F1 /* Font+Pretendard.swift */,
 			);
 			path = Font;

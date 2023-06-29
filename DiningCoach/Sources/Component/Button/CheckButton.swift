@@ -32,8 +32,6 @@ struct CheckButton<Element: CheckButtonElement>: View {
                     Color.white
                     
                     HStack {
-                        Spacer()
-                            .frame(width: 16)
                         Text(element.type)
                             .font(.bold, size: 16, lineHeight: 24)
                             .foregroundColor(Color.neutral900)
@@ -43,15 +41,12 @@ struct CheckButton<Element: CheckButtonElement>: View {
                             .frame(width: 24, height: 24)
                             .background(Color.neutral100)
                             .cornerRadius(6)
-                        Spacer()
-                            .frame(width: 16)
                     }
+                    .padding(.horizontal, 16)
                 } else {
                     Color.primary50
                     
                     HStack {
-                        Spacer()
-                            .frame(width: 16)
                         Text(element.type)
                             .font(.bold, size: 18, lineHeight: 24)
                             .foregroundColor(Color.primary500)
@@ -61,9 +56,8 @@ struct CheckButton<Element: CheckButtonElement>: View {
                             .frame(width: 24, height: 24)
                             .background(Color.primary500)
                             .cornerRadius(6)
-                        Spacer()
-                            .frame(width: 16)
                     }
+                    .padding(.horizontal, 16)
                 }
             }
             .frame(height: 64)

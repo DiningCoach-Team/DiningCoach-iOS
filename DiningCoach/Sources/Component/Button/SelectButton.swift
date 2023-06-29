@@ -32,9 +32,6 @@ struct SelectButton<Element: SelectButtonElement>: View {
                     Color.white
                     
                     VStack(spacing: 0) {
-                        Spacer()
-                            .frame(height: 12)
-                        
                         Image(element.imageString)
                             .resizable()
                             .frame(width: 48, height: 48)
@@ -46,17 +43,12 @@ struct SelectButton<Element: SelectButtonElement>: View {
                             .font(.bold, size: 16, lineHeight: 24)
                             .frame(height: 24)
                             .foregroundColor(Color.neutral900)
-                        
-                        Spacer()
-                            .frame(width: 12)
                     }
+                    .padding(.vertical, 12)
                 } else {
                     Color.primary50
                     
                     VStack(spacing: 0) {
-                        Spacer()
-                            .frame(height: 10)
-                        
                         Image(element.imageString)
                             .resizable()
                             .frame(width: 52, height: 52)
@@ -68,10 +60,8 @@ struct SelectButton<Element: SelectButtonElement>: View {
                             .font(.bold, size: 18, lineHeight: 24)
                             .frame(height: 24)
                             .foregroundColor(Color.primary500)
-                        
-                        Spacer()
-                            .frame(width: 10)
                     }
+                    .padding(.vertical, 10)
                 }
             }
             .frame(width: 104, height: 104)
