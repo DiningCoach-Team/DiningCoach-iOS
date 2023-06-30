@@ -9,12 +9,24 @@ import SwiftUI
 import KakaoSDKAuth
 import KakaoSDKUser
 import AuthenticationServices
+import GoogleSignIn
+
+public enum PlatformType: String {
+    case kakao, google, apple
+}
+
+// MARK: Login Store Protocol
+protocol BaseLoginStore {
+    func login(completion: @escaping (Bool) -> Void)
+    func loginWithSocial(platformType: PlatformType, completion: @escaping (Bool) -> Void)
+}
 
 class LoginStore: NSObject, ObservableObject, ASAuthorizationControllerDelegate {
     @Published var isNextViewPresented = false
     @Published var oauthToken: OAuthToken?
     @Published var user: User?
     
+    // MARK: kakao login
     func kakaoLogin() {
         if UserApi.isKakaoTalkLoginAvailable() {
             UserApi.shared.loginWithKakaoTalk { (oauthToken, error) in
@@ -51,6 +63,7 @@ class LoginStore: NSObject, ObservableObject, ASAuthorizationControllerDelegate 
         }
     }
     
+    // MARK: apple login
     func appleLogin() {
         let request = ASAuthorizationAppleIDProvider().createRequest()
         request.requestedScopes = [.email]
@@ -68,6 +81,27 @@ class LoginStore: NSObject, ObservableObject, ASAuthorizationControllerDelegate 
 
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
         print("Authorization failed: \(error.localizedDescription)")
+    }
+}
+
+// MARK: google login
+extension LoginStore {
+    func googleLogin() {
+        guard let rootViewController = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first?.rootViewController else { return }
+        
+        GIDSignIn.sharedInstance.signIn(withPresenting: rootViewController) { (signInResult, error) in
+            if let error = error {
+                print("구글 로그인 실패 : \(error)")
+                return
+            }
+            
+            guard let result = signInResult else {
+                print("구글 로그인 실패 : signInResult 결과가 없음")
+                return
+            }
+            
+            
+        }
     }
 }
 
