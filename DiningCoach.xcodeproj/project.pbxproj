@@ -40,6 +40,9 @@
 		8FE516852A468A790059D720 /* CheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE516842A468A790059D720 /* CheckButton.swift */; };
 		8FE5168B2A481B4E0059D720 /* UserInfoCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE5168A2A481B4E0059D720 /* UserInfoCompleteView.swift */; };
 		8FE5168D2A4833CE0059D720 /* SelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE5168C2A4833CE0059D720 /* SelectButton.swift */; };
+		8FF418B52A4EC8550090FA34 /* TermsAgreementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF418B42A4EC8550090FA34 /* TermsAgreementView.swift */; };
+		8FF418B72A4EC8720090FA34 /* NicknameInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF418B62A4EC8720090FA34 /* NicknameInputView.swift */; };
+		8FF418B92A4EC87B0090FA34 /* SigninCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF418B82A4EC87B0090FA34 /* SigninCompleteView.swift */; };
 		A51E1C372A405DDF00E4EBA3 /* LoginStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E1C362A405DDF00E4EBA3 /* LoginStore.swift */; };
 		A51E1C3A2A40606800E4EBA3 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = A51E1C392A40606800E4EBA3 /* KakaoSDK */; };
 		A51E1C3D2A4061C800E4EBA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E1C3C2A4061C800E4EBA3 /* AppDelegate.swift */; };
@@ -86,6 +89,9 @@
 		8FE516842A468A790059D720 /* CheckButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckButton.swift; sourceTree = "<group>"; };
 		8FE5168A2A481B4E0059D720 /* UserInfoCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoCompleteView.swift; sourceTree = "<group>"; };
 		8FE5168C2A4833CE0059D720 /* SelectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectButton.swift; sourceTree = "<group>"; };
+		8FF418B42A4EC8550090FA34 /* TermsAgreementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAgreementView.swift; sourceTree = "<group>"; };
+		8FF418B62A4EC8720090FA34 /* NicknameInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameInputView.swift; sourceTree = "<group>"; };
+		8FF418B82A4EC87B0090FA34 /* SigninCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninCompleteView.swift; sourceTree = "<group>"; };
 		A51E1C362A405DDF00E4EBA3 /* LoginStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStore.swift; sourceTree = "<group>"; };
 		A51E1C3C2A4061C800E4EBA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A51E1C402A4066D100E4EBA3 /* DiningCoach.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DiningCoach.entitlements; sourceTree = "<group>"; };
@@ -198,6 +204,9 @@
 				8FE516712A455EEF0059D720 /* UserInfo */,
 				655D9B8F2A39D9FF005E133E /* Component */,
 				65F8854D2A32761E00D151F1 /* Helper */,
+				8FF418B42A4EC8550090FA34 /* TermsAgreementView.swift */,
+				8FF418B62A4EC8720090FA34 /* NicknameInputView.swift */,
+				8FF418B82A4EC87B0090FA34 /* SigninCompleteView.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -416,8 +425,10 @@
 				8FE516752A455F220059D720 /* HeightWeightInputView.swift in Sources */,
 				65F8854C2A3275B000D151F1 /* Color+Primary.swift in Sources */,
 				65F885302A2EAB3900D151F1 /* Font+Pretendard.swift in Sources */,
+				8FF418B72A4EC8720090FA34 /* NicknameInputView.swift in Sources */,
 				655D9B962A39DBED005E133E /* DCButton+Style.swift in Sources */,
 				A51E1C372A405DDF00E4EBA3 /* LoginStore.swift in Sources */,
+				8FF418B52A4EC8550090FA34 /* TermsAgreementView.swift in Sources */,
 				A526DDC52A092B0300B682BF /* ContentView.swift in Sources */,
 				8FE516792A455F310059D720 /* PreferredFoodInputView.swift in Sources */,
 				8FE516852A468A790059D720 /* CheckButton.swift in Sources */,
@@ -430,6 +441,7 @@
 				8FE5167D2A455F3D0059D720 /* MedicalConditionInputView.swift in Sources */,
 				8FE5168D2A4833CE0059D720 /* SelectButton.swift in Sources */,
 				655D9B8E2A39D815005E133E /* Color+Neutral.swift in Sources */,
+				8FF418B92A4EC87B0090FA34 /* SigninCompleteView.swift in Sources */,
 				A526DDC32A092B0300B682BF /* DiningCoachApp.swift in Sources */,
 				65F885532A327AF700D151F1 /* SplashView.swift in Sources */,
 				A51E1C462A406BAC00E4EBA3 /* Validation.swift in Sources */,
