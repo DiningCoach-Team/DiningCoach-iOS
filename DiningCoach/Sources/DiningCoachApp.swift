@@ -15,9 +15,10 @@ struct DiningCoachApp: App {
     
     var body: some Scene {
         WindowGroup {
-            SplashView()
-                .environmentObject(loginStore)
-                .environmentObject(registrationStore)
+//            SplashView()
+//                .environmentObject(loginStore)
+//                .environmentObject(registrationStore)
+            GenderBirthdayInputView()
         }
     }
 }
