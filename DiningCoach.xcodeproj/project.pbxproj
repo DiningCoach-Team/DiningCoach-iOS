@@ -29,7 +29,6 @@
 		65F8854F2A32764900D151F1 /* View+LineHeightFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F8854E2A32764900D151F1 /* View+LineHeightFont.swift */; };
 		65F885532A327AF700D151F1 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F885522A327AF700D151F1 /* SplashView.swift */; };
 		65F885592A341B6000D151F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65F885582A341B6000D151F1 /* LaunchScreen.storyboard */; };
-		8ECF90E72A4EE72500069225 /* DCTextField+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECF90E62A4EE72500069225 /* DCTextField+Style.swift */; };
 		8ECF90E92A4EEBEB00069225 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECF90E82A4EEBEB00069225 /* LoginButton.swift */; };
 		8ECF90EC2A4EF6B500069225 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 8ECF90EB2A4EF6B500069225 /* GoogleSignIn */; };
 		8ECF90EE2A4EF6B500069225 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8ECF90ED2A4EF6B500069225 /* GoogleSignInSwift */; };
@@ -70,7 +69,6 @@
 		65F8854E2A32764900D151F1 /* View+LineHeightFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+LineHeightFont.swift"; sourceTree = "<group>"; };
 		65F885522A327AF700D151F1 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		65F885582A341B6000D151F1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8ECF90E62A4EE72500069225 /* DCTextField+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DCTextField+Style.swift"; sourceTree = "<group>"; };
 		8ECF90E82A4EEBEB00069225 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		8EE137742A4B06A400A0D665 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		8EE137772A4B09FB00A0D665 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -239,7 +237,6 @@
 			isa = PBXGroup;
 			children = (
 				8EE1377A2A4B12B100A0D665 /* DCTextField.swift */,
-				8ECF90E62A4EE72500069225 /* DCTextField+Style.swift */,
 			);
 			path = TextField;
 			sourceTree = "<group>";
@@ -411,7 +408,6 @@
 				A51E1C3D2A4061C800E4EBA3 /* AppDelegate.swift in Sources */,
 				65F8854C2A3275B000D151F1 /* Color+Primary.swift in Sources */,
 				65F885302A2EAB3900D151F1 /* Font+Pretendard.swift in Sources */,
-				8ECF90E72A4EE72500069225 /* DCTextField+Style.swift in Sources */,
 				8EE137782A4B09FB00A0D665 /* LoginView.swift in Sources */,
 				655D9B962A39DBED005E133E /* DCButton+Style.swift in Sources */,
 				A51E1C372A405DDF00E4EBA3 /* LoginStore.swift in Sources */,

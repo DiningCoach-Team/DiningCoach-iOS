@@ -58,12 +58,13 @@ struct DCLoginView: View {
 struct DCLoginInput: View {
     @State var emailInput: String = ""
     @State var passwdInput: String = ""
+    @State var inputStyle: DCTextField.Style = .normal
     
     var body: some View {
         VStack {
-            DCTextField(textInput: $emailInput, placeholder: "아이디 (이메일)", supportText: nil)
+            DCTextField(textInput: $emailInput, style: $inputStyle, placeholder: "아이디 (이메일)", supportText: nil)
             
-            DCTextField(textInput: $passwdInput, placeholder: "비밀번호", supportText: nil)
+            DCTextField(textInput: $passwdInput, style: $inputStyle, placeholder: "비밀번호", supportText: nil, isSecure: true)
             
             DCButton("로그인", style: .primary) {
                 
