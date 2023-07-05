@@ -54,16 +54,6 @@ struct ForgotPasswordView: View {
 
                         VStack(alignment: .leading, spacing: 0) {
                                 BasicTextField(placeHolder: "가입하신 이메일을 입력해 주세요.", text: $emailAddress)
-
-                                if  emailAddress.isEmpty {
-                                    Text(".")
-                                        .foregroundColor(Color.neutral300)
-                                        .fontWeight(.bold)
-                                } else {
-                                    Text(".")
-                                        .foregroundColor(.black)
-                                        .fontWeight(.bold)
-                                }
                         }
                     }
 

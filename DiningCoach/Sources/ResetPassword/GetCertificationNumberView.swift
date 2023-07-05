@@ -53,16 +53,6 @@ struct GetCertificationNumberView: View {
 
                         VStack(alignment: .leading, spacing: 0) {
                             BasicTextFieldWithTimer(placeHolder: "인증번호를 입력해 주세요", text: $certificationNumber)
-
-                                if  certificationNumber.isEmpty {
-                                    Text(".")
-                                        .foregroundColor(Color.neutral300)
-                                        .fontWeight(.bold)
-                                } else {
-                                    Text(".")
-                                        .foregroundColor(.black)
-                                        .fontWeight(.bold)
-                                }
                         }
                     } 
 
