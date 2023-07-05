@@ -29,20 +29,26 @@
 		65F8854F2A32764900D151F1 /* View+LineHeightFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F8854E2A32764900D151F1 /* View+LineHeightFont.swift */; };
 		65F885532A327AF700D151F1 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F885522A327AF700D151F1 /* SplashView.swift */; };
 		65F885592A341B6000D151F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65F885582A341B6000D151F1 /* LaunchScreen.storyboard */; };
-		8FE516732A455F0F0059D720 /* GenderBirthdayInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE516722A455F0F0059D720 /* GenderBirthdayInputView.swift */; };
-		8FE516752A455F220059D720 /* HeightWeightInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE516742A455F220059D720 /* HeightWeightInputView.swift */; };
-		8FE516772A455F280059D720 /* ExerciseSleepInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE516762A455F280059D720 /* ExerciseSleepInputView.swift */; };
-		8FE516792A455F310059D720 /* PreferredFoodInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE516782A455F310059D720 /* PreferredFoodInputView.swift */; };
-		8FE5167B2A455F370059D720 /* EatingHabitInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE5167A2A455F370059D720 /* EatingHabitInputView.swift */; };
-		8FE5167D2A455F3D0059D720 /* MedicalConditionInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE5167C2A455F3D0059D720 /* MedicalConditionInputView.swift */; };
-		8FE5167F2A455F430059D720 /* AllergyInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE5167E2A455F430059D720 /* AllergyInputView.swift */; };
-		8FE516832A45BF460059D720 /* View+hideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE516822A45BF460059D720 /* View+hideKeyboard.swift */; };
-		8FE516852A468A790059D720 /* CheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE516842A468A790059D720 /* CheckButton.swift */; };
-		8FE5168B2A481B4E0059D720 /* UserInfoCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE5168A2A481B4E0059D720 /* UserInfoCompleteView.swift */; };
-		8FE5168D2A4833CE0059D720 /* SelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE5168C2A4833CE0059D720 /* SelectButton.swift */; };
-		8FF418B52A4EC8550090FA34 /* TermsAgreementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF418B42A4EC8550090FA34 /* TermsAgreementView.swift */; };
-		8FF418B72A4EC8720090FA34 /* NicknameInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF418B62A4EC8720090FA34 /* NicknameInputView.swift */; };
-		8FF418B92A4EC87B0090FA34 /* SigninCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF418B82A4EC87B0090FA34 /* SigninCompleteView.swift */; };
+		8ECF90E92A4EEBEB00069225 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECF90E82A4EEBEB00069225 /* LoginButton.swift */; };
+		8ECF90EC2A4EF6B500069225 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 8ECF90EB2A4EF6B500069225 /* GoogleSignIn */; };
+		8ECF90EE2A4EF6B500069225 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8ECF90ED2A4EF6B500069225 /* GoogleSignInSwift */; };
+		8EE137782A4B09FB00A0D665 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE137772A4B09FB00A0D665 /* LoginView.swift */; };
+		8EE1377B2A4B12B100A0D665 /* DCTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE1377A2A4B12B100A0D665 /* DCTextField.swift */; };
+		8EF5C5B22A544DBF0025E589 /* NicknameInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5C5AE2A544DBF0025E589 /* NicknameInputView.swift */; };
+		8EF5C5B32A544DBF0025E589 /* TermsAgreementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5C5AF2A544DBF0025E589 /* TermsAgreementView.swift */; };
+		8EF5C5B42A544DBF0025E589 /* SigninCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5C5B02A544DBF0025E589 /* SigninCompleteView.swift */; };
+		8EF5C5C12A544E4A0025E589 /* ExerciseSleepInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5C5B92A544E4A0025E589 /* ExerciseSleepInputView.swift */; };
+		8EF5C5C22A544E4A0025E589 /* AllergyInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5C5BA2A544E4A0025E589 /* AllergyInputView.swift */; };
+		8EF5C5C32A544E4A0025E589 /* UserInfoCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5C5BB2A544E4A0025E589 /* UserInfoCompleteView.swift */; };
+		8EF5C5C42A544E4A0025E589 /* GenderBirthdayInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5C5BC2A544E4A0025E589 /* GenderBirthdayInputView.swift */; };
+		8EF5C5C52A544E4A0025E589 /* PreferredFoodInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5C5BD2A544E4A0025E589 /* PreferredFoodInputView.swift */; };
+		8EF5C5C62A544E4A0025E589 /* HeightWeightInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5C5BE2A544E4A0025E589 /* HeightWeightInputView.swift */; };
+		8EF5C5C72A544E4A0025E589 /* EatingHabitInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5C5BF2A544E4A0025E589 /* EatingHabitInputView.swift */; };
+		8EF5C5C82A544E4A0025E589 /* MedicalConditionInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5C5C02A544E4A0025E589 /* MedicalConditionInputView.swift */; };
+		8EF5C5D92A544EC10025E589 /* SelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5C5D72A544EC10025E589 /* SelectButton.swift */; };
+		8EF5C5DA2A544EC10025E589 /* CheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5C5D82A544EC10025E589 /* CheckButton.swift */; };
+		8EF5C5DD2A544EE40025E589 /* View+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5C5DB2A544EE40025E589 /* View+CornerRadius.swift */; };
+		8EF5C5DE2A544EE40025E589 /* View+hideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5C5DC2A544EE40025E589 /* View+hideKeyboard.swift */; };
 		A51E1C372A405DDF00E4EBA3 /* LoginStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E1C362A405DDF00E4EBA3 /* LoginStore.swift */; };
 		A51E1C3A2A40606800E4EBA3 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = A51E1C392A40606800E4EBA3 /* KakaoSDK */; };
 		A51E1C3D2A4061C800E4EBA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E1C3C2A4061C800E4EBA3 /* AppDelegate.swift */; };
@@ -78,20 +84,25 @@
 		65F8854E2A32764900D151F1 /* View+LineHeightFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+LineHeightFont.swift"; sourceTree = "<group>"; };
 		65F885522A327AF700D151F1 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		65F885582A341B6000D151F1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8FE516722A455F0F0059D720 /* GenderBirthdayInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderBirthdayInputView.swift; sourceTree = "<group>"; };
-		8FE516742A455F220059D720 /* HeightWeightInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightWeightInputView.swift; sourceTree = "<group>"; };
-		8FE516762A455F280059D720 /* ExerciseSleepInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSleepInputView.swift; sourceTree = "<group>"; };
-		8FE516782A455F310059D720 /* PreferredFoodInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferredFoodInputView.swift; sourceTree = "<group>"; };
-		8FE5167A2A455F370059D720 /* EatingHabitInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatingHabitInputView.swift; sourceTree = "<group>"; };
-		8FE5167C2A455F3D0059D720 /* MedicalConditionInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalConditionInputView.swift; sourceTree = "<group>"; };
-		8FE5167E2A455F430059D720 /* AllergyInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergyInputView.swift; sourceTree = "<group>"; };
-		8FE516822A45BF460059D720 /* View+hideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+hideKeyboard.swift"; sourceTree = "<group>"; };
-		8FE516842A468A790059D720 /* CheckButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckButton.swift; sourceTree = "<group>"; };
-		8FE5168A2A481B4E0059D720 /* UserInfoCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoCompleteView.swift; sourceTree = "<group>"; };
-		8FE5168C2A4833CE0059D720 /* SelectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectButton.swift; sourceTree = "<group>"; };
-		8FF418B42A4EC8550090FA34 /* TermsAgreementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAgreementView.swift; sourceTree = "<group>"; };
-		8FF418B62A4EC8720090FA34 /* NicknameInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameInputView.swift; sourceTree = "<group>"; };
-		8FF418B82A4EC87B0090FA34 /* SigninCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninCompleteView.swift; sourceTree = "<group>"; };
+		8ECF90E82A4EEBEB00069225 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
+		8EE137742A4B06A400A0D665 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		8EE137772A4B09FB00A0D665 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		8EE1377A2A4B12B100A0D665 /* DCTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCTextField.swift; sourceTree = "<group>"; };
+		8EF5C5AE2A544DBF0025E589 /* NicknameInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NicknameInputView.swift; sourceTree = "<group>"; };
+		8EF5C5AF2A544DBF0025E589 /* TermsAgreementView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsAgreementView.swift; sourceTree = "<group>"; };
+		8EF5C5B02A544DBF0025E589 /* SigninCompleteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninCompleteView.swift; sourceTree = "<group>"; };
+		8EF5C5B92A544E4A0025E589 /* ExerciseSleepInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseSleepInputView.swift; sourceTree = "<group>"; };
+		8EF5C5BA2A544E4A0025E589 /* AllergyInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllergyInputView.swift; sourceTree = "<group>"; };
+		8EF5C5BB2A544E4A0025E589 /* UserInfoCompleteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoCompleteView.swift; sourceTree = "<group>"; };
+		8EF5C5BC2A544E4A0025E589 /* GenderBirthdayInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenderBirthdayInputView.swift; sourceTree = "<group>"; };
+		8EF5C5BD2A544E4A0025E589 /* PreferredFoodInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferredFoodInputView.swift; sourceTree = "<group>"; };
+		8EF5C5BE2A544E4A0025E589 /* HeightWeightInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeightWeightInputView.swift; sourceTree = "<group>"; };
+		8EF5C5BF2A544E4A0025E589 /* EatingHabitInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EatingHabitInputView.swift; sourceTree = "<group>"; };
+		8EF5C5C02A544E4A0025E589 /* MedicalConditionInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalConditionInputView.swift; sourceTree = "<group>"; };
+		8EF5C5D72A544EC10025E589 /* SelectButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectButton.swift; sourceTree = "<group>"; };
+		8EF5C5D82A544EC10025E589 /* CheckButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckButton.swift; sourceTree = "<group>"; };
+		8EF5C5DB2A544EE40025E589 /* View+CornerRadius.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+CornerRadius.swift"; sourceTree = "<group>"; };
+		8EF5C5DC2A544EE40025E589 /* View+hideKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+hideKeyboard.swift"; sourceTree = "<group>"; };
 		A51E1C362A405DDF00E4EBA3 /* LoginStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStore.swift; sourceTree = "<group>"; };
 		A51E1C3C2A4061C800E4EBA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A51E1C402A4066D100E4EBA3 /* DiningCoach.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DiningCoach.entitlements; sourceTree = "<group>"; };
@@ -109,7 +120,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ECF90EE2A4EF6B500069225 /* GoogleSignInSwift in Frameworks */,
 				A51E1C3A2A40606800E4EBA3 /* KakaoSDK in Frameworks */,
+				8ECF90EC2A4EF6B500069225 /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +143,7 @@
 		655D9B8F2A39D9FF005E133E /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				8EE137792A4B12A400A0D665 /* TextField */,
 				655D9B902A39DA06005E133E /* Button */,
 			);
 			path = Component;
@@ -138,11 +152,11 @@
 		655D9B902A39DA06005E133E /* Button */ = {
 			isa = PBXGroup;
 			children = (
+				8EF5C5D82A544EC10025E589 /* CheckButton.swift */,
+				8EF5C5D72A544EC10025E589 /* SelectButton.swift */,
 				655D9B912A39DA0C005E133E /* DCButton.swift */,
 				655D9B952A39DBED005E133E /* DCButton+Style.swift */,
 				655D9B932A39DA47005E133E /* DCButtonStyle.swift */,
-				8FE516842A468A790059D720 /* CheckButton.swift */,
-				8FE5168C2A4833CE0059D720 /* SelectButton.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -174,10 +188,10 @@
 				65F8851D2A2EA91B00D151F1 /* Pretendard-SemiBold.otf */,
 				65F8851C2A2EA91B00D151F1 /* Pretendard-Medium.otf */,
 				65F885202A2EA91B00D151F1 /* Pretendard-Regular.otf */,
+				65F8851F2A2EA91B00D151F1 /* Pretendard-ExtraLight.otf */,
 				65F8851E2A2EA91B00D151F1 /* Pretendard-Light.otf */,
 				65F885212A2EA91B00D151F1 /* Pretendard-Black.otf */,
 				65F8851B2A2EA91B00D151F1 /* Pretendard-Thin.otf */,
-				65F8851F2A2EA91B00D151F1 /* Pretendard-ExtraLight.otf */,
 				65F8852F2A2EAB3900D151F1 /* Font+Pretendard.swift */,
 			);
 			path = Font;
@@ -194,6 +208,10 @@
 		65F8853B2A326CB400D151F1 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				8EF5C5B82A544E4A0025E589 /* UserInfo */,
+				8EF5C5AE2A544DBF0025E589 /* NicknameInputView.swift */,
+				8EF5C5B02A544DBF0025E589 /* SigninCompleteView.swift */,
+				8EF5C5AF2A544DBF0025E589 /* TermsAgreementView.swift */,
 				A51E1C442A406B9900E4EBA3 /* Validation */,
 				A51E1C412A406A3300E4EBA3 /* Registration */,
 				A51E1C3B2A4061B900E4EBA3 /* API */,
@@ -201,12 +219,8 @@
 				A526DDC22A092B0300B682BF /* DiningCoachApp.swift */,
 				A526DDC42A092B0300B682BF /* ContentView.swift */,
 				65F885502A327AE200D151F1 /* Scene */,
-				8FE516712A455EEF0059D720 /* UserInfo */,
 				655D9B8F2A39D9FF005E133E /* Component */,
 				65F8854D2A32761E00D151F1 /* Helper */,
-				8FF418B42A4EC8550090FA34 /* TermsAgreementView.swift */,
-				8FF418B62A4EC8720090FA34 /* NicknameInputView.swift */,
-				8FF418B82A4EC87B0090FA34 /* SigninCompleteView.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -224,8 +238,9 @@
 		65F8854D2A32761E00D151F1 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				8EF5C5DB2A544EE40025E589 /* View+CornerRadius.swift */,
+				8EF5C5DC2A544EE40025E589 /* View+hideKeyboard.swift */,
 				65F8854E2A32764900D151F1 /* View+LineHeightFont.swift */,
-				8FE516822A45BF460059D720 /* View+hideKeyboard.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -233,6 +248,7 @@
 		65F885502A327AE200D151F1 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				8EE137732A4B04AE00A0D665 /* Login */,
 				65F885512A327AE800D151F1 /* Splash */,
 			);
 			path = Scene;
@@ -246,17 +262,34 @@
 			path = Splash;
 			sourceTree = "<group>";
 		};
-		8FE516712A455EEF0059D720 /* UserInfo */ = {
+		8EE137732A4B04AE00A0D665 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				8FE516722A455F0F0059D720 /* GenderBirthdayInputView.swift */,
-				8FE516742A455F220059D720 /* HeightWeightInputView.swift */,
-				8FE516762A455F280059D720 /* ExerciseSleepInputView.swift */,
-				8FE516782A455F310059D720 /* PreferredFoodInputView.swift */,
-				8FE5167A2A455F370059D720 /* EatingHabitInputView.swift */,
-				8FE5167C2A455F3D0059D720 /* MedicalConditionInputView.swift */,
-				8FE5167E2A455F430059D720 /* AllergyInputView.swift */,
-				8FE5168A2A481B4E0059D720 /* UserInfoCompleteView.swift */,
+				8EE137772A4B09FB00A0D665 /* LoginView.swift */,
+				8ECF90E82A4EEBEB00069225 /* LoginButton.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		8EE137792A4B12A400A0D665 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				8EE1377A2A4B12B100A0D665 /* DCTextField.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		8EF5C5B82A544E4A0025E589 /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				8EF5C5B92A544E4A0025E589 /* ExerciseSleepInputView.swift */,
+				8EF5C5BA2A544E4A0025E589 /* AllergyInputView.swift */,
+				8EF5C5BB2A544E4A0025E589 /* UserInfoCompleteView.swift */,
+				8EF5C5BC2A544E4A0025E589 /* GenderBirthdayInputView.swift */,
+				8EF5C5BD2A544E4A0025E589 /* PreferredFoodInputView.swift */,
+				8EF5C5BE2A544E4A0025E589 /* HeightWeightInputView.swift */,
+				8EF5C5BF2A544E4A0025E589 /* EatingHabitInputView.swift */,
+				8EF5C5C02A544E4A0025E589 /* MedicalConditionInputView.swift */,
 			);
 			path = UserInfo;
 			sourceTree = "<group>";
@@ -296,6 +329,7 @@
 		A526DDB62A092B0300B682BF = {
 			isa = PBXGroup;
 			children = (
+				8EE137742A4B06A400A0D665 /* Config.xcconfig */,
 				A526DDC12A092B0300B682BF /* DiningCoach */,
 				A526DDC02A092B0300B682BF /* Products */,
 			);
@@ -347,6 +381,8 @@
 			name = DiningCoach;
 			packageProductDependencies = (
 				A51E1C392A40606800E4EBA3 /* KakaoSDK */,
+				8ECF90EB2A4EF6B500069225 /* GoogleSignIn */,
+				8ECF90ED2A4EF6B500069225 /* GoogleSignInSwift */,
 			);
 			productName = DiningCoach;
 			productReference = A526DDBF2A092B0300B682BF /* DiningCoach.app */;
@@ -378,6 +414,7 @@
 			mainGroup = A526DDB62A092B0300B682BF;
 			packageReferences = (
 				A51E1C382A40606800E4EBA3 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+				8ECF90EA2A4EF6B500069225 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			productRefGroup = A526DDC02A092B0300B682BF /* Products */;
 			projectDirPath = "";
@@ -419,34 +456,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EF5C5B32A544DBF0025E589 /* TermsAgreementView.swift in Sources */,
+				8EE1377B2A4B12B100A0D665 /* DCTextField.swift in Sources */,
+				8EF5C5C62A544E4A0025E589 /* HeightWeightInputView.swift in Sources */,
+				8EF5C5DE2A544EE40025E589 /* View+hideKeyboard.swift in Sources */,
+				8EF5C5C82A544E4A0025E589 /* MedicalConditionInputView.swift in Sources */,
+				8EF5C5D92A544EC10025E589 /* SelectButton.swift in Sources */,
+				8ECF90E92A4EEBEB00069225 /* LoginButton.swift in Sources */,
 				A51E1C3D2A4061C800E4EBA3 /* AppDelegate.swift in Sources */,
-				8FE516772A455F280059D720 /* ExerciseSleepInputView.swift in Sources */,
-				8FE516732A455F0F0059D720 /* GenderBirthdayInputView.swift in Sources */,
-				8FE516752A455F220059D720 /* HeightWeightInputView.swift in Sources */,
+				8EF5C5C22A544E4A0025E589 /* AllergyInputView.swift in Sources */,
+				8EF5C5C12A544E4A0025E589 /* ExerciseSleepInputView.swift in Sources */,
 				65F8854C2A3275B000D151F1 /* Color+Primary.swift in Sources */,
+				8EF5C5C42A544E4A0025E589 /* GenderBirthdayInputView.swift in Sources */,
+				8EF5C5C72A544E4A0025E589 /* EatingHabitInputView.swift in Sources */,
 				65F885302A2EAB3900D151F1 /* Font+Pretendard.swift in Sources */,
-				8FF418B72A4EC8720090FA34 /* NicknameInputView.swift in Sources */,
+				8EF5C5B22A544DBF0025E589 /* NicknameInputView.swift in Sources */,
+				8EE137782A4B09FB00A0D665 /* LoginView.swift in Sources */,
 				655D9B962A39DBED005E133E /* DCButton+Style.swift in Sources */,
 				A51E1C372A405DDF00E4EBA3 /* LoginStore.swift in Sources */,
-				8FF418B52A4EC8550090FA34 /* TermsAgreementView.swift in Sources */,
 				A526DDC52A092B0300B682BF /* ContentView.swift in Sources */,
-				8FE516792A455F310059D720 /* PreferredFoodInputView.swift in Sources */,
-				8FE516852A468A790059D720 /* CheckButton.swift in Sources */,
+				8EF5C5B42A544DBF0025E589 /* SigninCompleteView.swift in Sources */,
 				A51E1C432A406A4800E4EBA3 /* RegistrationStore.swift in Sources */,
-				8FE5167B2A455F370059D720 /* EatingHabitInputView.swift in Sources */,
+				8EF5C5C32A544E4A0025E589 /* UserInfoCompleteView.swift in Sources */,
 				65F8854F2A32764900D151F1 /* View+LineHeightFont.swift in Sources */,
+				8EF5C5C52A544E4A0025E589 /* PreferredFoodInputView.swift in Sources */,
 				655D9B922A39DA0C005E133E /* DCButton.swift in Sources */,
-				8FE516832A45BF460059D720 /* View+hideKeyboard.swift in Sources */,
-				8FE5167F2A455F430059D720 /* AllergyInputView.swift in Sources */,
-				8FE5167D2A455F3D0059D720 /* MedicalConditionInputView.swift in Sources */,
-				8FE5168D2A4833CE0059D720 /* SelectButton.swift in Sources */,
 				655D9B8E2A39D815005E133E /* Color+Neutral.swift in Sources */,
-				8FF418B92A4EC87B0090FA34 /* SigninCompleteView.swift in Sources */,
 				A526DDC32A092B0300B682BF /* DiningCoachApp.swift in Sources */,
 				65F885532A327AF700D151F1 /* SplashView.swift in Sources */,
 				A51E1C462A406BAC00E4EBA3 /* Validation.swift in Sources */,
+				8EF5C5DA2A544EC10025E589 /* CheckButton.swift in Sources */,
 				655D9B942A39DA47005E133E /* DCButtonStyle.swift in Sources */,
-				8FE5168B2A481B4E0059D720 /* UserInfoCompleteView.swift in Sources */,
+				8EF5C5DD2A544EE40025E589 /* View+CornerRadius.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +496,7 @@
 /* Begin XCBuildConfiguration section */
 		A526DDCB2A092B0400B682BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EE137742A4B06A400A0D665 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -515,6 +557,7 @@
 		};
 		A526DDCC2A092B0400B682BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EE137742A4B06A400A0D665 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -569,6 +612,7 @@
 		};
 		A526DDCE2A092B0400B682BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EE137742A4B06A400A0D665 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -576,10 +620,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DiningCoach/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "DiningCoach/Supporting Files/Info.plist";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -603,6 +647,7 @@
 		};
 		A526DDCF2A092B0400B682BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EE137742A4B06A400A0D665 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -610,10 +655,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DiningCoach/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "DiningCoach/Supporting Files/Info.plist";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -659,6 +704,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8ECF90EA2A4EF6B500069225 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = exactVersion;
+				version = 7.0.0;
+			};
+		};
 		A51E1C382A40606800E4EBA3 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
@@ -670,6 +723,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8ECF90EB2A4EF6B500069225 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8ECF90EA2A4EF6B500069225 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		8ECF90ED2A4EF6B500069225 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8ECF90EA2A4EF6B500069225 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
 		A51E1C392A40606800E4EBA3 /* KakaoSDK */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A51E1C382A40606800E4EBA3 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
