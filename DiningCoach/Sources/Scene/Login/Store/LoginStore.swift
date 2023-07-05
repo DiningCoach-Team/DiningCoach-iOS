@@ -11,10 +11,6 @@ import KakaoSDKUser
 import AuthenticationServices
 import GoogleSignIn
 
-public enum PlatformType: String {
-    case kakao, google, apple
-}
-
 // MARK: Login Store Protocol
 protocol BaseLoginStore {
     func login(completion: @escaping (Bool) -> Void)
@@ -43,6 +39,7 @@ class LoginStore: NSObject, ObservableObject, ASAuthorizationControllerDelegate 
                     print("카카오 로그인 실패: \(error.localizedDescription)")
                     return
                 }
+                
                 
                 self.kakaoUserInfo()
             }
