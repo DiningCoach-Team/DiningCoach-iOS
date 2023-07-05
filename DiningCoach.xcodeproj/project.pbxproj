@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		488F67792A554DE800A405E8 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488F67782A554DE800A405E8 /* SignUpView.swift */; };
 		48CB2E932A499A3B003D8201 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CB2E922A499A3B003D8201 /* ForgotPasswordView.swift */; };
 		48CB2E952A49AA47003D8201 /* GetCertificationNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CB2E942A49AA47003D8201 /* GetCertificationNumberView.swift */; };
 		48CB2E972A49B0D1003D8201 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CB2E962A49B0D1003D8201 /* ResetPasswordView.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		488F67782A554DE800A405E8 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		48CB2E922A499A3B003D8201 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		48CB2E942A49AA47003D8201 /* GetCertificationNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCertificationNumberView.swift; sourceTree = "<group>"; };
 		48CB2E962A49B0D1003D8201 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
@@ -96,6 +98,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		488F67772A554DD000A405E8 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				488F67782A554DE800A405E8 /* SignUpView.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
 		48CB2E912A499A17003D8201 /* ResetPassword */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +193,7 @@
 		65F8853B2A326CB400D151F1 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				488F67772A554DD000A405E8 /* SignUp */,
 				48CB2E912A499A17003D8201 /* ResetPassword */,
 				A51E1C442A406B9900E4EBA3 /* Validation */,
 				A51E1C412A406A3300E4EBA3 /* Registration */,
@@ -394,6 +405,7 @@
 				65F885302A2EAB3900D151F1 /* Font+Pretendard.swift in Sources */,
 				655D9B962A39DBED005E133E /* DCButton+Style.swift in Sources */,
 				A51E1C372A405DDF00E4EBA3 /* LoginStore.swift in Sources */,
+				488F67792A554DE800A405E8 /* SignUpView.swift in Sources */,
 				A526DDC52A092B0300B682BF /* ContentView.swift in Sources */,
 				48CB2E992A4A04A2003D8201 /* FinishResetPasswordView.swift in Sources */,
 				A51E1C432A406A4800E4EBA3 /* RegistrationStore.swift in Sources */,
