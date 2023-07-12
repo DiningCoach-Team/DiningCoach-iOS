@@ -49,6 +49,7 @@
 		8EF5C5DA2A544EC10025E589 /* CheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5C5D82A544EC10025E589 /* CheckButton.swift */; };
 		8EF5C5DD2A544EE40025E589 /* View+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5C5DB2A544EE40025E589 /* View+CornerRadius.swift */; };
 		8EF5C5DE2A544EE40025E589 /* View+hideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5C5DC2A544EE40025E589 /* View+hideKeyboard.swift */; };
+		8FAD69142A5E7FE200FBBFD6 /* DietEvaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD69132A5E7FE200FBBFD6 /* DietEvaluation.swift */; };
 		8FE820702A5D27F600FA4560 /* DietRecordCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE8206F2A5D27F600FA4560 /* DietRecordCard.swift */; };
 		8FE820722A5D280F00FA4560 /* DietRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE820712A5D280F00FA4560 /* DietRecordModel.swift */; };
 		8FE820742A5D2A6900FA4560 /* DietRecordDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE820732A5D2A6900FA4560 /* DietRecordDetailView.swift */; };
@@ -109,6 +110,7 @@
 		8EF5C5D82A544EC10025E589 /* CheckButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckButton.swift; sourceTree = "<group>"; };
 		8EF5C5DB2A544EE40025E589 /* View+CornerRadius.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+CornerRadius.swift"; sourceTree = "<group>"; };
 		8EF5C5DC2A544EE40025E589 /* View+hideKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+hideKeyboard.swift"; sourceTree = "<group>"; };
+		8FAD69132A5E7FE200FBBFD6 /* DietEvaluation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietEvaluation.swift; sourceTree = "<group>"; };
 		8FE8206F2A5D27F600FA4560 /* DietRecordCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietRecordCard.swift; sourceTree = "<group>"; };
 		8FE820712A5D280F00FA4560 /* DietRecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietRecordModel.swift; sourceTree = "<group>"; };
 		8FE820732A5D2A6900FA4560 /* DietRecordDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietRecordDetailView.swift; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 				8FF279722A5CD724003B325F /* DietRecordView.swift */,
 				8FE8206F2A5D27F600FA4560 /* DietRecordCard.swift */,
 				8FE820752A5D2C1000FA4560 /* DietStatistics.swift */,
+				8FAD69132A5E7FE200FBBFD6 /* DietEvaluation.swift */,
 				8FE820732A5D2A6900FA4560 /* DietRecordDetailView.swift */,
 			);
 			path = DietRecordView;
@@ -515,6 +518,7 @@
 				8EF5C5C72A544E4A0025E589 /* EatingHabitInputView.swift in Sources */,
 				65F885302A2EAB3900D151F1 /* Font+Pretendard.swift in Sources */,
 				8EF5C5B22A544DBF0025E589 /* NicknameInputView.swift in Sources */,
+				8FAD69142A5E7FE200FBBFD6 /* DietEvaluation.swift in Sources */,
 				8EE137782A4B09FB00A0D665 /* LoginView.swift in Sources */,
 				655D9B962A39DBED005E133E /* DCButton+Style.swift in Sources */,
 				A51E1C372A405DDF00E4EBA3 /* LoginStore.swift in Sources */,

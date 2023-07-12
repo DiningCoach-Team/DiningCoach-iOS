@@ -14,6 +14,7 @@ struct DietRecordView: View {
                 DietRecordCard()
                     .padding(.top, 161)
                 DietStatistics()
+                DietEvaluation()
             }
         }
     }
