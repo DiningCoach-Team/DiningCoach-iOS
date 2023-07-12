@@ -12,35 +12,41 @@ import AuthenticationServices
 import GoogleSignIn
 
 // MARK: Login Store Protocol
-protocol BaseLoginStore {
-    func login(completion: @escaping (Bool) -> Void)
-    func loginWithSocial(platformType: PlatformType, completion: @escaping (Bool) -> Void)
-}
 
 class LoginStore: NSObject, ObservableObject, ASAuthorizationControllerDelegate {
     @Published var isNextViewPresented = false
     @Published var oauthToken: OAuthToken?
     @Published var user: User?
     
-    // MARK: kakao login
-    func kakaoLogin() {
+    let loginApi = LoginApi.shared
+    private var appleLoginDelegator: ((Result<Bool, Error>) -> Void)? = nil
+    
+}
+    
+extension LoginStore {
+    // MARK: - kakao login
+    func kakaoLogin(completion: @escaping (Result<Bool, Error>) -> Void) {
         if UserApi.isKakaoTalkLoginAvailable() {
             UserApi.shared.loginWithKakaoTalk { (oauthToken, error) in
                 if let error = error {
                     print("카카오 로그인 실패: \(error.localizedDescription)")
+                    completion(.failure(error))
                     return
                 }
                 
+                self.handleSsoLogin(platformType: .kakao, accessToken: oauthToken!.accessToken, completion: completion)
                 self.kakaoUserInfo()
             }
+            
         } else {
             UserApi.shared.loginWithKakaoAccount { (oauthToken, error) in
                 if let error = error {
                     print("카카오 로그인 실패: \(error.localizedDescription)")
+                    completion(.failure(error))
                     return
                 }
                 
-                
+                self.handleSsoLogin(platformType: .kakao, accessToken: oauthToken!.accessToken, completion: completion)
                 self.kakaoUserInfo()
             }
         }
@@ -60,8 +66,10 @@ class LoginStore: NSObject, ObservableObject, ASAuthorizationControllerDelegate 
         }
     }
     
-    // MARK: apple login
-    func appleLogin() {
+    // MARK: - apple login
+    func appleLogin(completion: @escaping (Result<Bool, Error>) -> Void) {
+        self.appleLoginDelegator = completion
+        
         let request = ASAuthorizationAppleIDProvider().createRequest()
         request.requestedScopes = [.email]
 
@@ -71,33 +79,83 @@ class LoginStore: NSObject, ObservableObject, ASAuthorizationControllerDelegate 
     }
 
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
-        if let _ = authorization.credential as? ASAuthorizationAppleIDCredential {
-            isNextViewPresented = true
+        if let appleIdCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
+            // TODO: Sign in Apple은 access token을 반환하지 않음, 서버를 통해 access token 발급
         }
     }
 
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
         print("Authorization failed: \(error.localizedDescription)")
     }
-}
-
-// MARK: google login
-extension LoginStore {
-    func googleLogin() {
+    
+    // MARK: - google login
+    func googleLogin(completion: @escaping (Result<Bool, Error>) -> Void) {
         guard let rootViewController = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first?.rootViewController else { return }
         
         GIDSignIn.sharedInstance.signIn(withPresenting: rootViewController) { (signInResult, error) in
             if let error = error {
-                print("구글 로그인 실패 : \(error)")
+                completion(.failure(error))
                 return
             }
             
             guard let result = signInResult else {
-                print("구글 로그인 실패 : signInResult 결과가 없음")
+                completion(.success(false))
                 return
             }
             
+            self.handleSsoLogin(platformType: .google, accessToken: result.user.accessToken.tokenString, completion: completion)
+        }
+    }
+}
+
+extension LoginStore {
+    func isLogin() -> Bool {
+        let storedToken = TokenManager.shared.getToken()
+        
+        if let storedToken = storedToken {
+            // TODO: Request server
+            // check valid access token
+            return false
+        }
+        
+        return false
+    }
+    
+    func login(email: String, password: String, completion: @escaping (Result<Bool, Error>) -> Void) {
+        loginApi.loginWithEmail(email: email, password: password) { (response, error) in
             
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+            
+            if let response = response {
+                TokenManager.shared.setToken(token: response)
+                completion(.success(true))
+                
+                return
+            }
+            
+            completion(.success(false))
+        }
+    }
+    
+    func handleSsoLogin(platformType: PlatformType, accessToken: String, completion: @escaping (Result<Bool, Error>) -> Void) {
+        
+        loginApi.loginWithSso(platformType: platformType, userAgent: UIDevice.current.model, accessToken: accessToken) { (response, error) in
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+            
+            if let response = response {
+                TokenManager.shared.setToken(token: response)
+                completion(.success(true))
+                
+                return
+            }
+            
+            completion(.success(false))
         }
     }
 }

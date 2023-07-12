@@ -29,6 +29,9 @@
 		65F8854F2A32764900D151F1 /* View+LineHeightFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F8854E2A32764900D151F1 /* View+LineHeightFont.swift */; };
 		65F885532A327AF700D151F1 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F885522A327AF700D151F1 /* SplashView.swift */; };
 		65F885592A341B6000D151F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65F885582A341B6000D151F1 /* LaunchScreen.storyboard */; };
+		8E5A37902A5C27BB000281AC /* LoginApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5A378F2A5C27BB000281AC /* LoginApi.swift */; };
+		8E5A37922A5C298B000281AC /* DCInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5A37912A5C298B000281AC /* DCInterceptor.swift */; };
+		8EA4CBF12A5EDCEA00734ED3 /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4CBF02A5EDCEA00734ED3 /* TokenManager.swift */; };
 		8ECF90E92A4EEBEB00069225 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECF90E82A4EEBEB00069225 /* LoginButton.swift */; };
 		8ECF90EC2A4EF6B500069225 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 8ECF90EB2A4EF6B500069225 /* GoogleSignIn */; };
 		8ECF90EE2A4EF6B500069225 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8ECF90ED2A4EF6B500069225 /* GoogleSignInSwift */; };
@@ -86,6 +89,9 @@
 		65F8854E2A32764900D151F1 /* View+LineHeightFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+LineHeightFont.swift"; sourceTree = "<group>"; };
 		65F885522A327AF700D151F1 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		65F885582A341B6000D151F1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8E5A378F2A5C27BB000281AC /* LoginApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginApi.swift; sourceTree = "<group>"; };
+		8E5A37912A5C298B000281AC /* DCInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCInterceptor.swift; sourceTree = "<group>"; };
+		8EA4CBF02A5EDCEA00734ED3 /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
 		8ECF90E82A4EEBEB00069225 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		8EE137742A4B06A400A0D665 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		8EE137772A4B09FB00A0D665 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -244,6 +250,7 @@
 				8EF5C5DB2A544EE40025E589 /* View+CornerRadius.swift */,
 				8EF5C5DC2A544EE40025E589 /* View+hideKeyboard.swift */,
 				65F8854E2A32764900D151F1 /* View+LineHeightFont.swift */,
+				8EA4CBF02A5EDCEA00734ED3 /* TokenManager.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -328,6 +335,8 @@
 				8EE3EFF42A5593CE005585C7 /* Model */,
 				A51E1C3C2A4061C800E4EBA3 /* AppDelegate.swift */,
 				8EE3EFF72A55AD54005585C7 /* Urls.swift */,
+				8E5A378F2A5C27BB000281AC /* LoginApi.swift */,
+				8E5A37912A5C298B000281AC /* DCInterceptor.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -480,6 +489,7 @@
 			files = (
 				8EF5C5B32A544DBF0025E589 /* TermsAgreementView.swift in Sources */,
 				8EE1377B2A4B12B100A0D665 /* DCTextField.swift in Sources */,
+				8E5A37902A5C27BB000281AC /* LoginApi.swift in Sources */,
 				8EF5C5C62A544E4A0025E589 /* HeightWeightInputView.swift in Sources */,
 				8EF5C5DE2A544EE40025E589 /* View+hideKeyboard.swift in Sources */,
 				8EF5C5C82A544E4A0025E589 /* MedicalConditionInputView.swift in Sources */,
@@ -497,6 +507,7 @@
 				8EE137782A4B09FB00A0D665 /* LoginView.swift in Sources */,
 				655D9B962A39DBED005E133E /* DCButton+Style.swift in Sources */,
 				A51E1C372A405DDF00E4EBA3 /* LoginStore.swift in Sources */,
+				8E5A37922A5C298B000281AC /* DCInterceptor.swift in Sources */,
 				A526DDC52A092B0300B682BF /* ContentView.swift in Sources */,
 				8EF5C5B42A544DBF0025E589 /* SigninCompleteView.swift in Sources */,
 				A51E1C432A406A4800E4EBA3 /* RegistrationStore.swift in Sources */,
@@ -510,6 +521,7 @@
 				65F885532A327AF700D151F1 /* SplashView.swift in Sources */,
 				A51E1C462A406BAC00E4EBA3 /* Validation.swift in Sources */,
 				8EF5C5DA2A544EC10025E589 /* CheckButton.swift in Sources */,
+				8EA4CBF12A5EDCEA00734ED3 /* TokenManager.swift in Sources */,
 				655D9B942A39DA47005E133E /* DCButtonStyle.swift in Sources */,
 				8EF5C5DD2A544EE40025E589 /* View+CornerRadius.swift in Sources */,
 			);
@@ -641,10 +653,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DiningCoach/DiningCoach.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DiningCoach/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = D8Z3QRBB63;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "DiningCoach/Supporting Files/Info.plist";
@@ -658,8 +672,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.DiningCoach;
+				PRODUCT_BUNDLE_IDENTIFIER = com.diningcoach.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "DiningCoach Development";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -676,10 +692,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DiningCoach/DiningCoach.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DiningCoach/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = D8Z3QRBB63;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "DiningCoach/Supporting Files/Info.plist";
@@ -693,8 +711,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.DiningCoach;
+				PRODUCT_BUNDLE_IDENTIFIER = com.diningcoach.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "DiningCoach Development";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
