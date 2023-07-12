@@ -50,10 +50,11 @@
 		8EF5C5DD2A544EE40025E589 /* View+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5C5DB2A544EE40025E589 /* View+CornerRadius.swift */; };
 		8EF5C5DE2A544EE40025E589 /* View+hideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5C5DC2A544EE40025E589 /* View+hideKeyboard.swift */; };
 		8FE820702A5D27F600FA4560 /* DietRecordCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE8206F2A5D27F600FA4560 /* DietRecordCard.swift */; };
-		8FE820722A5D280F00FA4560 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE820712A5D280F00FA4560 /* Model.swift */; };
+		8FE820722A5D280F00FA4560 /* DietRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE820712A5D280F00FA4560 /* DietRecordModel.swift */; };
 		8FE820742A5D2A6900FA4560 /* DietRecordDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE820732A5D2A6900FA4560 /* DietRecordDetailView.swift */; };
+		8FE820762A5D2C1000FA4560 /* DietStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE820752A5D2C1000FA4560 /* DietStatistics.swift */; };
 		8FF279732A5CD724003B325F /* DietRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF279722A5CD724003B325F /* DietRecordView.swift */; };
-		8FF279762A5CD7D4003B325F /* DietDiaryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF279752A5CD7D4003B325F /* DietDiaryStore.swift */; };
+		8FF279762A5CD7D4003B325F /* DietRecordStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF279752A5CD7D4003B325F /* DietRecordStore.swift */; };
 		A51E1C372A405DDF00E4EBA3 /* LoginStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E1C362A405DDF00E4EBA3 /* LoginStore.swift */; };
 		A51E1C3A2A40606800E4EBA3 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = A51E1C392A40606800E4EBA3 /* KakaoSDK */; };
 		A51E1C3D2A4061C800E4EBA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E1C3C2A4061C800E4EBA3 /* AppDelegate.swift */; };
@@ -109,10 +110,11 @@
 		8EF5C5DB2A544EE40025E589 /* View+CornerRadius.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+CornerRadius.swift"; sourceTree = "<group>"; };
 		8EF5C5DC2A544EE40025E589 /* View+hideKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+hideKeyboard.swift"; sourceTree = "<group>"; };
 		8FE8206F2A5D27F600FA4560 /* DietRecordCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietRecordCard.swift; sourceTree = "<group>"; };
-		8FE820712A5D280F00FA4560 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		8FE820712A5D280F00FA4560 /* DietRecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietRecordModel.swift; sourceTree = "<group>"; };
 		8FE820732A5D2A6900FA4560 /* DietRecordDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietRecordDetailView.swift; sourceTree = "<group>"; };
+		8FE820752A5D2C1000FA4560 /* DietStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietStatistics.swift; sourceTree = "<group>"; };
 		8FF279722A5CD724003B325F /* DietRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietRecordView.swift; sourceTree = "<group>"; };
-		8FF279752A5CD7D4003B325F /* DietDiaryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietDiaryStore.swift; sourceTree = "<group>"; };
+		8FF279752A5CD7D4003B325F /* DietRecordStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietRecordStore.swift; sourceTree = "<group>"; };
 		A51E1C362A405DDF00E4EBA3 /* LoginStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStore.swift; sourceTree = "<group>"; };
 		A51E1C3C2A4061C800E4EBA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A51E1C402A4066D100E4EBA3 /* DiningCoach.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DiningCoach.entitlements; sourceTree = "<group>"; };
@@ -309,9 +311,9 @@
 		8FE8206E2A5D27E700FA4560 /* DietRecordView */ = {
 			isa = PBXGroup;
 			children = (
-				8FE820712A5D280F00FA4560 /* Model.swift */,
 				8FF279722A5CD724003B325F /* DietRecordView.swift */,
 				8FE8206F2A5D27F600FA4560 /* DietRecordCard.swift */,
+				8FE820752A5D2C1000FA4560 /* DietStatistics.swift */,
 				8FE820732A5D2A6900FA4560 /* DietRecordDetailView.swift */,
 			);
 			path = DietRecordView;
@@ -328,7 +330,8 @@
 		8FF279742A5CD762003B325F /* DietDiary */ = {
 			isa = PBXGroup;
 			children = (
-				8FF279752A5CD7D4003B325F /* DietDiaryStore.swift */,
+				8FE820712A5D280F00FA4560 /* DietRecordModel.swift */,
+				8FF279752A5CD7D4003B325F /* DietRecordStore.swift */,
 			);
 			path = DietDiary;
 			sourceTree = "<group>";
@@ -517,13 +520,14 @@
 				A51E1C372A405DDF00E4EBA3 /* LoginStore.swift in Sources */,
 				A526DDC52A092B0300B682BF /* ContentView.swift in Sources */,
 				8EF5C5B42A544DBF0025E589 /* SigninCompleteView.swift in Sources */,
+				8FE820762A5D2C1000FA4560 /* DietStatistics.swift in Sources */,
 				A51E1C432A406A4800E4EBA3 /* RegistrationStore.swift in Sources */,
 				8EF5C5C32A544E4A0025E589 /* UserInfoCompleteView.swift in Sources */,
 				65F8854F2A32764900D151F1 /* View+LineHeightFont.swift in Sources */,
 				8EF5C5C52A544E4A0025E589 /* PreferredFoodInputView.swift in Sources */,
 				655D9B922A39DA0C005E133E /* DCButton.swift in Sources */,
-				8FF279762A5CD7D4003B325F /* DietDiaryStore.swift in Sources */,
-				8FE820722A5D280F00FA4560 /* Model.swift in Sources */,
+				8FF279762A5CD7D4003B325F /* DietRecordStore.swift in Sources */,
+				8FE820722A5D280F00FA4560 /* DietRecordModel.swift in Sources */,
 				8FF279732A5CD724003B325F /* DietRecordView.swift in Sources */,
 				655D9B8E2A39D815005E133E /* Color+Neutral.swift in Sources */,
 				A526DDC32A092B0300B682BF /* DiningCoachApp.swift in Sources */,

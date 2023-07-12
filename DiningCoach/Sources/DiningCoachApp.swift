@@ -12,12 +12,14 @@ struct DiningCoachApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @StateObject private var loginStore = LoginStore()
     @StateObject private var registrationStore = RegistrationStore()
+    @StateObject private var dietRecordStore = DietRecordStore()
     
     var body: some Scene {
         WindowGroup {
             SplashView()
                 .environmentObject(loginStore)
                 .environmentObject(registrationStore)
+                .environmentObject(dietRecordStore)
         }
     }
 }

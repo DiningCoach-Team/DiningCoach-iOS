@@ -8,15 +8,13 @@
 import SwiftUI
 
 struct DietRecordView: View {
-    @EnvironmentObject private var dietDiaryView: DietDiaryStore
-    
     var body: some View {
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             VStack {
                 DietRecordCard()
                     .padding(.top, 161)
+                DietStatistics()
             }
-            .padding(.horizontal, 16)
         }
     }
 }
@@ -24,5 +22,6 @@ struct DietRecordView: View {
 struct DietRecordView_Preview: PreviewProvider {
     static var previews: some View {
         DietRecordView()
+            .environmentObject(DietRecordStore())
     }
 }

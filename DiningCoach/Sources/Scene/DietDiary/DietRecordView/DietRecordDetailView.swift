@@ -8,15 +8,11 @@
 import SwiftUI
 
 struct DietRecordDetailView: View {
+    var record: DietRecord
+    
     var body: some View {
         VStack {
             
         }
-    }
-}
-
-struct DietRecordDetailView_Preview: PreviewProvider {
-    static var previews: some View {
-        DietRecordDetailView()
     }
 }

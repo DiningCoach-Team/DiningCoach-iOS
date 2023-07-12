@@ -7,50 +7,28 @@
 
 import SwiftUI
 
-let records =
-[
-    DietRecord(mealTime: .breakfast,
-               food: [
-                FoodItem(name: "시리얼"),
-                FoodItem(name: "시리얼"),
-                FoodItem(name: "시리얼"),
-                FoodItem(name: "시리얼"),
-                FoodItem(name: "시리얼"),
-               ],
-               diary: "아침에 시리얼을 먹었다.")
-    ,
-    DietRecord(mealTime: .lunch,
-               food: [
-                FoodItem(name: "시리얼"),
-                FoodItem(name: "시리얼"),
-               ],
-               diary: "아침에 시리얼을 먹었다.")
-    ,
-    DietRecord(mealTime: .snack,
-               food: [
-                FoodItem(name: "시리얼"),
-               ],
-               diary: "아침에 시리얼을 먹었다.")
-]
-
 struct DietRecordCard: View {
+    @EnvironmentObject var store: DietRecordStore
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             Text("식단 기록")
                 .font(.pretendard(weight: .semiBold, size: 16))
                 .foregroundColor(.neutral900)
+                .padding(.horizontal, 16)
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
-                    ForEach(records, id: \.self) { record in
+                    ForEach(store.records, id: \.self) { record in
                         NavigationLink {
-                            DietRecordDetailView()
+                            DietRecordDetailView(record: record)
                         } label: {
                             RecordCard(record: record)
                         }
                     }
                 }
                 .padding(.vertical, 16)
+                .padding(.horizontal, 16)
             }
         }
         .padding(.top, 8)
@@ -122,5 +100,6 @@ struct RecordCard: View {
 struct DietDiaryCard_Preview: PreviewProvider {
     static var previews: some View {
         DietRecordCard()
+            .environmentObject(DietRecordStore())
     }
 }
