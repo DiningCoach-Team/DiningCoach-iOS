@@ -9,6 +9,7 @@ import SwiftUI
 import UserNotifications
 
 struct SplashView: View {
+    @EnvironmentObject private var loginStore: LoginStore
     @State var isLoading: Bool = true
     var body: some View {
         ZStack {
@@ -17,8 +18,12 @@ struct SplashView: View {
                 Text("Dining Coach")
                     .font(.extraBold, size: 22, lineHeight: 28)
                     .foregroundColor(.white)
-            } else {   
-                LoginView().zIndex(1)
+            } else {
+                if loginStore.isLogin() {
+                    
+                } else {
+                    LoginView().zIndex(1)
+                }
             }
         }
         .ignoresSafeArea()
@@ -29,9 +34,11 @@ struct SplashView: View {
         UNUserNotificationCenter.current()
             .requestAuthorization(options: [.alert, .sound, .badge]) { hasAllowed, error in
                 // TODO: 알림 권한을 획득하지 않았을 때 처리 필요
+                
+                if hasAllowed {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: { isLoading.toggle() })
+                }
             }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: { isLoading.toggle() })
     }
 }
 

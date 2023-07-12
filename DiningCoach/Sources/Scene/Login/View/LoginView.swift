@@ -11,35 +11,37 @@ struct LoginView: View {
     @EnvironmentObject private var loginStore: LoginStore
     
     var body: some View {
-        VStack {
-            HStack {
-                Spacer()
-                Text("둘러보기")
-                    .padding(.trailing, 16)
-                    .padding(.top, 20)
-                    .font(.pretendard(weight: .bold, size: 11))
-                    .foregroundColor(.neutral600)
-                    .onTapGesture {
-                        // TODO: Gesture
-                    }
-            }
-            
-            Text("Dinning Coach")
-                .font(.pretendard(weight: .black, size: 22))
-                .padding(.top, 43.5)
-                .padding(.bottom, 78.5)
-            
-            DCLoginView()
-            
-            SsoLoginView()
-            
-            Link(destination: URL(string: "https://www.apple.com")!) {
-                Text("로그인에 문제가 있으신가요?").loginHelper {
-                    
+        ScrollView {
+            VStack {
+                HStack {
+                    Spacer()
+                    Text("둘러보기")
+                        .padding(.horizontal, 16)
+                        .padding(.vertical, 20)
+                        .font(.pretendard(weight: .bold, size: 11))
+                        .foregroundColor(.neutral600)
+                        .onTapGesture {
+                            // TODO: Gesture
+                        }
                 }
-                .underline()
+                
+                Text("Dinning Coach")
+                    .font(.pretendard(weight: .black, size: 22))
+                    .padding(.top, 43.5)
+                    .padding(.bottom, 78.5)
+                
+                DCLoginView()
+                
+                SsoLoginView()
+                
+                Link(destination: URL(string: "https://www.apple.com")!) {
+                    Text("로그인에 문제가 있으신가요?").loginHelper {
+                        
+                    }
+                    .underline()
+                }
+                .padding(.top, 37)
             }
-            .padding(.top, 37)
         }
     }
 }
@@ -140,15 +142,28 @@ struct SsoLoginButtons: View {
     var body: some View {
         HStack(spacing: 16) {
             LoginButton(type: .kakao) {
-                loginStore.kakaoLogin()
+                loginStore.kakaoLogin { result in           switch result {
+                    // TODO: route or show error
+                case .success:
+                    // route to main view
+                    print("login success")
+                case .failure(let error):
+                    print("error: \(error)")
+                }
+                }
             }
             
             LoginButton(type: .google) {
-                loginStore.googleLogin()
+                loginStore.googleLogin{ result in
+                    // TODO: route or show error
+                    
+                }
             }
             
             LoginButton(type: .apple) {
-                loginStore.appleLogin()
+                loginStore.appleLogin { result in
+                    // TODO: route or show error
+                }
             }
         }
     }
