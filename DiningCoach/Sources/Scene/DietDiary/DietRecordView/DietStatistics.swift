@@ -24,7 +24,6 @@ struct DietStatistics: View {
 
 struct DietStatisticsContainer: View {
     @EnvironmentObject var store: DietRecordStore
-    @State private var percentage: [NutrientType: Double] = [:]
     
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -33,10 +32,10 @@ struct DietStatisticsContainer: View {
                 .foregroundColor(.neutral900)
             
             VStack(spacing: 8) {
-                DietStatisticsGraph(type: .calories, percentage: percentage[.calories] ?? 0)
-                DietStatisticsGraph(type: .carbohydrate, percentage: percentage[.carbohydrate] ?? 0)
-                DietStatisticsGraph(type: .protein, percentage: percentage[.protein] ?? 0)
-                DietStatisticsGraph(type: .fat, percentage: percentage[.fat] ?? 0)
+                DietStatisticsGraph(type: .calories, percentage: store.percentageOfDailyRequirement[.calories] ?? 0)
+                DietStatisticsGraph(type: .carbohydrate, percentage: store.percentageOfDailyRequirement[.carbohydrate] ?? 0)
+                DietStatisticsGraph(type: .protein, percentage: store.percentageOfDailyRequirement[.protein] ?? 0)
+                DietStatisticsGraph(type: .fat, percentage: store.percentageOfDailyRequirement[.fat] ?? 0)
             }
         }
         .padding(.vertical, 16)
@@ -45,9 +44,6 @@ struct DietStatisticsContainer: View {
         .background(.white)
         .cornerRadius(12)
         .shadow(color: Color(white: 0, opacity: 0.10), radius: 10)
-        .onAppear {
-            percentage = store.percentageOfDailyRequirement()
-        }
     }
 }
 

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DietRecordDetailView: View {
-    var record: DietRecord
+    @EnvironmentObject var store: DietRecordStore
     
     var body: some View {
         VStack {

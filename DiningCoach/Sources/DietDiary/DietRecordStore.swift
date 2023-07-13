@@ -13,26 +13,27 @@ class DietRecordStore: ObservableObject {
     
     @Published var isWeeklyCalendar: Bool = true
     @Published var selectedDate: Date = Date()
-    //@Published var selectedDateRecord: [DietRecord]
+    @Published var selectedDateRecord = [DietRecord]()
+    @Published var percentageOfDailyRequirement: [NutrientType: Double] = [:]
     
     @Published var isMale: Bool = true
     @Published var records =
     [
-        DietRecord(
-            mealTime: .breakfast,
-            food:
-                [
-                    FoodItem(
-                        name: "시리얼",
-                        nutrient: Nutrient(calories: 200, carbohydrate: 40, protein: 10, fat: 5)
-                    ),
-                    FoodItem(
-                        name: "우유",
-                        nutrient: Nutrient(calories: 103, carbohydrate: 12, protein: 8, fat: 2.4)
-                    )
-                ],
-            diary: "아침에 시리얼과 우유를 먹었다."
-        ),
+//        DietRecord(
+//            mealTime: .breakfast,
+//            food:
+//                [
+//                    FoodItem(
+//                        name: "시리얼",
+//                        nutrient: Nutrient(calories: 200, carbohydrate: 40, protein: 10, fat: 5)
+//                    ),
+//                    FoodItem(
+//                        name: "우유",
+//                        nutrient: Nutrient(calories: 103, carbohydrate: 12, protein: 8, fat: 2.4)
+//                    )
+//                ],
+//            diary: "아침에 시리얼과 우유를 먹었다."
+//        ),
         DietRecord(
             mealTime: .lunch,
             food:
@@ -122,21 +123,25 @@ class DietRecordStore: ObservableObject {
             return startOfDay
         }()
         
-//        records
-//            .filter { $0.date = selectedDate }
-//            .assign(to: &selectedDateRecord)
-//            .store(in: &cancellables)
-        
-//        $selectedDate
-//            .map { selectedDate in
-//                return self.records.filter {
-//                    $0.date != nil && Calendar.current.isDate($0.date, inSameDayAs: selectedDate)
-//                }
-//            }
-//            .assign(to: &selectedDateRecord)
-//            //.store(in: &cancellables)
+        $selectedDate
+            .sink { [weak self] newDate in
+                self?.updateSelectedDateRecords(date: newDate)
+                self?.getPercentageOfDailyRequirement()
+            }
+            .store(in: &cancellables)
     }
-
+    
+    func updateSelectedDateRecords(date: Date) {
+        let selectedDateComponents = Calendar.current.dateComponents([.year, .month, .day], from: date)
+        
+        let filteredRecords = records.filter { record in
+            let recordDateComponents = Calendar.current.dateComponents([.year, .month, .day], from: record.date)
+            return recordDateComponents == selectedDateComponents
+        }
+        
+        selectedDateRecord = filteredRecords
+    }
+    
     func dayOfMonthRecord(day: Int) -> [DietRecord] {
         let components = Calendar.current.dateComponents([.year, .month], from: Date())
         let firstDayOfMonth = Calendar.current.date(from: components)!
@@ -145,9 +150,9 @@ class DietRecordStore: ObservableObject {
         return records
     }
     
-    func percentageOfDailyRequirement() -> [NutrientType: Double] {
+    func getPercentageOfDailyRequirement() {
         let totalNutrient =
-        records
+        selectedDateRecord
             .flatMap { $0.food.map { $0.nutrient } }
             .reduce(Nutrient(calories: 0, carbohydrate: 0, protein: 0, fat: 0)) { (total, nutrient) in
                 return Nutrient(
@@ -167,7 +172,7 @@ class DietRecordStore: ObservableObject {
         let percentageOfProtein = totalNutrient.protein / dailyRequirement.protein
         let percentageOfFat = totalNutrient.fat / dailyRequirement.fat
         
-        return [
+        return self.percentageOfDailyRequirement = [
             .calories: percentageOfCalories,
             .carbohydrate: percentageOfCarbohydrate,
             .protein: percentageOfProtein,

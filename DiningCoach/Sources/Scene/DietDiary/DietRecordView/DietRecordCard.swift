@@ -19,11 +19,15 @@ struct DietRecordCard: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
-                    ForEach(store.records, id: \.self) { record in
+                    ForEach(MealTime.allCases, id: \.self) { mealTime in
                         NavigationLink {
-                            DietRecordDetailView(record: record)
+                            DietRecordDetailView()
                         } label: {
-                            RecordCard(record: record)
+                            if let record = store.selectedDateRecord.first(where: { $0.mealTime == mealTime }) {
+                                RecordCard(record: record)
+                            } else {
+                                EmptyCard(type: mealTime)
+                            }
                         }
                     }
                 }
@@ -42,7 +46,7 @@ struct RecordCard: View {
         VStack {
             VStack(alignment: .leading, spacing: 16) {
                 HStack(spacing: 4) {
-                    Image(systemName: record.mealTime.imageString)
+                    Image(record.mealTime.imageString)
                         .resizable()
                         .frame(width: 18, height: 18)
                         .foregroundColor(.neutral900)
@@ -52,13 +56,9 @@ struct RecordCard: View {
                         .foregroundColor(.neutral800)
                 }
                 
-                Rectangle()
+                Image("음식 촤르르 1")
+                    .resizable()
                     .frame(width: 160, height: 160)
-                    .foregroundColor(.clear)
-                    .background(
-                        .gray
-                    )
-                    .cornerRadius(12)
                 
                 HStack {
                     let totalCount = record.food.count
@@ -87,6 +87,49 @@ struct RecordCard: View {
                     }
                 }
                 .frame(height: 88)
+            }
+            .padding(16)
+        }
+        .frame(width: 192, height: 332)
+        .background(.white)
+        .cornerRadius(12)
+        .shadow(color: Color(white: 0, opacity: 0.1), radius: 10)
+    }
+}
+
+struct EmptyCard: View {
+    var type: MealTime
+    
+    var body: some View {
+        VStack {
+            VStack(alignment: .leading) {
+                HStack(spacing: 4) {
+                    Image(type.imageString)
+                        .resizable()
+                        .frame(width: 18, height: 18)
+                        .foregroundColor(.neutral900)
+                    
+                    Text(type.rawValue)
+                        .font(.pretendard(weight: .semiBold, size: 16))
+                        .foregroundColor(.neutral800)
+                }
+                
+                Spacer()
+                    .frame(height: 32)
+                
+                Image("밥 수정 1")
+                    .resizable()
+                    .frame(width: 128, height: 128)
+                
+                Spacer()
+                    .frame(height: 24)
+                
+                Text("무엇을 드셨나요?\n음식을 등록하고 식단을\n관리해 보세요!")
+                    .font(.pretendard(weight: .semiBold, size: 14))
+                    .foregroundColor(.neutral400)
+                    .lineSpacing(10)
+                
+                Spacer()
             }
             .padding(16)
         }
