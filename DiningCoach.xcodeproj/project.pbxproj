@@ -50,6 +50,7 @@
 		8EF5C5DD2A544EE40025E589 /* View+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5C5DB2A544EE40025E589 /* View+CornerRadius.swift */; };
 		8EF5C5DE2A544EE40025E589 /* View+hideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5C5DC2A544EE40025E589 /* View+hideKeyboard.swift */; };
 		8FAD69142A5E7FE200FBBFD6 /* DietEvaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD69132A5E7FE200FBBFD6 /* DietEvaluation.swift */; };
+		8FAD691C2A5EA48500FBBFD6 /* DietRecordCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD691B2A5EA48500FBBFD6 /* DietRecordCalendar.swift */; };
 		8FE820702A5D27F600FA4560 /* DietRecordCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE8206F2A5D27F600FA4560 /* DietRecordCard.swift */; };
 		8FE820722A5D280F00FA4560 /* DietRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE820712A5D280F00FA4560 /* DietRecordModel.swift */; };
 		8FE820742A5D2A6900FA4560 /* DietRecordDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE820732A5D2A6900FA4560 /* DietRecordDetailView.swift */; };
@@ -111,6 +112,7 @@
 		8EF5C5DB2A544EE40025E589 /* View+CornerRadius.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+CornerRadius.swift"; sourceTree = "<group>"; };
 		8EF5C5DC2A544EE40025E589 /* View+hideKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+hideKeyboard.swift"; sourceTree = "<group>"; };
 		8FAD69132A5E7FE200FBBFD6 /* DietEvaluation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietEvaluation.swift; sourceTree = "<group>"; };
+		8FAD691B2A5EA48500FBBFD6 /* DietRecordCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietRecordCalendar.swift; sourceTree = "<group>"; };
 		8FE8206F2A5D27F600FA4560 /* DietRecordCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietRecordCard.swift; sourceTree = "<group>"; };
 		8FE820712A5D280F00FA4560 /* DietRecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietRecordModel.swift; sourceTree = "<group>"; };
 		8FE820732A5D2A6900FA4560 /* DietRecordDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietRecordDetailView.swift; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				8FF279722A5CD724003B325F /* DietRecordView.swift */,
+				8FAD691B2A5EA48500FBBFD6 /* DietRecordCalendar.swift */,
 				8FE8206F2A5D27F600FA4560 /* DietRecordCard.swift */,
 				8FE820752A5D2C1000FA4560 /* DietStatistics.swift */,
 				8FAD69132A5E7FE200FBBFD6 /* DietEvaluation.swift */,
@@ -511,6 +514,7 @@
 				8ECF90E92A4EEBEB00069225 /* LoginButton.swift in Sources */,
 				A51E1C3D2A4061C800E4EBA3 /* AppDelegate.swift in Sources */,
 				8EF5C5C22A544E4A0025E589 /* AllergyInputView.swift in Sources */,
+				8FAD691C2A5EA48500FBBFD6 /* DietRecordCalendar.swift in Sources */,
 				8EF5C5C12A544E4A0025E589 /* ExerciseSleepInputView.swift in Sources */,
 				65F8854C2A3275B000D151F1 /* Color+Primary.swift in Sources */,
 				8FE820702A5D27F600FA4560 /* DietRecordCard.swift in Sources */,

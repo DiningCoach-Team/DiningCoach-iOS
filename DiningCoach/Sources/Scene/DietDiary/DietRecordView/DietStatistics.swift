@@ -79,7 +79,7 @@ struct DietStatisticsGraph: View {
             Text("\(Int(percentage*100))%")
                 .font(.pretendard(weight: .medium, size: 12))
                 .foregroundColor(.neutral700)
-                .frame(width: 32, alignment: .trailing)
+                .frame(width: 34, alignment: .trailing)
             
             Spacer()
         }

@@ -16,13 +16,13 @@ enum MealTime: String, CaseIterable, Hashable {
     var imageString: String {
         switch self {
         case .breakfast :
-            return "sun.min"
+            return "Sun"
         case .lunch:
-            return "sun.haze"
+            return "Sunrise"
         case .dinner:
-            return "moon.stars"
+            return "Moon"
         case .snack:
-            return "wand.and.stars"
+            return "Star"
         }
     }
 }

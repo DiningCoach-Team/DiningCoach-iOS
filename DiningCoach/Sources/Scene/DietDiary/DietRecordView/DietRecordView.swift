@@ -9,13 +9,17 @@ import SwiftUI
 
 struct DietRecordView: View {
     var body: some View {
-        ScrollView(showsIndicators: false) {
-            VStack {
-                DietRecordCard()
-                    .padding(.top, 161)
-                DietStatistics()
-                DietEvaluation()
+        ZStack {
+            ScrollView(showsIndicators: false) {
+                VStack {
+                    DietRecordCard()
+                        .padding(.top, 161)
+                    DietStatistics()
+                    DietEvaluation()
+                }
             }
+            
+            DietRecordCalendar()
         }
     }
 }

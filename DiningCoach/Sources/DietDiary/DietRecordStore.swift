@@ -6,10 +6,16 @@
 //
 
 import SwiftUI
+import Combine
 
 class DietRecordStore: ObservableObject {
-    @Published var isMale: Bool = true
+    private var cancellables = Set<AnyCancellable>()
+    
+    @Published var isWeeklyCalendar: Bool = true
     @Published var selectedDate: Date = Date()
+    //@Published var selectedDateRecord: [DietRecord]
+    
+    @Published var isMale: Bool = true
     @Published var records =
     [
         DietRecord(
@@ -72,7 +78,72 @@ class DietRecordStore: ObservableObject {
                 ],
             diary: "간식으로 요구르트와 블루베리를 먹었다."
         ),
+        
+        DietRecord(
+            mealTime: .breakfast,
+            food:
+                [
+                    FoodItem(
+                        name: "시리얼",
+                        nutrient: Nutrient(calories: 200, carbohydrate: 40, protein: 10, fat: 5)
+                    ),
+                    FoodItem(
+                        name: "우유",
+                        nutrient: Nutrient(calories: 103, carbohydrate: 12, protein: 8, fat: 2.4)
+                    )
+                ],
+            diary: "아침에 시리얼과 우유를 먹었다.",
+            date: Date(timeIntervalSinceNow: -3600*24)
+        ),
+        
+        DietRecord(
+            mealTime: .snack,
+            food:
+                [
+                    FoodItem(
+                        name: "시리얼",
+                        nutrient: Nutrient(calories: 200, carbohydrate: 40, protein: 10, fat: 5)
+                    ),
+                    FoodItem(
+                        name: "우유",
+                        nutrient: Nutrient(calories: 103, carbohydrate: 12, protein: 8, fat: 2.4)
+                    )
+                ],
+            diary: "아침에 시리얼과 우유를 먹었다.",
+            date: Date(timeIntervalSinceNow: -3600*24)
+        ),
     ]
+    
+    init() {
+        
+        selectedDate = {
+            let components = Calendar.current.dateComponents([.year, .month, .day], from: Date())
+            let startOfDay = Calendar.current.date(from: components)!
+            return startOfDay
+        }()
+        
+//        records
+//            .filter { $0.date = selectedDate }
+//            .assign(to: &selectedDateRecord)
+//            .store(in: &cancellables)
+        
+//        $selectedDate
+//            .map { selectedDate in
+//                return self.records.filter {
+//                    $0.date != nil && Calendar.current.isDate($0.date, inSameDayAs: selectedDate)
+//                }
+//            }
+//            .assign(to: &selectedDateRecord)
+//            //.store(in: &cancellables)
+    }
+
+    func dayOfMonthRecord(day: Int) -> [DietRecord] {
+        let components = Calendar.current.dateComponents([.year, .month], from: Date())
+        let firstDayOfMonth = Calendar.current.date(from: components)!
+        let date = Calendar.current.date(byAdding: .day, value: day - 1, to: firstDayOfMonth)!
+        let records = self.records.filter { Calendar.current.isDate($0.date, inSameDayAs: date) }
+        return records
+    }
     
     func percentageOfDailyRequirement() -> [NutrientType: Double] {
         let totalNutrient =
