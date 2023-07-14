@@ -57,7 +57,6 @@ struct Nutrient: Hashable {
 struct FoodItem: Hashable {
     var name: String
     var nutrient: Nutrient
-    var imageString: String?
 }
 
 struct DietRecord: Identifiable, Hashable {

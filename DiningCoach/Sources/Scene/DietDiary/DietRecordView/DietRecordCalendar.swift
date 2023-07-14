@@ -241,11 +241,6 @@ extension Date {
         formatter.dateFormat = "yyyy년 M월"
         return formatter.string(from: self)
     }
-    
-    func toDayComponent() -> Date {
-        let components = Calendar.current.dateComponents([.year, .month, .day], from: self)
-        return Calendar.current.date(from: components)!
-    }
 }
 
 // MARK: - Previews

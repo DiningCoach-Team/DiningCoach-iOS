@@ -22,6 +22,9 @@ struct DietRecordCard: View {
                     ForEach(MealTime.allCases, id: \.self) { mealTime in
                         NavigationLink {
                             DietRecordDetailView()
+                                .onAppear {
+                                    store.selectedMealTime = mealTime
+                                }
                         } label: {
                             if let record = store.selectedDateRecord.first(where: { $0.mealTime == mealTime }) {
                                 RecordCard(record: record)
@@ -56,7 +59,7 @@ struct RecordCard: View {
                         .foregroundColor(.neutral800)
                 }
                 
-                Image("음식 촤르르 1")
+                Image("음식 사진 등록")
                     .resizable()
                     .frame(width: 160, height: 160)
                 
