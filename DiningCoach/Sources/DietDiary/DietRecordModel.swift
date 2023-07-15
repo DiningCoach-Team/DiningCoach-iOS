@@ -125,13 +125,15 @@ struct DietRecord: Identifiable, Hashable {
     var food: [FoodItem]
     var diary: String
     var date: Date
+    var foodImageURL: [String]
     
-    init(mealTime: MealTime, food: [FoodItem], diary: String, date: Date = Date()) {
+    init(mealTime: MealTime, food: [FoodItem], diary: String, date: Date = Date(), foodImageURL: [String] = []) {
         self.id = UUID().uuidString
         self.mealTime = mealTime
         self.food = food
         self.diary = diary
         self.date = date
+        self.foodImageURL = foodImageURL
     }
 }
 

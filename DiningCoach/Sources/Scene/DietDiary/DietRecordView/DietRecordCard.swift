@@ -17,25 +17,31 @@ struct DietRecordCard: View {
                 .foregroundColor(.neutral900)
                 .padding(.horizontal, 16)
             
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack {
-                    ForEach(MealTime.allCases, id: \.self) { mealTime in
-                        NavigationLink {
-                            DietRecordDetailView()
-                                .onAppear {
-                                    store.selectedMealTime = mealTime
+            ScrollViewReader { proxy in
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack {
+                        ForEach(MealTime.allCases, id: \.self) { mealTime in
+                            NavigationLink {
+                                DietRecordDetailView()
+                                    .onAppear {
+                                        store.selectedMealTime = mealTime
+                                    }
+                            } label: {
+                                if let record = store.selectedDateRecord.first(where: { $0.mealTime == mealTime }) {
+                                    RecordCard(record: record)
+                                } else {
+                                    EmptyCard(type: mealTime)
                                 }
-                        } label: {
-                            if let record = store.selectedDateRecord.first(where: { $0.mealTime == mealTime }) {
-                                RecordCard(record: record)
-                            } else {
-                                EmptyCard(type: mealTime)
                             }
                         }
                     }
+                    .padding(.vertical, 16)
+                    .padding(.horizontal, 16)
+                    .id(1)
                 }
-                .padding(.vertical, 16)
-                .padding(.horizontal, 16)
+                .onChange(of: store.selectedDate) { _ in
+                    proxy.scrollTo(1, anchor: .leading)
+                }
             }
         }
         .padding(.top, 8)

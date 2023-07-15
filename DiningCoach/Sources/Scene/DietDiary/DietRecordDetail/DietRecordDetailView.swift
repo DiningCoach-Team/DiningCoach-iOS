@@ -88,6 +88,7 @@ struct DietRecordDetailNavigation: View {
                         .onTapGesture {
                             dismiss()
                             store.isEditMode = false
+                            store.isWeeklyCalendar = true
                             store.selectedMealTime = .breakfast
                             store.selectedDate = store.selectedDate
                         }

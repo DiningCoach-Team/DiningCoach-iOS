@@ -20,6 +20,7 @@ class DietRecordStore: ObservableObject {
     
     @Published var selectedMealTime: MealTime = .breakfast
     @Published var isEditMode: Bool = false
+    @Published var foodImageList = [Image]() // Image -> String
     @Published var foodList = [FoodItem]()
     @Published var diaryText = ""
     
@@ -144,9 +145,11 @@ class DietRecordStore: ObservableObject {
             .sink { [weak self] newMealTime in
                 if let self = self,
                    let record = self.records.first(where: { $0.date.isSameDay(with: self.selectedDate) && $0.mealTime == newMealTime }) {
+                    self.foodImageList = []
                     self.foodList = record.food
                     self.diaryText = record.diary
                 } else {
+                    self?.foodImageList = []
                     self?.foodList = []
                     self?.diaryText = ""
                 }
@@ -189,12 +192,13 @@ class DietRecordStore: ObservableObject {
         return (startOfMonth, endOfMonth)
     }
     
-    func dayOfMonthRecord(day: Int) -> [DietRecord] {
+    func getRecordsForDay(day: Int) -> [DietRecord] {
         let components = Calendar.current.dateComponents([.year, .month], from: Date())
         let startOfMonth = Calendar.current.date(from: components)!
-        
         let date = Calendar.current.date(byAdding: .day, value: day - 1, to: startOfMonth)!
+        
         let records = self.records.filter { $0.date.isSameDay(with: date) }
+        
         return records
     }
     
@@ -223,7 +227,6 @@ class DietRecordStore: ObservableObject {
         let weeklyNutrients = records
             .filter { $0.date >= startOfWeekDate && $0.date <= endOfWeekDate }
             .flatMap { $0.food.map { $0.nutrient } }
-        print("weeklyNutrients: \(weeklyNutrients)")
         
         let weeklyTotalNutrient = weeklyNutrients
             .reduce(Nutrient()) { result, nutrient in

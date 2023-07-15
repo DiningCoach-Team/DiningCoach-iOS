@@ -101,11 +101,13 @@ struct WeeklyCalendarView: View {
     
     var body: some View {
         HStack {
-            ForEach(-3..<4, id: \.self) { index in
-                let date = getDate(for: index)
-                let day = getDay(for: index)
+            let firstDayOfWeek = store.getWeekDates(date: Date()).startOfWeek
+            
+            ForEach(0..<7, id: \.self) { dayOffset in
+                let date = getDate(offset: dayOffset, from: firstDayOfWeek)
+                let dayNumber = getDayNumber(for: date)
                 
-                CalendarCell(day: day, isSelected: store.selectedDate == date)
+                CalendarCell(day: dayNumber, isSelected: store.selectedDate == date)
                     .frame(maxWidth: .infinity)
                     .onTapGesture {
                         store.selectedDate = date
@@ -114,19 +116,16 @@ struct WeeklyCalendarView: View {
         }
     }
     
-    // 오늘을 기준으로 전후 7일 중에 특정 일자에 해당하는 날짜를 반환
-    func getDay(for day: Int) -> Int {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "d"
-        let date = Calendar.current.date(byAdding: .day, value: day, to: Date())!
-        return Int(formatter.string(from: date))!
+    // 주의 첫 날을 기준으로, 특정 일자에 해당하는 Date를 반환
+    private func getDate(offset: Int, from firstDayOfWeek: Date) -> Date {
+        return Calendar.current.date(byAdding: .day, value: offset, to: firstDayOfWeek)!
     }
     
-    // 오늘을 기준으로 전후 7일 중에 특정 일자에 해당하는 Date를 반환
-    func getDate(for day: Int) -> Date {
-        let components = Calendar.current.dateComponents([.year, .month, .day], from: Date())
-        let startOfDay = Calendar.current.date(from: components)!
-        return Calendar.current.date(byAdding: .day, value: day, to: startOfDay)!
+    // 특정 Date에서 일자를 추출하여 반환
+    private func getDayNumber(for date: Date) -> Int {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "d"
+        return Int(formatter.string(from: date))!
     }
 }
 
@@ -136,9 +135,12 @@ struct MonthlyCalendar: View {
     @EnvironmentObject var store: DietRecordStore
     
     var body: some View {
-        let numberOfDaysInMonth: Int = numberOfDaysInMonth(in: Date())
-        let firstWeekdayOfMonth: Int = firstWeekdayOfMonth(in: Date()) - 1
-        let totalIndex = numberOfDaysInMonth + firstWeekdayOfMonth
+        let firstDayOfMonth = store.getMonthDates(date: Date()).startOfMonth
+        let lastDayofMonth = store.getMonthDates(date: Date()).endOfMonth
+        
+        let daysInMonth = Calendar.current.component(.day, from: lastDayofMonth)
+        let firstWeekdayOfMonth = Calendar.current.component(.weekday, from: firstDayOfMonth)
+        let totalIndex = daysInMonth + firstWeekdayOfMonth
         
         VStack {
             LazyVGrid(columns: Array(repeating: GridItem(), count: 7), spacing: 16) {
@@ -148,10 +150,11 @@ struct MonthlyCalendar: View {
                             .frame(maxWidth: .infinity)
                             .foregroundColor(Color.clear)
                     } else {
-                        let date = getDate(for: index - firstWeekdayOfMonth)
-                        let day = index - firstWeekdayOfMonth + 1
+                        let dayIndex = index - firstWeekdayOfMonth
+                        let date = getDate(for: dayIndex)
+                        let dayNumber = dayIndex + 1
                         
-                        CalendarCell(day: day, isSelected: store.selectedDate == date)
+                        CalendarCell(day: dayNumber, isSelected: store.selectedDate == date)
                             .frame(maxWidth: .infinity)
                             .onTapGesture {
                                 store.selectedDate = date
@@ -162,19 +165,7 @@ struct MonthlyCalendar: View {
         }
     }
     
-    // 특정 날짜가 속한 월에 포함된 전체 일수 반환
-    func numberOfDaysInMonth(in date: Date) -> Int {
-        return Calendar.current.range(of: .day, in: .month, for: date)!.count
-    }
-    
-    // 특정 날짜가 속한 월의 첫 날이 해당 주에서 몇 번째 요일에 해당하는지 반환
-    func firstWeekdayOfMonth(in date: Date) -> Int {
-        let components = Calendar.current.dateComponents([.year, .month], from: date)
-        let firstDayOfMonth = Calendar.current.date(from: components)!
-        return Calendar.current.component(.weekday, from: firstDayOfMonth)
-    }
-    
-    // 이번 달에서 특정 일자에 해당하는 Date를 반환
+    // 달의 첫 날을 기준으로,  특정 일자에 해당하는 Date를 반환
     func getDate(for day: Int) -> Date {
         let components = Calendar.current.dateComponents([.year, .month], from: Date())
         let firstDayOfMonth = Calendar.current.date(from: components)!
@@ -221,7 +212,7 @@ struct CalendarCell: View {
                         Circle()
                             .frame(width: 5, height: 5)
                             .foregroundColor(
-                                store.dayOfMonthRecord(day: day)
+                                store.getRecordsForDay(day: day)
                                     .map { $0.mealTime }
                                     .contains(MealTime.allCases[index])
                                 ? .white : .primary800)
