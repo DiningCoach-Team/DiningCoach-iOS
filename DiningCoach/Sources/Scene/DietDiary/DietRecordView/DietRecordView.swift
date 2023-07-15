@@ -29,6 +29,5 @@ struct DietRecordView: View {
 struct DietRecordView_Preview: PreviewProvider {
     static var previews: some View {
         DietRecordView()
-            .environmentObject(DietRecordStore())
     }
 }

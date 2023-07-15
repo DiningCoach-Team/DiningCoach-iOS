@@ -89,6 +89,7 @@ struct DietRecordDetailNavigation: View {
                             dismiss()
                             store.isEditMode = false
                             store.selectedMealTime = .breakfast
+                            store.selectedDate = store.selectedDate
                         }
                 }
                 .frame(width: 24, height: 24)
@@ -98,7 +99,7 @@ struct DietRecordDetailNavigation: View {
                 Spacer()
             }
             
-            Text(store.selectedDate.toNavigationTitleString())
+            Text(store.selectedDate.toNaviTitleWithWeekday())
                 .font(.pretendard(weight: .bold, size: 18))
                 .foregroundColor(.white)
         }

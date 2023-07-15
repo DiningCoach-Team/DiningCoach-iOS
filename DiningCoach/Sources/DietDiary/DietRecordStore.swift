@@ -23,6 +23,9 @@ class DietRecordStore: ObservableObject {
     @Published var foodList = [FoodItem]()
     @Published var diaryText = ""
     
+    @Published var selectedStatistics: Statistics = .daily
+    @Published var totalNutrientValues = [Nutrient]()
+    
     @Published var records =
     [
         DietRecord(
@@ -31,11 +34,11 @@ class DietRecordStore: ObservableObject {
                 [
                     FoodItem(
                         name: "시리얼",
-                        nutrient: Nutrient(calories: 200, carbohydrate: 40, protein: 10, fat: 5)
+                        nutrient: Nutrient(calorie: 200, carbohydrate: 40, protein: 10, fat: 5, sugar: 10, cholesterol: 0, sodium: 300, saturatedFat: 1.5, transFat: 1)
                     ),
                     FoodItem(
                         name: "우유",
-                        nutrient: Nutrient(calories: 103, carbohydrate: 12, protein: 8, fat: 2.4)
+                        nutrient: Nutrient(calorie: 103, carbohydrate: 12, protein: 8, fat: 2.4, sugar: 12, cholesterol: 10, sodium: 100, saturatedFat: 1.5, transFat: 1)
                     )
                 ],
             diary: ""
@@ -46,41 +49,41 @@ class DietRecordStore: ObservableObject {
                 [
                     FoodItem(
                         name: "닭가슴살",
-                        nutrient: Nutrient(calories: 165, carbohydrate: 0, protein: 31, fat: 3.6)
+                        nutrient: Nutrient(calorie: 165, carbohydrate: 0, protein: 31, fat: 3.6, sugar: 0, cholesterol: 85, sodium: 70, saturatedFat: 1, transFat: 0)
                     ),
                     FoodItem(
                         name: "감자",
-                        nutrient: Nutrient(calories: 130, carbohydrate: 30, protein: 2, fat: 0.2)
+                        nutrient: Nutrient(calorie: 130, carbohydrate: 30, protein: 2, fat: 0.2, sugar: 1.2, cholesterol: 0, sodium: 10, saturatedFat: 0, transFat: 0)
                     )
                 ],
             diary: "점심에 닭가슴살과 감자를 먹었다."
         ),
-//        DietRecord(
-//            mealTime: .dinner,
-//            food:
-//                [
-//                    FoodItem(
-//                        name: "연어",
-//                        nutrient: Nutrient(calories: 206, carbohydrate: 0, protein: 22, fat: 13)
-//                    ),
-//                    FoodItem(
-//                        name: "퀴노아",
-//                        nutrient: Nutrient(calories: 222, carbohydrate: 39, protein: 8.1, fat: 3.6)
-//                    )
-//                ],
-//            diary: "저녁에 연어와 퀴노아를 먹었다."
-//        ),
+        DietRecord(
+            mealTime: .dinner,
+            food:
+                [
+                    FoodItem(
+                        name: "연어",
+                        nutrient: Nutrient(calorie: 206, carbohydrate: 0, protein: 22, fat: 13, sugar: 0, cholesterol: 50, sodium: 50, saturatedFat: 3, transFat: 0)
+                    ),
+                    FoodItem(
+                        name: "퀴노아",
+                        nutrient: Nutrient(calorie: 222, carbohydrate: 39, protein: 8.1, fat: 3.6, sugar: 1.6, cholesterol: 0, sodium: 13, saturatedFat: 0.42, transFat: 0)
+                    )
+                ],
+            diary: "저녁에 연어와 퀴노아를 먹었다."
+        ),
         DietRecord(
             mealTime: .snack,
             food:
                 [
                     FoodItem(
                         name: "요구르트",
-                        nutrient: Nutrient(calories: 149, carbohydrate: 11.4, protein: 8.5, fat: 7.9)
+                        nutrient: Nutrient(calorie: 149, carbohydrate: 11.4, protein: 8.5, fat: 7.9, sugar: 11.4, cholesterol: 20, sodium: 100, saturatedFat: 5, transFat: 0)
                     ),
                     FoodItem(
                         name: "블루베리",
-                        nutrient: Nutrient(calories: 85, carbohydrate: 21, protein: 1.1, fat: 0.5)
+                        nutrient: Nutrient(calorie: 85, carbohydrate: 21, protein: 1.1, fat: 0.5, sugar: 15, cholesterol: 0, sodium: 1, saturatedFat: 0.01, transFat: 0)
                     )
                 ],
             diary: "간식으로 요구르트와 블루베리를 먹었다."
@@ -92,11 +95,11 @@ class DietRecordStore: ObservableObject {
                 [
                     FoodItem(
                         name: "시리얼",
-                        nutrient: Nutrient(calories: 200, carbohydrate: 40, protein: 10, fat: 5)
+                        nutrient: Nutrient(calorie: 200, carbohydrate: 40, protein: 10, fat: 5, sugar: 10, cholesterol: 0, sodium: 300, saturatedFat: 1.5, transFat: 0)
                     ),
                     FoodItem(
                         name: "우유",
-                        nutrient: Nutrient(calories: 103, carbohydrate: 12, protein: 8, fat: 2.4)
+                        nutrient: Nutrient(calorie: 103, carbohydrate: 12, protein: 8, fat: 2.4, sugar: 12, cholesterol: 10, sodium: 100, saturatedFat: 1.5, transFat: 0)
                     )
                 ],
             diary: "어제 아침에 시리얼과 우유를 먹었다.",
@@ -109,11 +112,11 @@ class DietRecordStore: ObservableObject {
                 [
                     FoodItem(
                         name: "시리얼",
-                        nutrient: Nutrient(calories: 200, carbohydrate: 40, protein: 10, fat: 5)
+                        nutrient: Nutrient(calorie: 200, carbohydrate: 40, protein: 10, fat: 5, sugar: 10, cholesterol: 0, sodium: 300, saturatedFat: 1.5, transFat: 0)
                     ),
                     FoodItem(
                         name: "우유",
-                        nutrient: Nutrient(calories: 103, carbohydrate: 12, protein: 8, fat: 2.4)
+                        nutrient: Nutrient(calorie: 103, carbohydrate: 12, protein: 8, fat: 2.4, sugar: 12, cholesterol: 10, sodium: 100, saturatedFat: 1.5, transFat: 0)
                     )
                 ],
             diary: "어제 간식으로 시리얼과 우유를 먹었다.",
@@ -132,7 +135,7 @@ class DietRecordStore: ObservableObject {
             .sink { [weak self] newDate in
                 if let self = self {
                     self.selectedDateRecord = self.records.filter { $0.date.isSameDay(with: newDate) }
-                    self.getPercentageOfDailyRequirement()
+                    self.getTotalNutrientValues(date: newDate)
                 }
             }
             .store(in: &cancellables)
@@ -146,15 +149,6 @@ class DietRecordStore: ObservableObject {
                 } else {
                     self?.foodList = []
                     self?.diaryText = ""
-                }
-            }
-            .store(in: &cancellables)
-        
-        $records
-            .sink { [weak self] newRecords in
-                if let self = self {
-                    self.selectedDateRecord = newRecords.filter { $0.date.isSameDay(with: self.selectedDate) }
-                    self.getPercentageOfDailyRequirement()
                 }
             }
             .store(in: &cancellables)
@@ -174,58 +168,130 @@ class DietRecordStore: ObservableObject {
         }
     }
     
+    func getWeekDates(date: Date) -> (startOfWeek: Date, endOfWeek: Date) {
+        let components = Calendar.current.dateComponents([.yearForWeekOfYear, .weekOfYear], from: date)
+        
+        let startOfWeek = Calendar.current.date(from: components)!
+        let endOfWeek = Calendar.current.date(byAdding: .day, value: 6, to: startOfWeek)!
+        
+        return (startOfWeek, endOfWeek)
+    }
+    
+    func getMonthDates(date: Date) -> (startOfMonth: Date, endOfMonth: Date) {
+        let components = Calendar.current.dateComponents([.year, .month], from: date)
+        let startOfMonth = Calendar.current.date(from: components)!
+
+        var endDayComponents = DateComponents()
+        endDayComponents.month = 1
+        endDayComponents.day = -1
+        let endOfMonth = Calendar.current.date(byAdding: endDayComponents, to: startOfMonth)!
+
+        return (startOfMonth, endOfMonth)
+    }
+    
     func dayOfMonthRecord(day: Int) -> [DietRecord] {
         let components = Calendar.current.dateComponents([.year, .month], from: Date())
-        let firstDayOfMonth = Calendar.current.date(from: components)!
-        let date = Calendar.current.date(byAdding: .day, value: day - 1, to: firstDayOfMonth)!
+        let startOfMonth = Calendar.current.date(from: components)!
+        
+        let date = Calendar.current.date(byAdding: .day, value: day - 1, to: startOfMonth)!
         let records = self.records.filter { $0.date.isSameDay(with: date) }
         return records
     }
     
-    func getPercentageOfDailyRequirement() {
-        let totalNutrient =
-        selectedDateRecord
+    func getTotalNutrientValues(date: Date) {
+        let dailyNutrients = records
+            .filter { $0.date.isSameDay(with: date) }
             .flatMap { $0.food.map { $0.nutrient } }
-            .reduce(Nutrient(calories: 0, carbohydrate: 0, protein: 0, fat: 0)) { (total, nutrient) in
+        
+        let dilayTotalNutrient = dailyNutrients
+            .reduce(Nutrient()) { result, nutrient in
                 return Nutrient(
-                    calories: total.calories + nutrient.calories,
-                    carbohydrate: total.carbohydrate + nutrient.carbohydrate,
-                    protein: total.protein + nutrient.protein,
-                    fat: total.fat + nutrient.fat
+                    calorie: result.calorie + nutrient.calorie,
+                    carbohydrate: result.carbohydrate + nutrient.carbohydrate,
+                    protein: result.protein + nutrient.protein,
+                    fat: result.fat + nutrient.fat,
+                    sugar: result.sugar + nutrient.sugar,
+                    cholesterol: result.cholesterol + nutrient.cholesterol,
+                    sodium: result.sodium + nutrient.sodium,
+                    saturatedFat: result.saturatedFat + nutrient.saturatedFat,
+                    transFat: result.transFat + nutrient.transFat
                 )
             }
         
-        let maleDailyRequirement = Nutrient(calories: 2500, carbohydrate: 324, protein: 55, fat: 54)
-        let femaleDailyRequirement = Nutrient(calories: 2000, carbohydrate: 324, protein: 55, fat: 54)
-        let dailyRequirement = self.isMale ? maleDailyRequirement : femaleDailyRequirement
+        let startOfWeekDate = getWeekDates(date: date).startOfWeek
+        let endOfWeekDate = getWeekDates(date: date).endOfWeek
+        let weeklyNutrients = records
+            .filter { $0.date >= startOfWeekDate && $0.date <= endOfWeekDate }
+            .flatMap { $0.food.map { $0.nutrient } }
+        print("weeklyNutrients: \(weeklyNutrients)")
         
-        let percentageOfCalories = totalNutrient.calories / dailyRequirement.calories
-        let percentageOfCarbohydrate = totalNutrient.carbohydrate / dailyRequirement.carbohydrate
-        let percentageOfProtein = totalNutrient.protein / dailyRequirement.protein
-        let percentageOfFat = totalNutrient.fat / dailyRequirement.fat
+        let weeklyTotalNutrient = weeklyNutrients
+            .reduce(Nutrient()) { result, nutrient in
+                return Nutrient(
+                    calorie: result.calorie + nutrient.calorie,
+                    carbohydrate: result.carbohydrate + nutrient.carbohydrate,
+                    protein: result.protein + nutrient.protein,
+                    fat: result.fat + nutrient.fat,
+                    sugar: result.sugar + nutrient.sugar,
+                    cholesterol: result.cholesterol + nutrient.cholesterol,
+                    sodium: result.sodium + nutrient.sodium,
+                    saturatedFat: result.saturatedFat + nutrient.saturatedFat,
+                    transFat: result.transFat + nutrient.transFat
+                )
+            }
         
-        return self.percentageOfDailyRequirement = [
-            .calories: percentageOfCalories,
-            .carbohydrate: percentageOfCarbohydrate,
-            .protein: percentageOfProtein,
-            .fat: percentageOfFat
-        ]
+        let startOfMonthDate = getMonthDates(date: date).startOfMonth
+        let endOfMonthDate = getMonthDates(date: date).endOfMonth
+        let monthlyNutrients = records
+            .filter { $0.date >= startOfMonthDate && $0.date <= endOfMonthDate }
+            .flatMap { $0.food.map { $0.nutrient } }
+        
+        let monthlyTotalNutrient = monthlyNutrients
+            .reduce(Nutrient()) { result, nutrient in
+                return Nutrient(
+                    calorie: result.calorie + nutrient.calorie,
+                    carbohydrate: result.carbohydrate + nutrient.carbohydrate,
+                    protein: result.protein + nutrient.protein,
+                    fat: result.fat + nutrient.fat,
+                    sugar: result.sugar + nutrient.sugar,
+                    cholesterol: result.cholesterol + nutrient.cholesterol,
+                    sodium: result.sodium + nutrient.sodium,
+                    saturatedFat: result.saturatedFat + nutrient.saturatedFat,
+                    transFat: result.transFat + nutrient.transFat
+                )
+            }
+        
+        if self.totalNutrientValues.isEmpty {
+            self.totalNutrientValues.append(dilayTotalNutrient)
+            self.totalNutrientValues.append(weeklyTotalNutrient)
+            self.totalNutrientValues.append(monthlyTotalNutrient)
+        } else {
+            self.totalNutrientValues[0] = dilayTotalNutrient
+            self.totalNutrientValues[1] = weeklyTotalNutrient
+            self.totalNutrientValues[2] = monthlyTotalNutrient
+        }
     }
 }
 
 // MARK: - Date extension
 
 extension Date {
-    func toNavigationTitleString() -> String {
+    func isSameDay(with date: Date) -> Bool {
+        let dateComponents1 = Calendar.current.dateComponents([.year, .month, .day], from: self)
+        let dateComponents2 = Calendar.current.dateComponents([.year, .month, .day], from: date)
+        return dateComponents1 == dateComponents2
+    }
+    
+    func toNaviTitleWithWeekday() -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "M월 d일 (E)"
         formatter.locale = Locale(identifier: "ko_KR")
         return formatter.string(from: self)
     }
     
-    func isSameDay(with date: Date) -> Bool {
-        let dateComponents1 = Calendar.current.dateComponents([.year, .month, .day], from: self)
-        let dateComponents2 = Calendar.current.dateComponents([.year, .month, .day], from: date)
-        return dateComponents1 == dateComponents2
+    func toNaviTitleWithYear() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy년 M월 d일"
+        return formatter.string(from: self)
     }
 }

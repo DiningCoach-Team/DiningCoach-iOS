@@ -52,6 +52,7 @@
 		8F1FDC2F2A60D75E00FCB49C /* DietRecordDetailFoodList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1FDC2E2A60D75E00FCB49C /* DietRecordDetailFoodList.swift */; };
 		8F1FDC312A60D7CA00FCB49C /* DietRecordDetailImageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1FDC302A60D7CA00FCB49C /* DietRecordDetailImageList.swift */; };
 		8F1FDC332A60D81F00FCB49C /* DietRecordDetailDiary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1FDC322A60D81F00FCB49C /* DietRecordDetailDiary.swift */; };
+		8F9D380C2A617ED900E05890 /* DietStatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9D380B2A617ED900E05890 /* DietStatisticsView.swift */; };
 		8FAD69142A5E7FE200FBBFD6 /* DietEvaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD69132A5E7FE200FBBFD6 /* DietEvaluation.swift */; };
 		8FAD691C2A5EA48500FBBFD6 /* DietRecordCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD691B2A5EA48500FBBFD6 /* DietRecordCalendar.swift */; };
 		8FE820702A5D27F600FA4560 /* DietRecordCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE8206F2A5D27F600FA4560 /* DietRecordCard.swift */; };
@@ -118,6 +119,7 @@
 		8F1FDC2E2A60D75E00FCB49C /* DietRecordDetailFoodList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietRecordDetailFoodList.swift; sourceTree = "<group>"; };
 		8F1FDC302A60D7CA00FCB49C /* DietRecordDetailImageList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietRecordDetailImageList.swift; sourceTree = "<group>"; };
 		8F1FDC322A60D81F00FCB49C /* DietRecordDetailDiary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietRecordDetailDiary.swift; sourceTree = "<group>"; };
+		8F9D380B2A617ED900E05890 /* DietStatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietStatisticsView.swift; sourceTree = "<group>"; };
 		8FAD69132A5E7FE200FBBFD6 /* DietEvaluation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietEvaluation.swift; sourceTree = "<group>"; };
 		8FAD691B2A5EA48500FBBFD6 /* DietRecordCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietRecordCalendar.swift; sourceTree = "<group>"; };
 		8FE8206F2A5D27F600FA4560 /* DietRecordCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietRecordCard.swift; sourceTree = "<group>"; };
@@ -332,6 +334,14 @@
 			path = DietRecordDetail;
 			sourceTree = "<group>";
 		};
+		8F9D380A2A617EB500E05890 /* DietStatistics */ = {
+			isa = PBXGroup;
+			children = (
+				8F9D380B2A617ED900E05890 /* DietStatisticsView.swift */,
+			);
+			path = DietStatistics;
+			sourceTree = "<group>";
+		};
 		8FE8206E2A5D27E700FA4560 /* DietRecordView */ = {
 			isa = PBXGroup;
 			children = (
@@ -349,6 +359,7 @@
 			children = (
 				8FE8206E2A5D27E700FA4560 /* DietRecordView */,
 				8F1FDC2D2A60CF4B00FCB49C /* DietRecordDetail */,
+				8F9D380A2A617EB500E05890 /* DietStatistics */,
 			);
 			path = DietDiary;
 			sourceTree = "<group>";
@@ -562,6 +573,7 @@
 				655D9B8E2A39D815005E133E /* Color+Neutral.swift in Sources */,
 				8FF2555C2A60559500C8D0A5 /* RemoveAlert.swift in Sources */,
 				A526DDC32A092B0300B682BF /* DiningCoachApp.swift in Sources */,
+				8F9D380C2A617ED900E05890 /* DietStatisticsView.swift in Sources */,
 				65F885532A327AF700D151F1 /* SplashView.swift in Sources */,
 				A51E1C462A406BAC00E4EBA3 /* Validation.swift in Sources */,
 				8EF5C5DA2A544EC10025E589 /* CheckButton.swift in Sources */,

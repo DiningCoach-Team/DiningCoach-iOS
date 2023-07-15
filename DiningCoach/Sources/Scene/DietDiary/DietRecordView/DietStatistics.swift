@@ -26,30 +26,34 @@ struct DietStatisticsContainer: View {
     @EnvironmentObject var store: DietRecordStore
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            Text("영양 성분")
-                .font(.pretendard(weight: .semiBold, size: 14))
-                .foregroundColor(.neutral900)
-            
-            VStack(spacing: 8) {
-                DietStatisticsGraph(type: .calories, percentage: store.percentageOfDailyRequirement[.calories] ?? 0)
-                DietStatisticsGraph(type: .carbohydrate, percentage: store.percentageOfDailyRequirement[.carbohydrate] ?? 0)
-                DietStatisticsGraph(type: .protein, percentage: store.percentageOfDailyRequirement[.protein] ?? 0)
-                DietStatisticsGraph(type: .fat, percentage: store.percentageOfDailyRequirement[.fat] ?? 0)
+        NavigationLink {
+            DietStatisticsView()
+        } label: {
+            VStack(alignment: .leading, spacing: 16) {
+                Text("영양 성분")
+                    .font(.pretendard(weight: .semiBold, size: 14))
+                    .foregroundColor(.neutral900)
+                
+                VStack(spacing: 8) {
+                    DietStatisticsGraph(type: .calorie, value: store.totalNutrientValues[0].calorie)
+                    DietStatisticsGraph(type: .carbohydrate, value: store.totalNutrientValues[0].carbohydrate)
+                    DietStatisticsGraph(type: .protein, value: store.totalNutrientValues[0].protein)
+                    DietStatisticsGraph(type: .fat, value: store.totalNutrientValues[0].fat)
+                }
             }
+            .padding(.vertical, 16)
+            .padding(.leading, 16)
+            .frame(height: 152)
+            .background(.white)
+            .cornerRadius(12)
+            .shadow(color: Color(white: 0, opacity: 0.10), radius: 10)
         }
-        .padding(.vertical, 16)
-        .padding(.leading, 16)
-        .frame(height: 152)
-        .background(.white)
-        .cornerRadius(12)
-        .shadow(color: Color(white: 0, opacity: 0.10), radius: 10)
     }
 }
 
 struct DietStatisticsGraph: View {
     var type: NutrientType
-    var percentage: Double
+    var value: Double
     
     var body: some View {
         HStack(spacing: 8) {
@@ -67,12 +71,12 @@ struct DietStatisticsGraph: View {
                     Rectangle()
                         .foregroundColor(type.graphColor)
                         .cornerRadius(12)
-                        .frame(width: geometry.size.width * min(self.percentage, 1))
+                        .frame(width: geometry.size.width * min(value/type.dailyStandard, 1))
                 }
             }
             .frame(height: 8)
             
-            Text("\(Int(percentage*100))%")
+            Text("\(Int((value/type.dailyStandard) * 100))%")
                 .font(.pretendard(weight: .medium, size: 12))
                 .foregroundColor(.neutral700)
                 .frame(width: 34, alignment: .trailing)

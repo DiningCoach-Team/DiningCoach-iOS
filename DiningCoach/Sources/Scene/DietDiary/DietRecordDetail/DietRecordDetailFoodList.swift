@@ -53,6 +53,9 @@ struct FoodNameRectangle: View {
                         .foregroundColor(.neutral300)
                         .frame(width: 24, height: 24)
                 }
+                .onTapGesture {
+                    //TODO: 음식 추가 페이지로 이동
+                }
             } else {
                 HStack(spacing: 4) {
                     Text(name ?? "")
