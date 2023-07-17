@@ -23,9 +23,6 @@ struct DietRecordCard: View {
                         ForEach(MealTime.allCases, id: \.self) { mealTime in
                             NavigationLink {
                                 DietRecordDetailView()
-                                    .onAppear {
-                                        store.selectedMealTime = mealTime
-                                    }
                             } label: {
                                 if let record = store.selectedDateRecord.first(where: { $0.mealTime == mealTime }) {
                                     RecordCard(record: record)

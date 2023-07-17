@@ -58,9 +58,6 @@ struct DietStatisticsNavigation: View {
                 .foregroundColor(.white)
         }
         .frame(height: 48)
-        .onAppear {
-            print(store.totalNutrientValues)
-        }
     }
 }
 
@@ -165,7 +162,7 @@ struct StatisticsDetailGraph: View {
                     
                     Text("\(doubleValueFormat(value)) \(type.unit)")
                         .font(.pretendard(weight: .bold, size: 22))
-                        .foregroundColor(.neutral900)
+                        .foregroundColor(value/type.dailyStandard >= 1 ? .red :.neutral900)
                 }
                 Spacer()
                 
@@ -174,7 +171,7 @@ struct StatisticsDetailGraph: View {
                         Spacer()
                         Text("\(Int((value/type.dailyStandard) * 100))%")
                             .font(.pretendard(weight: .bold, size: 18))
-                            .foregroundColor(.neutral900)
+                            .foregroundColor(value/type.dailyStandard >= 1 ? .red :.neutral900)
                     }
                 }
             }

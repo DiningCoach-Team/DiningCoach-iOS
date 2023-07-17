@@ -40,21 +40,27 @@ struct FoodNameRectangle: View {
     @EnvironmentObject var store: DietRecordStore
     var name: String?
     var isFoodPlusMode: Bool = false
+    @State private var isPresentedFoodAddictionView: Bool = false
     
     var body: some View {
         Group {
             if isFoodPlusMode {
-                HStack(spacing: 4) {
-                    Text("음식 추가")
-                        .font(.pretendard(weight: .semiBold, size: 14))
-                        .foregroundColor(.neutral300)
-                        .padding(.vertical, 12)
-                    Image(systemName: "plus")
-                        .foregroundColor(.neutral300)
-                        .frame(width: 24, height: 24)
+                Button {
+                    isPresentedFoodAddictionView = true
+                } label: {
+                    HStack(spacing: 4) {
+                        Text("음식 추가")
+                            .font(.pretendard(weight: .semiBold, size: 14))
+                            .foregroundColor(.neutral300)
+                            .padding(.vertical, 12)
+                        Image(systemName: "plus")
+                            .foregroundColor(.neutral300)
+                            .frame(width: 24, height: 24)
+                    }
                 }
-                .onTapGesture {
-                    //TODO: 음식 추가 페이지로 이동
+                .disabled(!store.isEditMode)
+                .navigationDestination(isPresented: $isPresentedFoodAddictionView) {
+                    FoodAddictionView()
                 }
             } else {
                 HStack(spacing: 4) {

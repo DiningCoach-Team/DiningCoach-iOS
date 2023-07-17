@@ -10,7 +10,7 @@ import SwiftUI
 struct DietRecordDetailView: View {
     @EnvironmentObject var store: DietRecordStore
     @State private var isPresented: Bool = false
-    @FocusState var isTextEditorFocused: Bool
+    @FocusState private var isTextEditorFocused: Bool
         
     var body: some View {
         ZStack {

@@ -27,6 +27,9 @@ class DietRecordStore: ObservableObject {
     @Published var selectedStatistics: Statistics = .daily
     @Published var totalNutrientValues = [Nutrient]()
     
+    @Published var selectedFoodAddictionMethod: FoodAddictionMetohd = .search
+    @Published var foodAddictionIsCompleted: Bool = false
+    
     @Published var records =
     [
         DietRecord(

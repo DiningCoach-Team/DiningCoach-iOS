@@ -60,6 +60,8 @@
 		8FE820742A5D2A6900FA4560 /* DietRecordDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE820732A5D2A6900FA4560 /* DietRecordDetailView.swift */; };
 		8FE820762A5D2C1000FA4560 /* DietStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE820752A5D2C1000FA4560 /* DietStatistics.swift */; };
 		8FF2555C2A60559500C8D0A5 /* RemoveAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF2555B2A60559500C8D0A5 /* RemoveAlert.swift */; };
+		8FF26A1B2A64E1DF00149972 /* FoodAddictionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF26A1A2A64E1DF00149972 /* FoodAddictionView.swift */; };
+		8FF26A1D2A64F83300149972 /* FoodInfoInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF26A1C2A64F83300149972 /* FoodInfoInput.swift */; };
 		8FF279732A5CD724003B325F /* DietRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF279722A5CD724003B325F /* DietRecordView.swift */; };
 		8FF279762A5CD7D4003B325F /* DietRecordStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF279752A5CD7D4003B325F /* DietRecordStore.swift */; };
 		A51E1C372A405DDF00E4EBA3 /* LoginStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E1C362A405DDF00E4EBA3 /* LoginStore.swift */; };
@@ -127,6 +129,8 @@
 		8FE820732A5D2A6900FA4560 /* DietRecordDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietRecordDetailView.swift; sourceTree = "<group>"; };
 		8FE820752A5D2C1000FA4560 /* DietStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietStatistics.swift; sourceTree = "<group>"; };
 		8FF2555B2A60559500C8D0A5 /* RemoveAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveAlert.swift; sourceTree = "<group>"; };
+		8FF26A1A2A64E1DF00149972 /* FoodAddictionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodAddictionView.swift; sourceTree = "<group>"; };
+		8FF26A1C2A64F83300149972 /* FoodInfoInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodInfoInput.swift; sourceTree = "<group>"; };
 		8FF279722A5CD724003B325F /* DietRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietRecordView.swift; sourceTree = "<group>"; };
 		8FF279752A5CD7D4003B325F /* DietRecordStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietRecordStore.swift; sourceTree = "<group>"; };
 		A51E1C362A405DDF00E4EBA3 /* LoginStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStore.swift; sourceTree = "<group>"; };
@@ -354,12 +358,22 @@
 			path = DietRecordView;
 			sourceTree = "<group>";
 		};
+		8FF26A192A64E1B700149972 /* FoodAddition */ = {
+			isa = PBXGroup;
+			children = (
+				8FF26A1A2A64E1DF00149972 /* FoodAddictionView.swift */,
+				8FF26A1C2A64F83300149972 /* FoodInfoInput.swift */,
+			);
+			path = FoodAddition;
+			sourceTree = "<group>";
+		};
 		8FF279712A5CD63C003B325F /* DietDiary */ = {
 			isa = PBXGroup;
 			children = (
 				8FE8206E2A5D27E700FA4560 /* DietRecordView */,
 				8F1FDC2D2A60CF4B00FCB49C /* DietRecordDetail */,
 				8F9D380A2A617EB500E05890 /* DietStatistics */,
+				8FF26A192A64E1B700149972 /* FoodAddition */,
 			);
 			path = DietDiary;
 			sourceTree = "<group>";
@@ -556,6 +570,7 @@
 				8EF5C5B22A544DBF0025E589 /* NicknameInputView.swift in Sources */,
 				8FAD69142A5E7FE200FBBFD6 /* DietEvaluation.swift in Sources */,
 				8F1FDC2F2A60D75E00FCB49C /* DietRecordDetailFoodList.swift in Sources */,
+				8FF26A1D2A64F83300149972 /* FoodInfoInput.swift in Sources */,
 				8EE137782A4B09FB00A0D665 /* LoginView.swift in Sources */,
 				655D9B962A39DBED005E133E /* DCButton+Style.swift in Sources */,
 				A51E1C372A405DDF00E4EBA3 /* LoginStore.swift in Sources */,
@@ -579,6 +594,7 @@
 				8EF5C5DA2A544EC10025E589 /* CheckButton.swift in Sources */,
 				655D9B942A39DA47005E133E /* DCButtonStyle.swift in Sources */,
 				8EF5C5DD2A544EE40025E589 /* View+CornerRadius.swift in Sources */,
+				8FF26A1B2A64E1DF00149972 /* FoodAddictionView.swift in Sources */,
 				8F1FDC332A60D81F00FCB49C /* DietRecordDetailDiary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

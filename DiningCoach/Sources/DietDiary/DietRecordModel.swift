@@ -115,8 +115,22 @@ struct Nutrient: Hashable {
 }
 
 struct FoodItem: Hashable {
+//    var category: Category
     var name: String
+//    var capacity: Int
+//    var unit: Unit
     var nutrient: Nutrient
+    
+    enum Catgory: String, CaseIterable, Hashable {
+        case processed = "가공 식품"
+        case fresh = "신선 식품"
+        case Cooked = "조리 식품"
+    }
+    
+    enum Unit: String {
+        case gram = "g"
+        case milliLitre = "ml"
+    }
 }
 
 struct DietRecord: Identifiable, Hashable {
@@ -141,4 +155,9 @@ enum Statistics: String, CaseIterable, Hashable {
     case daily = "일별"
     case weekly = "주별"
     case monthly = "월별"
+}
+
+enum FoodAddictionMetohd: String, CaseIterable, Hashable {
+    case search = "식품 검색"
+    case input = "직접 입력"
 }
