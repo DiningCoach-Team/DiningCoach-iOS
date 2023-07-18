@@ -21,7 +21,7 @@ struct MainTabView: View {
         .background(
             Rectangle()
                 .fill(.white)
-                .background(.white)
+                .background(.clear)
                 .ignoresSafeArea()
                 .cornerRadius(24, corners: [.topLeft, .topRight])
                 .shadow(color: .black.opacity(0.05), radius: 3, x: 0, y: -5)
@@ -45,6 +45,9 @@ struct MainTabView: View {
                 )
                 .frame(width: 56, height: 56)
                 .offset(y: -19)
+                .onTapGesture {
+                    selectedTab = tabCategory
+                }
         } else {
             Button(action: {
                 selectedTab = tabCategory
@@ -68,6 +71,6 @@ struct MainTabView: View {
 
 struct MainTabView_Previews: PreviewProvider {
     static var previews: some View {
-        MainTabView(selectedTab: .constant(.record))
+        MainTabView(selectedTab: .constant(.diary))
     }
 }
