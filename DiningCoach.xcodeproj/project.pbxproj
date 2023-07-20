@@ -32,6 +32,11 @@
 		58A7FA902A6109BD000AED80 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A7FA8E2A6109BD000AED80 /* MainView.swift */; };
 		58A7FA922A610A1A000AED80 /* Color+WithHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A7FA912A610A1A000AED80 /* Color+WithHex.swift */; };
 		58A7FA982A64D3CF000AED80 /* CameraPermissionDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A7FA972A64D3CF000AED80 /* CameraPermissionDialog.swift */; };
+		488F67792A554DE800A405E8 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488F67782A554DE800A405E8 /* SignUpView.swift */; };
+		48CB2E932A499A3B003D8201 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CB2E922A499A3B003D8201 /* ForgotPasswordView.swift */; };
+		48CB2E952A49AA47003D8201 /* GetCertificationNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CB2E942A49AA47003D8201 /* GetCertificationNumberView.swift */; };
+		48CB2E972A49B0D1003D8201 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CB2E962A49B0D1003D8201 /* ResetPasswordView.swift */; };
+		48CB2E992A4A04A2003D8201 /* FinishResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CB2E982A4A04A2003D8201 /* FinishResetPasswordView.swift */; };
 		655D9B742A354C03005E133E /* launchScreenLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 655D9B712A354C03005E133E /* launchScreenLogo@2x.png */; };
 		655D9B752A354C03005E133E /* launchScreenLogo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 655D9B722A354C03005E133E /* launchScreenLogo@3x.png */; };
 		655D9B762A354C03005E133E /* launchScreenLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 655D9B732A354C03005E133E /* launchScreenLogo.png */; };
@@ -110,6 +115,11 @@
 		58A7FA8E2A6109BD000AED80 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		58A7FA912A610A1A000AED80 /* Color+WithHex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+WithHex.swift"; sourceTree = "<group>"; };
 		58A7FA972A64D3CF000AED80 /* CameraPermissionDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPermissionDialog.swift; sourceTree = "<group>"; };
+		488F67782A554DE800A405E8 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		48CB2E922A499A3B003D8201 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		48CB2E942A49AA47003D8201 /* GetCertificationNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCertificationNumberView.swift; sourceTree = "<group>"; };
+		48CB2E962A49B0D1003D8201 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
+		48CB2E982A4A04A2003D8201 /* FinishResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishResetPasswordView.swift; sourceTree = "<group>"; };
 		655D9B712A354C03005E133E /* launchScreenLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchScreenLogo@2x.png"; sourceTree = "<group>"; };
 		655D9B722A354C03005E133E /* launchScreenLogo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchScreenLogo@3x.png"; sourceTree = "<group>"; };
 		655D9B732A354C03005E133E /* launchScreenLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchScreenLogo.png; sourceTree = "<group>"; };
@@ -288,6 +298,23 @@
 				585386CD2A6561A900FD6707 /* BarcodeInputView.swift */,
 			);
 			path = View;
+		488F67772A554DD000A405E8 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				488F67782A554DE800A405E8 /* SignUpView.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		48CB2E912A499A17003D8201 /* ResetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				48CB2E922A499A3B003D8201 /* ForgotPasswordView.swift */,
+				48CB2E942A49AA47003D8201 /* GetCertificationNumberView.swift */,
+				48CB2E962A49B0D1003D8201 /* ResetPasswordView.swift */,
+				48CB2E982A4A04A2003D8201 /* FinishResetPasswordView.swift */,
+			);
+			path = ResetPassword;
 			sourceTree = "<group>";
 		};
 		655D9B702A354BF9005E133E /* Launch Screen */ = {
@@ -372,6 +399,8 @@
 				5868F4252A6101F800AB5EDC /* Data */,
 				5868F4222A6100B400AB5EDC /* Mock */,
 				65F885502A327AE200D151F1 /* Scene */,
+				488F67772A554DD000A405E8 /* SignUp */,
+				48CB2E912A499A17003D8201 /* ResetPassword */,
 				8EF5C5B82A544E4A0025E589 /* UserInfo */,
 				8EF5C5AE2A544DBF0025E589 /* NicknameInputView.swift */,
 				8EF5C5B02A544DBF0025E589 /* SigninCompleteView.swift */,
@@ -661,6 +690,9 @@
 				5868F4132A60FFB600AB5EDC /* SearchListView.swift in Sources */,
 				A526DDC52A092B0300B682BF /* ContentView.swift in Sources */,
 				5868F41F2A61006100AB5EDC /* SearchStore.swift in Sources */,
+				488F67792A554DE800A405E8 /* SignUpView.swift in Sources */,
+				A526DDC52A092B0300B682BF /* ContentView.swift in Sources */,
+				48CB2E992A4A04A2003D8201 /* FinishResetPasswordView.swift in Sources */,
 				8EF5C5B42A544DBF0025E589 /* SigninCompleteView.swift in Sources */,
 				58A7FA922A610A1A000AED80 /* Color+WithHex.swift in Sources */,
 				A51E1C432A406A4800E4EBA3 /* RegistrationStore.swift in Sources */,
@@ -674,11 +706,14 @@
 				5868F42C2A6102A300AB5EDC /* ProcessedFood.swift in Sources */,
 				A526DDC32A092B0300B682BF /* DiningCoachApp.swift in Sources */,
 				65F885532A327AF700D151F1 /* SplashView.swift in Sources */,
+				48CB2E952A49AA47003D8201 /* GetCertificationNumberView.swift in Sources */,
+				48CB2E932A499A3B003D8201 /* ForgotPasswordView.swift in Sources */,
 				A51E1C462A406BAC00E4EBA3 /* Validation.swift in Sources */,
 				8EF5C5DA2A544EC10025E589 /* CheckButton.swift in Sources */,
 				655D9B942A39DA47005E133E /* DCButtonStyle.swift in Sources */,
 				5868F40F2A60FE8000AB5EDC /* SearchBarView.swift in Sources */,
 				585386CC2A654E2700FD6707 /* PermissionView.swift in Sources */,
+				48CB2E972A49B0D1003D8201 /* ResetPasswordView.swift in Sources */,
 				8EF5C5DD2A544EE40025E589 /* View+CornerRadius.swift in Sources */,
 				5868F41D2A61004E00AB5EDC /* DiaryAddResultView.swift in Sources */,
 				585386D12A6630B000FD6707 /* FoodProtocol.swift in Sources */,

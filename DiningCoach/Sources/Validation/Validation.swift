@@ -33,4 +33,8 @@ class Validation {
     static func isNicknameLength(_ nickname: String) -> Bool {
         return nickname.count <= 16
     }
+
+    static func isPasswordSame(_ newPassword: String,_ confirmPassword: String ) -> Bool {
+        return newPassword == confirmPassword ? true : false
+    }
 }
