@@ -43,7 +43,8 @@ struct DietStatisticsNavigation: View {
                         .onTapGesture {
                             dismiss()
                             store.isEditMode = false
-                            store.selectedMealTime = .breakfast
+                            store.selectedStatistics = .daily
+                            store.selectedDate = store.selectedDate
                         }
                 }
                 .frame(width: 24, height: 24)
