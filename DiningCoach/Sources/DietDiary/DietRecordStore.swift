@@ -21,7 +21,7 @@ class DietRecordStore: ObservableObject {
     @Published var selectedMealTime: MealTime = .breakfast
     @Published var isEditMode: Bool = false
     @Published var foodImageList = [Image]() // Image -> String
-    @Published var foodList = [FoodItem]()
+    @Published var foodList = [FoodRecord]()
     @Published var diaryText = ""
     
     @Published var selectedStatistics: Statistics = .daily
@@ -36,11 +36,11 @@ class DietRecordStore: ObservableObject {
             mealTime: .breakfast,
             food:
                 [
-                    FoodItem(
+                    FoodRecord(
                         name: "시리얼",
                         nutrient: Nutrient(calorie: 200, carbohydrate: 40, protein: 10, fat: 5, sugar: 10, cholesterol: 0, sodium: 300, saturatedFat: 1.5, transFat: 1)
                     ),
-                    FoodItem(
+                    FoodRecord(
                         name: "우유",
                         nutrient: Nutrient(calorie: 103, carbohydrate: 12, protein: 8, fat: 2.4, sugar: 12, cholesterol: 10, sodium: 100, saturatedFat: 1.5, transFat: 1)
                     )
@@ -51,11 +51,11 @@ class DietRecordStore: ObservableObject {
             mealTime: .lunch,
             food:
                 [
-                    FoodItem(
+                    FoodRecord(
                         name: "닭가슴살",
                         nutrient: Nutrient(calorie: 165, carbohydrate: 0, protein: 31, fat: 3.6, sugar: 0, cholesterol: 85, sodium: 70, saturatedFat: 1, transFat: 0)
                     ),
-                    FoodItem(
+                    FoodRecord(
                         name: "감자",
                         nutrient: Nutrient(calorie: 130, carbohydrate: 30, protein: 2, fat: 0.2, sugar: 1.2, cholesterol: 0, sodium: 10, saturatedFat: 0, transFat: 0)
                     )
@@ -66,11 +66,11 @@ class DietRecordStore: ObservableObject {
             mealTime: .dinner,
             food:
                 [
-                    FoodItem(
+                    FoodRecord(
                         name: "연어",
                         nutrient: Nutrient(calorie: 206, carbohydrate: 0, protein: 22, fat: 13, sugar: 0, cholesterol: 50, sodium: 50, saturatedFat: 3, transFat: 0)
                     ),
-                    FoodItem(
+                    FoodRecord(
                         name: "퀴노아",
                         nutrient: Nutrient(calorie: 222, carbohydrate: 39, protein: 8.1, fat: 3.6, sugar: 1.6, cholesterol: 0, sodium: 13, saturatedFat: 0.42, transFat: 0)
                     )
@@ -81,11 +81,11 @@ class DietRecordStore: ObservableObject {
             mealTime: .snack,
             food:
                 [
-                    FoodItem(
+                    FoodRecord(
                         name: "요구르트",
                         nutrient: Nutrient(calorie: 149, carbohydrate: 11.4, protein: 8.5, fat: 7.9, sugar: 11.4, cholesterol: 20, sodium: 100, saturatedFat: 5, transFat: 0)
                     ),
-                    FoodItem(
+                    FoodRecord(
                         name: "블루베리",
                         nutrient: Nutrient(calorie: 85, carbohydrate: 21, protein: 1.1, fat: 0.5, sugar: 15, cholesterol: 0, sodium: 1, saturatedFat: 0.01, transFat: 0)
                     )
@@ -97,11 +97,11 @@ class DietRecordStore: ObservableObject {
             mealTime: .breakfast,
             food:
                 [
-                    FoodItem(
+                    FoodRecord(
                         name: "시리얼",
                         nutrient: Nutrient(calorie: 200, carbohydrate: 40, protein: 10, fat: 5, sugar: 10, cholesterol: 0, sodium: 300, saturatedFat: 1.5, transFat: 0)
                     ),
-                    FoodItem(
+                    FoodRecord(
                         name: "우유",
                         nutrient: Nutrient(calorie: 103, carbohydrate: 12, protein: 8, fat: 2.4, sugar: 12, cholesterol: 10, sodium: 100, saturatedFat: 1.5, transFat: 0)
                     )
@@ -114,11 +114,11 @@ class DietRecordStore: ObservableObject {
             mealTime: .snack,
             food:
                 [
-                    FoodItem(
+                    FoodRecord(
                         name: "시리얼",
                         nutrient: Nutrient(calorie: 200, carbohydrate: 40, protein: 10, fat: 5, sugar: 10, cholesterol: 0, sodium: 300, saturatedFat: 1.5, transFat: 0)
                     ),
-                    FoodItem(
+                    FoodRecord(
                         name: "우유",
                         nutrient: Nutrient(calorie: 103, carbohydrate: 12, protein: 8, fat: 2.4, sugar: 12, cholesterol: 10, sodium: 100, saturatedFat: 1.5, transFat: 0)
                     )
@@ -195,13 +195,8 @@ class DietRecordStore: ObservableObject {
         return (startOfMonth, endOfMonth)
     }
     
-    func getRecordsForDay(day: Int) -> [DietRecord] {
-        let components = Calendar.current.dateComponents([.year, .month], from: Date())
-        let startOfMonth = Calendar.current.date(from: components)!
-        let date = Calendar.current.date(byAdding: .day, value: day - 1, to: startOfMonth)!
-        
+    func getRecordsForDay(date: Date) -> [DietRecord] {
         let records = self.records.filter { $0.date.isSameDay(with: date) }
-        
         return records
     }
     

@@ -11,11 +11,11 @@ struct FoodInfoInput: View {
     @EnvironmentObject var store: DietRecordStore
     @Environment(\.dismiss) var dismiss
     
-    @State private var category: FoodItem.Catgory?
+    @State private var category: FoodRecord.Catgory?
     @State private var name: String = ""
     @State private var brand: String = ""
     @State private var capacity: String = ""
-    @State private var unit: FoodItem.Unit = .gram
+    @State private var unit: FoodRecord.Unit = .gram
     @State private var calorie: String = ""
     @State private var carbohydrate: String = ""
     @State private var protein: String = ""
@@ -81,7 +81,7 @@ struct FoodInfoInput: View {
                 let saturatedFat = Double(saturatedFat) ?? 0
                 let transFat = Double(transFat) ?? 0
                 
-                store.foodList.append(FoodItem(name: name, nutrient: Nutrient(calorie: calorie, carbohydrate: carbohydrate, protein: protein, fat: fat, sugar: sugar, cholesterol: cholesterol, sodium: sodium, saturatedFat: saturatedFat, transFat: transFat)))
+                store.foodList.append(FoodRecord(name: name, nutrient: Nutrient(calorie: calorie, carbohydrate: carbohydrate, protein: protein, fat: fat, sugar: sugar, cholesterol: cholesterol, sodium: sodium, saturatedFat: saturatedFat, transFat: transFat)))
             })
             .padding(.bottom, 8)
             .disabled(category == nil || name == "" || capacity == "" || calorie == "")
@@ -112,8 +112,8 @@ struct FoodInfoTitle: View {
 
 struct FoodCategoryRectangle: View {
     @EnvironmentObject var store: DietRecordStore
-    var category: FoodItem.Catgory
-    @Binding var selectedCategory: FoodItem.Catgory?
+    var category: FoodRecord.Catgory
+    @Binding var selectedCategory: FoodRecord.Catgory?
     
     var body: some View {
         Text(category.rawValue)
@@ -156,8 +156,8 @@ struct FoodInfoTextField: View {
 }
 
 struct FoodUnitRectangle: View {
-    var unit: FoodItem.Unit
-    @Binding var selectedUnit: FoodItem.Unit
+    var unit: FoodRecord.Unit
+    @Binding var selectedUnit: FoodRecord.Unit
     
     var body: some View {
         Text(unit.rawValue)

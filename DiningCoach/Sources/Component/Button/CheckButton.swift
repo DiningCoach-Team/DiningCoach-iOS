@@ -76,8 +76,8 @@ struct CheckButton<Element: CheckButtonElement>: View {
 struct CheckButton_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            CheckButton(element: Exercise.between1And5Hours, state: .selected){ }
-            CheckButton(element: Exercise.between1And5Hours, state: .unselected) { }
+            CheckButton(element: ExerciseSleepInputView.Exercise.between1And5Hours, state: .selected){ }
+            CheckButton(element: ExerciseSleepInputView.Exercise.between1And5Hours, state: .unselected) { }
         }
     }
 }

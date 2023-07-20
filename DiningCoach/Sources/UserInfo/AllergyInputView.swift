@@ -92,106 +92,108 @@ struct AllergyInputView_Previews: PreviewProvider {
     }
 }
 
-enum Allergy: SelectButtonElement, CaseIterable {
-    case none
-    case egg
-    case milk
-    case beef
-    case pork
-    case chicken
-    case crab
-    case shrimp
-    case mackerel
-    case shellfish
-    case wheat
-    case peach
-    case tomato
-    case peanut
-    case soy
-    case buckwheat
-    case walnut
-    case nuts
-    
-    var name: String {
-        switch self {
-        case .none:
-            return "해당없음"
-        case .egg:
-            return "알류"
-        case .milk:
-            return "우유"
-        case .beef:
-            return "소고기"
-        case .pork:
-            return "돼지고기"
-        case .chicken:
-            return "닭고기"
-        case .crab:
-            return "게"
-        case .shrimp:
-            return "새우"
-        case .mackerel:
-            return "고등어"
-        case .shellfish:
-            return "조개"
-        case .wheat:
-            return "밀"
-        case .peach:
-            return "복숭아"
-        case .tomato:
-            return "토마토"
-        case .peanut:
-            return "땅콩"
-        case .soy:
-            return "대두"
-        case .buckwheat:
-            return "메밀"
-        case .walnut:
-            return "호두"
-        case .nuts:
-            return "견과류"
+extension AllergyInputView {
+    enum Allergy: SelectButtonElement, CaseIterable {
+        case none
+        case egg
+        case milk
+        case beef
+        case pork
+        case chicken
+        case crab
+        case shrimp
+        case mackerel
+        case shellfish
+        case wheat
+        case peach
+        case tomato
+        case peanut
+        case soy
+        case buckwheat
+        case walnut
+        case nuts
+        
+        var name: String {
+            switch self {
+            case .none:
+                return "해당없음"
+            case .egg:
+                return "알류"
+            case .milk:
+                return "우유"
+            case .beef:
+                return "소고기"
+            case .pork:
+                return "돼지고기"
+            case .chicken:
+                return "닭고기"
+            case .crab:
+                return "게"
+            case .shrimp:
+                return "새우"
+            case .mackerel:
+                return "고등어"
+            case .shellfish:
+                return "조개"
+            case .wheat:
+                return "밀"
+            case .peach:
+                return "복숭아"
+            case .tomato:
+                return "토마토"
+            case .peanut:
+                return "땅콩"
+            case .soy:
+                return "대두"
+            case .buckwheat:
+                return "메밀"
+            case .walnut:
+                return "호두"
+            case .nuts:
+                return "견과류"
+            }
         }
-    }
-    
-    
-    var imageString: String {
-        switch self {
-        case .none:
-            return "Property=해당없음"
-        case .egg:
-            return "Property=난류"
-        case .milk:
-            return "Property=우유"
-        case .beef:
-            return "Property=소고기"
-        case .pork:
-            return "Property=돼지고기"
-        case .chicken:
-            return "Property=닭고기"
-        case .crab:
-            return "Property=게"
-        case .shrimp:
-            return "Property=새우"
-        case .mackerel:
-            return "Property=고등어"
-        case .shellfish:
-            return "Property=조개"
-        case .wheat:
-            return "Property=밀"
-        case .peach:
-            return "Property=복숭아"
-        case .tomato:
-            return "Property=토마토"
-        case .peanut:
-            return "Property=땅콩"
-        case .soy:
-            return "Property=대두"
-        case .buckwheat:
-            return "Property=메밀"
-        case .walnut:
-            return "Property=호두"
-        case .nuts:
-            return "Property=견과류"
+        
+        
+        var imageString: String {
+            switch self {
+            case .none:
+                return "Property=해당없음"
+            case .egg:
+                return "Property=난류"
+            case .milk:
+                return "Property=우유"
+            case .beef:
+                return "Property=소고기"
+            case .pork:
+                return "Property=돼지고기"
+            case .chicken:
+                return "Property=닭고기"
+            case .crab:
+                return "Property=게"
+            case .shrimp:
+                return "Property=새우"
+            case .mackerel:
+                return "Property=고등어"
+            case .shellfish:
+                return "Property=조개"
+            case .wheat:
+                return "Property=밀"
+            case .peach:
+                return "Property=복숭아"
+            case .tomato:
+                return "Property=토마토"
+            case .peanut:
+                return "Property=땅콩"
+            case .soy:
+                return "Property=대두"
+            case .buckwheat:
+                return "Property=메밀"
+            case .walnut:
+                return "Property=호두"
+            case .nuts:
+                return "Property=견과류"
+            }
         }
     }
 }

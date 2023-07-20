@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DietRecordCalendar: View {
     @EnvironmentObject var store: DietRecordStore
+    @State private var month: Int = 7
     
     var body: some View {
         ZStack {
@@ -21,12 +22,12 @@ struct DietRecordCalendar: View {
             .ignoresSafeArea()
             
             VStack {
-                CalendarNavigation()
+                CalendarNavigation(month: $month)
                 CalendarHeader()
                 if store.isWeeklyCalendar {
-                    WeeklyCalendarView()
+                    WeeklyCalendarView(month: $month)
                 } else {
-                    MonthlyCalendar()
+                    MonthlyCalendar(month: $month)
                 }
                 Spacer()
             }
@@ -39,16 +40,21 @@ struct DietRecordCalendar: View {
 
 struct CalendarNavigation: View {
     @EnvironmentObject var store: DietRecordStore
+    @Binding var month: Int
     
     var body: some View {
         HStack {
             Text(store.isWeeklyCalendar
-                 ? "\(store.selectedDate.toCalendarHeaderString()) \(Image(systemName: "chevron.up"))"
-                 : "\(store.selectedDate.toCalendarHeaderString()) \(Image(systemName: "chevron.down"))")
+                 ? "\(calendarHeaderString(month: month)) \(Image(systemName: "chevron.up"))"
+                 : "\(calendarHeaderString(month: month)) \(Image(systemName: "chevron.down"))")
             .font(.pretendard(weight: .bold, size: 18))
             .foregroundColor(.white)
             .onTapGesture {
                 store.isWeeklyCalendar.toggle()
+            }
+            .onChange(of: store.isWeeklyCalendar) { _ in
+                let month = Calendar.current.component(.month, from: store.selectedDate)
+                self.month = month
             }
             
             Spacer()
@@ -74,6 +80,19 @@ struct CalendarNavigation: View {
         }
         .frame(height: 48)
     }
+    
+    func calendarHeaderString(month: Int) -> String {
+        if store.isWeeklyCalendar {
+            let components = Calendar.current.dateComponents([.year, .month], from: store.selectedDate)
+            let date = Calendar.current.date(from: components)!
+            return date.toCalendarHeaderString()
+        }
+        
+        var components = Calendar.current.dateComponents([.year, .month], from: Date())
+        components.month = month
+        let date = Calendar.current.date(from: components)!
+        return date.toCalendarHeaderString()
+    }
 }
 
 // MARK: - 달력 헤더
@@ -98,16 +117,16 @@ struct CalendarHeader: View {
 
 struct WeeklyCalendarView: View {
     @EnvironmentObject var store: DietRecordStore
+    @Binding var month: Int
     
     var body: some View {
         HStack {
-            let firstDayOfWeek = store.getWeekDates(date: Date()).startOfWeek
+            let firstDayOfWeek = store.getWeekDates(date: store.selectedDate).startOfWeek
             
             ForEach(0..<7, id: \.self) { dayOffset in
                 let date = getDate(offset: dayOffset, from: firstDayOfWeek)
-                let dayNumber = getDayNumber(for: date)
                 
-                CalendarCell(day: dayNumber, isSelected: store.selectedDate == date)
+                CalendarCell(date: date, isSelected: store.selectedDate == date)
                     .frame(maxWidth: .infinity)
                     .onTapGesture {
                         store.selectedDate = date
@@ -120,26 +139,21 @@ struct WeeklyCalendarView: View {
     private func getDate(offset: Int, from firstDayOfWeek: Date) -> Date {
         return Calendar.current.date(byAdding: .day, value: offset, to: firstDayOfWeek)!
     }
-    
-    // 특정 Date에서 일자를 추출하여 반환
-    private func getDayNumber(for date: Date) -> Int {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "d"
-        return Int(formatter.string(from: date))!
-    }
 }
 
 // MARK: - 월간 달력
 
 struct MonthlyCalendar: View {
     @EnvironmentObject var store: DietRecordStore
+    @Binding var month: Int
+    @State private var dragOffset = CGSize.zero
     
     var body: some View {
-        let firstDayOfMonth = store.getMonthDates(date: Date()).startOfMonth
-        let lastDayofMonth = store.getMonthDates(date: Date()).endOfMonth
+        let firstDayOfMonth = getMonthDates(month: month).firstDayOfMonth
+        let lastDayofMonth = getMonthDates(month: month).lastDayofMonth
         
         let daysInMonth = Calendar.current.component(.day, from: lastDayofMonth)
-        let firstWeekdayOfMonth = Calendar.current.component(.weekday, from: firstDayOfMonth)
+        let firstWeekdayOfMonth = Calendar.current.component(.weekday, from: firstDayOfMonth) - 1
         let totalIndex = daysInMonth + firstWeekdayOfMonth
         
         VStack {
@@ -151,25 +165,55 @@ struct MonthlyCalendar: View {
                             .foregroundColor(Color.clear)
                     } else {
                         let dayIndex = index - firstWeekdayOfMonth
-                        let date = getDate(for: dayIndex)
-                        let dayNumber = dayIndex + 1
+                        let date = getDate(month: month, day: dayIndex)
                         
-                        CalendarCell(day: dayNumber, isSelected: store.selectedDate == date)
+                        CalendarCell(date: date, isSelected: store.selectedDate == date)
                             .frame(maxWidth: .infinity)
                             .onTapGesture {
                                 store.selectedDate = date
+                                store.isWeeklyCalendar = true
                             }
                     }
                 }
             }
         }
+        .gesture(
+            DragGesture()
+                .onChanged { value in
+                    self.dragOffset.width = value.translation.width
+                }
+                .onEnded { value in
+                    if self.dragOffset.width < -50 {
+                        self.month += 1
+                    } else if self.dragOffset.width > 50 {
+                        self.month -= 1
+                    }
+                    self.dragOffset = CGSize.zero
+                }
+        )
     }
     
-    // 달의 첫 날을 기준으로,  특정 일자에 해당하는 Date를 반환
-    func getDate(for day: Int) -> Date {
-        let components = Calendar.current.dateComponents([.year, .month], from: Date())
+    // 달의 첫 날을 기준으로, 특정 일자에 해당하는 Date를 반환
+    func getDate(month: Int, day: Int) -> Date {
+        var components = Calendar.current.dateComponents([.year, .month], from: Date())
+        components.month = month
         let firstDayOfMonth = Calendar.current.date(from: components)!
         return Calendar.current.date(byAdding: .day, value: day, to: firstDayOfMonth)!
+    }
+    
+    // 특정 달의 첫날과 마지막날을 반환
+    func getMonthDates(month: Int) -> (firstDayOfMonth: Date, lastDayofMonth: Date) {
+        var components = Calendar.current.dateComponents([.year, .month], from: Date())
+        components.month = month
+        components.day = 1
+        let firstDayOfMonth = Calendar.current.date(from: components)!
+        
+        var lastDayComponents = DateComponents()
+        lastDayComponents.month = 1
+        lastDayComponents.day = -1
+        let lastDayofMonth = Calendar.current.date(byAdding: lastDayComponents, to: firstDayOfMonth)!
+        
+        return (firstDayOfMonth, lastDayofMonth)
     }
 }
 
@@ -178,15 +222,10 @@ struct MonthlyCalendar: View {
 struct CalendarCell: View {
     @EnvironmentObject var store: DietRecordStore
     
-    var day: Int
-    var isSelected: Bool = false
+    var date: Date
+    var isSelected: Bool
 
     let event: [MealTime] = [.breakfast, .snack]
-    
-    init(day: Int, isSelected: Bool) {
-        self.day = day
-        self.isSelected = isSelected
-    }
     
     var body: some View {
         ZStack {
@@ -200,7 +239,7 @@ struct CalendarCell: View {
             }
             
             VStack {
-                Text(String(day))
+                Text(dateToDay(date: date))
                     .font(.pretendard(weight: .semiBold, size: 16))
                     .foregroundColor(isSelected ? .primary500 : .white)
                     .frame(height: 28)
@@ -212,7 +251,7 @@ struct CalendarCell: View {
                         Circle()
                             .frame(width: 5, height: 5)
                             .foregroundColor(
-                                store.getRecordsForDay(day: day)
+                                store.getRecordsForDay(date: date)
                                     .map { $0.mealTime }
                                     .contains(MealTime.allCases[index])
                                 ? .white : .primary800)
@@ -221,6 +260,11 @@ struct CalendarCell: View {
             }
         }
         .frame(width: 29, height: 41)
+    }
+    
+    func dateToDay(date: Date) -> String {
+        let component = Calendar.current.component(.day, from: date)
+        return String(component)
     }
 }
 

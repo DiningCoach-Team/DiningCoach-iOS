@@ -27,6 +27,17 @@ enum MealTime: String, CaseIterable, Hashable {
     }
 }
 
+enum Statistics: String, CaseIterable, Hashable {
+    case daily = "일별"
+    case weekly = "주별"
+    case monthly = "월별"
+}
+
+enum FoodAddictionMetohd: String, CaseIterable, Hashable {
+    case search = "식품 검색"
+    case input = "직접 입력"
+}
+
 enum NutrientType: String, CaseIterable, Hashable {
     case calorie = "열량"
     case carbohydrate = "탄수화물"
@@ -114,12 +125,12 @@ struct Nutrient: Hashable {
     var transFat: Double = 0
 }
 
-struct FoodItem: Hashable {
-//    var category: Category
+struct FoodRecord: Hashable {
     var name: String
+    var nutrient: Nutrient
+//    var category: Category
 //    var capacity: Int
 //    var unit: Unit
-    var nutrient: Nutrient
     
     enum Catgory: String, CaseIterable, Hashable {
         case processed = "가공 식품"
@@ -136,12 +147,12 @@ struct FoodItem: Hashable {
 struct DietRecord: Identifiable, Hashable {
     var id: String
     var mealTime: MealTime
-    var food: [FoodItem]
+    var food: [FoodRecord]
     var diary: String
     var date: Date
     var foodImageURL: [String]
     
-    init(mealTime: MealTime, food: [FoodItem], diary: String, date: Date = Date(), foodImageURL: [String] = []) {
+    init(mealTime: MealTime, food: [FoodRecord], diary: String, date: Date = Date(), foodImageURL: [String] = []) {
         self.id = UUID().uuidString
         self.mealTime = mealTime
         self.food = food
@@ -151,13 +162,31 @@ struct DietRecord: Identifiable, Hashable {
     }
 }
 
-enum Statistics: String, CaseIterable, Hashable {
-    case daily = "일별"
-    case weekly = "주별"
-    case monthly = "월별"
-}
-
-enum FoodAddictionMetohd: String, CaseIterable, Hashable {
-    case search = "식품 검색"
-    case input = "직접 입력"
+struct Food: Hashable {
+    var id: String
+    var imageString: String
+    var category: Category // 식품 분류
+    var name: String
+    var country: String // 제조국
+    var brand: String // 제조사명
+    var reportNumber: String // 품목보고번호
+    var kind: String // 식품 유형
+    var allergy: String // 알레르기 정보
+    var storage: String // 보관방법
+    var barcode: Int // 유통바코드
+    var amountPerServing: Int // 1회 제공량
+    var nutrient: Nutrient
+    var capacity: Int
+    var unit: Unit
+    
+    enum Catgory: String, CaseIterable, Hashable {
+        case processed = "가공 식품"
+        case fresh = "신선 식품"
+        case Cooked = "조리 식품"
+    }
+    
+    enum Unit: String {
+        case gram = "g"
+        case milliLitre = "ml"
+    }
 }

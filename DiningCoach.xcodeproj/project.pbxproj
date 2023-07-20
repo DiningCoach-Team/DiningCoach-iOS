@@ -245,7 +245,11 @@
 				8FF279742A5CD762003B325F /* DietDiary */,
 				A526DDC22A092B0300B682BF /* DiningCoachApp.swift */,
 				A526DDC42A092B0300B682BF /* ContentView.swift */,
+				8EF5C5AF2A544DBF0025E589 /* TermsAgreementView.swift */,
+				8EF5C5AE2A544DBF0025E589 /* NicknameInputView.swift */,
+				8EF5C5B02A544DBF0025E589 /* SigninCompleteView.swift */,
 				65F885502A327AE200D151F1 /* Scene */,
+				8EF5C5B82A544E4A0025E589 /* UserInfo */,
 				655D9B8F2A39D9FF005E133E /* Component */,
 				65F8854D2A32761E00D151F1 /* Helper */,
 			);
@@ -276,9 +280,8 @@
 			isa = PBXGroup;
 			children = (
 				8EE137732A4B04AE00A0D665 /* Login */,
-				8EF5C5B82A544E4A0025E589 /* UserInfo */,
-				8FF279712A5CD63C003B325F /* DietDiary */,
 				65F885512A327AE800D151F1 /* Splash */,
+				8FF279712A5CD63C003B325F /* DietDiary */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -311,9 +314,6 @@
 		8EF5C5B82A544E4A0025E589 /* UserInfo */ = {
 			isa = PBXGroup;
 			children = (
-				8EF5C5AF2A544DBF0025E589 /* TermsAgreementView.swift */,
-				8EF5C5AE2A544DBF0025E589 /* NicknameInputView.swift */,
-				8EF5C5B02A544DBF0025E589 /* SigninCompleteView.swift */,
 				8EF5C5B92A544E4A0025E589 /* ExerciseSleepInputView.swift */,
 				8EF5C5BA2A544E4A0025E589 /* AllergyInputView.swift */,
 				8EF5C5BB2A544E4A0025E589 /* UserInfoCompleteView.swift */,

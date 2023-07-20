@@ -1,5 +1,5 @@
 //
-//  MedicalConditionsInputView.swift
+//  EatingHabitInputView.swift
 //  DiningCoach
 //
 //  Created by 심현석 on 2023/06/23.
@@ -7,35 +7,36 @@
 
 import SwiftUI
 
-struct MedicalConditionInputView: View {
+struct EatingHabitInputView: View {
     @Environment(\.dismiss) var dismiss
     @State private var isCompleted: Bool = false
     
-    @State private var selectedHabit = Set<MedicalCondition>()
+    @State private var selectedHabit = Set<EatingHabit>()
     
     var body: some View {
         VStack(spacing: 0) {
+            
             VStack {
-                ProgressView(value: 6, total: 7)
+                ProgressView(value: 5, total: 7)
                     .tint(Color.primary500)
             }
             .padding(.vertical, 8)
             
             VStack(alignment: .leading) {
-                Text("질병 정보를 선택해 주세요")
+                Text("해당하는 식습관을 선택해 주세요")
                     .font(.bold, size: 22, lineHeight: 28)
                     .frame(height: 28)
             }
             .padding(.vertical, 16)
             
             ScrollView(showsIndicators: false) {
-                VStack(spacing: 16) {
-                    ForEach(MedicalCondition.allCases, id: \.self) { condition in
-                        CheckButton(element: condition, state: selectedHabit.contains(condition) ? .selected : .unselected) {
-                            if selectedHabit.contains(condition) {
-                                selectedHabit.remove(condition)
+                VStack(spacing: 15) {
+                    ForEach(EatingHabit.allCases, id: \.self) { habit in
+                        CheckButton(element: habit, state: selectedHabit.contains(habit) ? .selected : .unselected) {
+                            if selectedHabit.contains(habit) {
+                                selectedHabit.remove(habit)
                             } else {
-                                selectedHabit.insert(condition)
+                                selectedHabit.insert(habit)
                             }
                             // input data
                         }
@@ -59,7 +60,7 @@ struct MedicalConditionInputView: View {
         }
         .padding(.horizontal, 16)
         .navigationDestination(isPresented: $isCompleted) {
-            AllergyInputView()
+            MedicalConditionInputView()
         }
         .navigationBarBackButtonHidden(true)
         .toolbar {
@@ -84,26 +85,39 @@ struct MedicalConditionInputView: View {
     }
 }
 
-struct MedicalConditionsInputView_Previews: PreviewProvider {
+struct EatingHabitInputView_Previews: PreviewProvider {
     static var previews: some View {
-        MedicalConditionInputView()
+        EatingHabitInputView()
     }
 }
 
-enum MedicalCondition: String, CheckButtonElement,CaseIterable {
-    case none = "해당없음"
-    case diabetes = "당뇨병"
-    case hypertension = "고혈압"
-    case hyperlipidemia = "고지혈증"
-    case cancerTreatment = "항암 치료"
-    case kidneyDisease = "신장 관련 지병"
-    case heartDisease = "심장 관련 지병"
-    case thyroidDisease = "갑상선 질환"
-    case gout = "통풍"
-    case skinDisease = "피부병"
-    case menieresDisease = "메니에르병"
-    
-    var type: String {
-        return rawValue
+extension EatingHabitInputView {
+    enum EatingHabit: CheckButtonElement, CaseIterable {
+        case none
+        case lowSalt
+        case iodineLimitation
+        case fiberLimited
+        case hardFoodLimited
+        case vegan
+        case halal
+        
+        var type: String {
+            switch self {
+            case .none:
+                return "해당없음"
+            case .lowSalt:
+                return "저염 식단"
+            case .iodineLimitation:
+                return "요오드 제한 식단"
+            case .fiberLimited:
+                return "섬유질을 많이 먹지 못해요"
+            case .hardFoodLimited:
+                return "딱딱한 음식 잘 먹지 못해요"
+            case .vegan:
+                return "비건 식단 지향"
+            case .halal:
+                return "할랄음식 먹어요"
+            }
+        }
     }
 }
