@@ -38,6 +38,7 @@ struct RemoveAlert: View {
                         .onTapGesture {
                             store.deleteDietRecord()
                             isPresented = false
+                            store.selectedMealTime = store.selectedMealTime
                         }
                 }
                 
