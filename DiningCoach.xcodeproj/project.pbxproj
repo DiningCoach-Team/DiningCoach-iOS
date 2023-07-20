@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		488F67792A554DE800A405E8 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488F67782A554DE800A405E8 /* SignUpView.swift */; };
+		48CB2E932A499A3B003D8201 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CB2E922A499A3B003D8201 /* ForgotPasswordView.swift */; };
+		48CB2E952A49AA47003D8201 /* GetCertificationNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CB2E942A49AA47003D8201 /* GetCertificationNumberView.swift */; };
+		48CB2E972A49B0D1003D8201 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CB2E962A49B0D1003D8201 /* ResetPasswordView.swift */; };
+		48CB2E992A4A04A2003D8201 /* FinishResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CB2E982A4A04A2003D8201 /* FinishResetPasswordView.swift */; };
 		655D9B742A354C03005E133E /* launchScreenLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 655D9B712A354C03005E133E /* launchScreenLogo@2x.png */; };
 		655D9B752A354C03005E133E /* launchScreenLogo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 655D9B722A354C03005E133E /* launchScreenLogo@3x.png */; };
 		655D9B762A354C03005E133E /* launchScreenLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 655D9B732A354C03005E133E /* launchScreenLogo.png */; };
@@ -76,6 +81,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		488F67782A554DE800A405E8 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		48CB2E922A499A3B003D8201 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		48CB2E942A49AA47003D8201 /* GetCertificationNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCertificationNumberView.swift; sourceTree = "<group>"; };
+		48CB2E962A49B0D1003D8201 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
+		48CB2E982A4A04A2003D8201 /* FinishResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishResetPasswordView.swift; sourceTree = "<group>"; };
 		655D9B712A354C03005E133E /* launchScreenLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchScreenLogo@2x.png"; sourceTree = "<group>"; };
 		655D9B722A354C03005E133E /* launchScreenLogo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchScreenLogo@3x.png"; sourceTree = "<group>"; };
 		655D9B732A354C03005E133E /* launchScreenLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchScreenLogo.png; sourceTree = "<group>"; };
@@ -159,6 +169,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		488F67772A554DD000A405E8 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				488F67782A554DE800A405E8 /* SignUpView.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		48CB2E912A499A17003D8201 /* ResetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				48CB2E922A499A3B003D8201 /* ForgotPasswordView.swift */,
+				48CB2E942A49AA47003D8201 /* GetCertificationNumberView.swift */,
+				48CB2E962A49B0D1003D8201 /* ResetPasswordView.swift */,
+				48CB2E982A4A04A2003D8201 /* FinishResetPasswordView.swift */,
+			);
+			path = ResetPassword;
+			sourceTree = "<group>";
+		};
 		655D9B702A354BF9005E133E /* Launch Screen */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +267,12 @@
 		65F8853B2A326CB400D151F1 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				488F67772A554DD000A405E8 /* SignUp */,
+				48CB2E912A499A17003D8201 /* ResetPassword */,
+				8EF5C5B82A544E4A0025E589 /* UserInfo */,
+				8EF5C5AE2A544DBF0025E589 /* NicknameInputView.swift */,
+				8EF5C5B02A544DBF0025E589 /* SigninCompleteView.swift */,
+				8EF5C5AF2A544DBF0025E589 /* TermsAgreementView.swift */,
 				A51E1C442A406B9900E4EBA3 /* Validation */,
 				A51E1C412A406A3300E4EBA3 /* Registration */,
 				A51E1C3B2A4061B900E4EBA3 /* API */,
@@ -574,7 +609,9 @@
 				8EE137782A4B09FB00A0D665 /* LoginView.swift in Sources */,
 				655D9B962A39DBED005E133E /* DCButton+Style.swift in Sources */,
 				A51E1C372A405DDF00E4EBA3 /* LoginStore.swift in Sources */,
+				488F67792A554DE800A405E8 /* SignUpView.swift in Sources */,
 				A526DDC52A092B0300B682BF /* ContentView.swift in Sources */,
+				48CB2E992A4A04A2003D8201 /* FinishResetPasswordView.swift in Sources */,
 				8EF5C5B42A544DBF0025E589 /* SigninCompleteView.swift in Sources */,
 				8FE820762A5D2C1000FA4560 /* DietStatistics.swift in Sources */,
 				A51E1C432A406A4800E4EBA3 /* RegistrationStore.swift in Sources */,
@@ -590,9 +627,12 @@
 				A526DDC32A092B0300B682BF /* DiningCoachApp.swift in Sources */,
 				8F9D380C2A617ED900E05890 /* DietStatisticsView.swift in Sources */,
 				65F885532A327AF700D151F1 /* SplashView.swift in Sources */,
+				48CB2E952A49AA47003D8201 /* GetCertificationNumberView.swift in Sources */,
+				48CB2E932A499A3B003D8201 /* ForgotPasswordView.swift in Sources */,
 				A51E1C462A406BAC00E4EBA3 /* Validation.swift in Sources */,
 				8EF5C5DA2A544EC10025E589 /* CheckButton.swift in Sources */,
 				655D9B942A39DA47005E133E /* DCButtonStyle.swift in Sources */,
+				48CB2E972A49B0D1003D8201 /* ResetPasswordView.swift in Sources */,
 				8EF5C5DD2A544EE40025E589 /* View+CornerRadius.swift in Sources */,
 				8FF26A1B2A64E1DF00149972 /* FoodAddictionView.swift in Sources */,
 				8F1FDC332A60D81F00FCB49C /* DietRecordDetailDiary.swift in Sources */,
