@@ -107,75 +107,77 @@ struct PreferredFoodInputView_Previews: PreviewProvider {
     }
 }
 
-enum Food: SelectButtonElement ,CaseIterable {
-    case convenience
-    case livestock
-    case cooking
-    case noodles
-    case seafood
-    case bread
-    case snack
-    case agriculture
-    case dairy
-    case beverage
-    case health
-    case alcohol
-    
-    var name: String {
-        switch self {
-        case .convenience:
-            return "간편식"
-        case .livestock:
-            return "축산물"
-        case .cooking:
-            return "조리식"
-        case .noodles:
-            return "면류"
-        case .seafood:
-            return "수산물"
-        case .bread:
-            return "빵/떡"
-        case .snack:
-            return "간식"
-        case .agriculture:
-            return "농산물"
-        case .dairy:
-            return "유제품"
-        case .beverage:
-            return "음료"
-        case .health:
-            return "건강식품"
-        case .alcohol:
-            return "주류"
+extension PreferredFoodInputView {
+    enum Food: SelectButtonElement, CaseIterable {
+        case convenience
+        case livestock
+        case cooking
+        case noodles
+        case seafood
+        case bread
+        case snack
+        case agriculture
+        case dairy
+        case beverage
+        case health
+        case alcohol
+        
+        var name: String {
+            switch self {
+            case .convenience:
+                return "간편식"
+            case .livestock:
+                return "축산물"
+            case .cooking:
+                return "조리식"
+            case .noodles:
+                return "면류"
+            case .seafood:
+                return "수산물"
+            case .bread:
+                return "빵/떡"
+            case .snack:
+                return "간식"
+            case .agriculture:
+                return "농산물"
+            case .dairy:
+                return "유제품"
+            case .beverage:
+                return "음료"
+            case .health:
+                return "건강식품"
+            case .alcohol:
+                return "주류"
+            }
         }
-    }
-    
-    var imageString: String {
-        switch self {
-        case .convenience:
-            return "Property=간편식"
-        case .livestock:
-            return "Property=고기류"
-        case .cooking:
-            return "Property=국"
-        case .noodles:
-            return "Property=면류"
-        case .seafood:
-            return "Property=해산물"
-        case .bread:
-            return "Property=베이커리"
-        case .snack:
-            return "Property=간식"
-        case .agriculture:
-            return "Property=샐러드"
-        case .dairy:
-            return "Property=유제품"
-        case .beverage:
-            return "Property=음료"
-        case .health:
-            return "Property=건강식품"
-        case .alcohol:
-            return "Property=주류"
+        
+        var imageString: String {
+            switch self {
+            case .convenience:
+                return "Property=간편식"
+            case .livestock:
+                return "Property=고기류"
+            case .cooking:
+                return "Property=국"
+            case .noodles:
+                return "Property=면류"
+            case .seafood:
+                return "Property=해산물"
+            case .bread:
+                return "Property=베이커리"
+            case .snack:
+                return "Property=간식"
+            case .agriculture:
+                return "Property=샐러드"
+            case .dairy:
+                return "Property=유제품"
+            case .beverage:
+                return "Property=음료"
+            case .health:
+                return "Property=건강식품"
+            case .alcohol:
+                return "Property=주류"
+            }
         }
     }
 }

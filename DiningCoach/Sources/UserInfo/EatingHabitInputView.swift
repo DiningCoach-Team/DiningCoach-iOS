@@ -91,31 +91,33 @@ struct EatingHabitInputView_Previews: PreviewProvider {
     }
 }
 
-enum EatingHabit: CheckButtonElement, CaseIterable {
-    case none
-    case lowSalt
-    case iodineLimitation
-    case fiberLimited
-    case hardFoodLimited
-    case vegan
-    case halal
-    
-    var type: String {
-        switch self {
-        case .none:
-            return "해당없음"
-        case .lowSalt:
-            return "저염 식단"
-        case .iodineLimitation:
-            return "요오드 제한 식단"
-        case .fiberLimited:
-            return "섬유질을 많이 먹지 못해요"
-        case .hardFoodLimited:
-            return "딱딱한 음식 잘 먹지 못해요"
-        case .vegan:
-            return "비건 식단 지향"
-        case .halal:
-            return "할랄음식 먹어요"
+extension EatingHabitInputView {
+    enum EatingHabit: CheckButtonElement, CaseIterable {
+        case none
+        case lowSalt
+        case iodineLimitation
+        case fiberLimited
+        case hardFoodLimited
+        case vegan
+        case halal
+        
+        var type: String {
+            switch self {
+            case .none:
+                return "해당없음"
+            case .lowSalt:
+                return "저염 식단"
+            case .iodineLimitation:
+                return "요오드 제한 식단"
+            case .fiberLimited:
+                return "섬유질을 많이 먹지 못해요"
+            case .hardFoodLimited:
+                return "딱딱한 음식 잘 먹지 못해요"
+            case .vegan:
+                return "비건 식단 지향"
+            case .halal:
+                return "할랄음식 먹어요"
+            }
         }
     }
 }

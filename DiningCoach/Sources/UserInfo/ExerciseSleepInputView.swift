@@ -121,39 +121,41 @@ struct WeeklyExerciseInputView_Previews: PreviewProvider {
     }
 }
 
-enum Exercise: CheckButtonElement, CaseIterable {
-    case under1Hour
-    case between1And5Hours
-    case between5And10Hours
-    case over10Hours
-    
-    var type: String {
-        switch self {
-        case .under1Hour:
-            return "1시간 미만"
-        case .between1And5Hours:
-            return "1시간 ~ 5시간"
-        case .between5And10Hours:
-            return "5시간 ~ 10시간"
-        case .over10Hours:
-            return "5시간 ~ 10시간"
+extension ExerciseSleepInputView {
+    enum Exercise: CheckButtonElement, CaseIterable {
+        case under1Hour
+        case between1And5Hours
+        case between5And10Hours
+        case over10Hours
+        
+        var type: String {
+            switch self {
+            case .under1Hour:
+                return "1시간 미만"
+            case .between1And5Hours:
+                return "1시간 ~ 5시간"
+            case .between5And10Hours:
+                return "5시간 ~ 10시간"
+            case .over10Hours:
+                return "5시간 ~ 10시간"
+            }
         }
     }
-}
-
-enum Sleep: CheckButtonElement, CaseIterable {
-    case under6Hours
-    case between6And10Hours
-    case over10Hours
     
-    var type: String {
-        switch self {
-        case .under6Hours:
-            return "6시간 미만"
-        case .between6And10Hours:
-            return "6시간 ~ 10시간"
-        case .over10Hours:
-            return "10시간 이상"
+    enum Sleep: CheckButtonElement, CaseIterable {
+        case under6Hours
+        case between6And10Hours
+        case over10Hours
+        
+        var type: String {
+            switch self {
+            case .under6Hours:
+                return "6시간 미만"
+            case .between6And10Hours:
+                return "6시간 ~ 10시간"
+            case .over10Hours:
+                return "10시간 이상"
+            }
         }
     }
 }

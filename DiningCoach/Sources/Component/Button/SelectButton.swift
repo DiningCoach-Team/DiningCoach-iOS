@@ -80,8 +80,8 @@ struct SelectButton<Element: SelectButtonElement>: View {
 struct SelectButton_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            SelectButton(element: Food.agriculture, state: .selected) { }
-            SelectButton(element: Food.agriculture, state: .unselected) { }
+            SelectButton(element: PreferredFoodInputView.Food.agriculture, state: .selected) { }
+            SelectButton(element: PreferredFoodInputView.Food.agriculture, state: .unselected) { }
         }
     }
 }
