@@ -18,6 +18,7 @@ struct DiningCoachApp: App {
             SplashView()
                 .environmentObject(loginStore)
                 .environmentObject(registrationStore)
+//            GenderBirthdayInputView()
         }
     }
 }

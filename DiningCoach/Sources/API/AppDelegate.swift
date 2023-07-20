@@ -8,23 +8,31 @@
 import SwiftUI
 import KakaoSDKCommon
 import KakaoSDKAuth
+import GoogleSignIn
 
 class AppDelegate: NSObject, UIApplicationDelegate{
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        let appKey = Bundle.main.infoDictionary?["KAKAO_NATIVE_APP_KEY"] as? String ?? ""
+        KakaoSDK.initSDK(appKey: appKey, loggingEnable:false)
         
-        KakaoSDK.initSDK(appKey: "고유키", loggingEnable:false)
-
         return true
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-           if (AuthApi.isKakaoTalkLoginUrl(url)) {
-               return AuthController.handleOpenUrl(url: url, options: options)
-           }
-           
-           return false
-       }
-
+        // kakao login
+        if (AuthApi.isKakaoTalkLoginUrl(url)) {
+            return AuthController.handleOpenUrl(url: url, options: options)
+        }
+        
+        // google login
+        let googleHandle = GIDSignIn.sharedInstance.handle(url)
+        if googleHandle {
+            return true
+        }
+        
+        return false
+    }
+    
 }
