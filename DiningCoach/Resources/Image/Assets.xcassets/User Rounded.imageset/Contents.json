@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "카카오.png",
+      "filename" : "User Rounded.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "카카오@2x.png",
+      "filename" : "User Rounded@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "카카오@3x.png",
+      "filename" : "User Rounded@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "카카오.png",
+      "filename" : "Moon.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "카카오@2x.png",
+      "filename" : "Moon@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "카카오@3x.png",
+      "filename" : "Moon@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
