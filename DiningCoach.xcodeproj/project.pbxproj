@@ -7,6 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		585386CC2A654E2700FD6707 /* PermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585386CB2A654E2700FD6707 /* PermissionView.swift */; };
+		585386CE2A6561A900FD6707 /* BarcodeInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585386CD2A6561A900FD6707 /* BarcodeInputView.swift */; };
+		585386D12A6630B000FD6707 /* FoodProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585386D02A6630B000FD6707 /* FoodProtocol.swift */; };
+		5868F4092A60FA2600AB5EDC /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5868F4082A60FA2600AB5EDC /* Config.xcconfig */; };
+		5868F40D2A60FADA00AB5EDC /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5868F40C2A60FADA00AB5EDC /* SearchView.swift */; };
+		5868F40F2A60FE8000AB5EDC /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5868F40E2A60FE8000AB5EDC /* SearchBarView.swift */; };
+		5868F4132A60FFB600AB5EDC /* SearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5868F4122A60FFB600AB5EDC /* SearchListView.swift */; };
+		5868F4152A60FFD200AB5EDC /* SearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5868F4142A60FFD200AB5EDC /* SearchResultView.swift */; };
+		5868F4172A60FFF400AB5EDC /* SearchResultMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5868F4162A60FFF400AB5EDC /* SearchResultMoreView.swift */; };
+		5868F4192A61001C00AB5EDC /* SearchDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5868F4182A61001C00AB5EDC /* SearchDetailView.swift */; };
+		5868F41B2A61003900AB5EDC /* DiaryAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5868F41A2A61003900AB5EDC /* DiaryAddView.swift */; };
+		5868F41D2A61004E00AB5EDC /* DiaryAddResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5868F41C2A61004E00AB5EDC /* DiaryAddResultView.swift */; };
+		5868F41F2A61006100AB5EDC /* SearchStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5868F41E2A61006100AB5EDC /* SearchStore.swift */; };
+		5868F4212A61007000AB5EDC /* SearchStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5868F4202A61007000AB5EDC /* SearchStoreProtocol.swift */; };
+		5868F4242A6100F300AB5EDC /* MockProcessedFood.json in Resources */ = {isa = PBXBuildFile; fileRef = 5868F4232A6100F300AB5EDC /* MockProcessedFood.json */; };
+		5868F42C2A6102A300AB5EDC /* ProcessedFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5868F42B2A6102A300AB5EDC /* ProcessedFood.swift */; };
+		5868F42E2A6102B900AB5EDC /* FreshFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5868F42D2A6102B900AB5EDC /* FreshFood.swift */; };
+		5868F4302A6102E800AB5EDC /* CookedFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5868F42F2A6102E800AB5EDC /* CookedFood.swift */; };
+		5868F4322A6102FA00AB5EDC /* NutritionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5868F4312A6102FA00AB5EDC /* NutritionInfo.swift */; };
+		5868F4342A6103AC00AB5EDC /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5868F4332A6103AC00AB5EDC /* CalendarHelper.swift */; };
+		5868F4372A6103F000AB5EDC /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5868F4362A6103F000AB5EDC /* Kingfisher */; };
+		58A7FA8F2A6109BD000AED80 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A7FA8D2A6109BD000AED80 /* MainTabView.swift */; };
+		58A7FA902A6109BD000AED80 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A7FA8E2A6109BD000AED80 /* MainView.swift */; };
+		58A7FA922A610A1A000AED80 /* Color+WithHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A7FA912A610A1A000AED80 /* Color+WithHex.swift */; };
+		58A7FA982A64D3CF000AED80 /* CameraPermissionDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A7FA972A64D3CF000AED80 /* CameraPermissionDialog.swift */; };
 		488F67792A554DE800A405E8 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488F67782A554DE800A405E8 /* SignUpView.swift */; };
 		48CB2E932A499A3B003D8201 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CB2E922A499A3B003D8201 /* ForgotPasswordView.swift */; };
 		48CB2E952A49AA47003D8201 /* GetCertificationNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CB2E942A49AA47003D8201 /* GetCertificationNumberView.swift */; };
@@ -81,6 +106,30 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		585386CB2A654E2700FD6707 /* PermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionView.swift; sourceTree = "<group>"; };
+		585386CD2A6561A900FD6707 /* BarcodeInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeInputView.swift; sourceTree = "<group>"; };
+		585386D02A6630B000FD6707 /* FoodProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodProtocol.swift; sourceTree = "<group>"; };
+		5868F4082A60FA2600AB5EDC /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		5868F40C2A60FADA00AB5EDC /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		5868F40E2A60FE8000AB5EDC /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		5868F4122A60FFB600AB5EDC /* SearchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListView.swift; sourceTree = "<group>"; };
+		5868F4142A60FFD200AB5EDC /* SearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultView.swift; sourceTree = "<group>"; };
+		5868F4162A60FFF400AB5EDC /* SearchResultMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultMoreView.swift; sourceTree = "<group>"; };
+		5868F4182A61001C00AB5EDC /* SearchDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailView.swift; sourceTree = "<group>"; };
+		5868F41A2A61003900AB5EDC /* DiaryAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryAddView.swift; sourceTree = "<group>"; };
+		5868F41C2A61004E00AB5EDC /* DiaryAddResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryAddResultView.swift; sourceTree = "<group>"; };
+		5868F41E2A61006100AB5EDC /* SearchStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStore.swift; sourceTree = "<group>"; };
+		5868F4202A61007000AB5EDC /* SearchStoreProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStoreProtocol.swift; sourceTree = "<group>"; };
+		5868F4232A6100F300AB5EDC /* MockProcessedFood.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockProcessedFood.json; sourceTree = "<group>"; };
+		5868F42B2A6102A300AB5EDC /* ProcessedFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessedFood.swift; sourceTree = "<group>"; };
+		5868F42D2A6102B900AB5EDC /* FreshFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreshFood.swift; sourceTree = "<group>"; };
+		5868F42F2A6102E800AB5EDC /* CookedFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookedFood.swift; sourceTree = "<group>"; };
+		5868F4312A6102FA00AB5EDC /* NutritionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionInfo.swift; sourceTree = "<group>"; };
+		5868F4332A6103AC00AB5EDC /* CalendarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
+		58A7FA8D2A6109BD000AED80 /* MainTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		58A7FA8E2A6109BD000AED80 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		58A7FA912A610A1A000AED80 /* Color+WithHex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+WithHex.swift"; sourceTree = "<group>"; };
+		58A7FA972A64D3CF000AED80 /* CameraPermissionDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPermissionDialog.swift; sourceTree = "<group>"; };
 		488F67782A554DE800A405E8 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		48CB2E922A499A3B003D8201 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		48CB2E942A49AA47003D8201 /* GetCertificationNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCertificationNumberView.swift; sourceTree = "<group>"; };
@@ -110,7 +159,6 @@
 		65F885522A327AF700D151F1 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		65F885582A341B6000D151F1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8ECF90E82A4EEBEB00069225 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
-		8EE137742A4B06A400A0D665 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		8EE137772A4B09FB00A0D665 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		8EE1377A2A4B12B100A0D665 /* DCTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCTextField.swift; sourceTree = "<group>"; };
 		8EF5C5AE2A544DBF0025E589 /* NicknameInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NicknameInputView.swift; sourceTree = "<group>"; };
@@ -160,6 +208,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5868F4372A6103F000AB5EDC /* Kingfisher in Frameworks */,
 				8ECF90EE2A4EF6B500069225 /* GoogleSignInSwift in Frameworks */,
 				A51E1C3A2A40606800E4EBA3 /* KakaoSDK in Frameworks */,
 				8ECF90EC2A4EF6B500069225 /* GoogleSignIn in Frameworks */,
@@ -169,6 +218,116 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		585386CF2A66309300FD6707 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				585386D02A6630B000FD6707 /* FoodProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		5868F40A2A60FAC600AB5EDC /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				5868F4112A60FE9F00AB5EDC /* Protocol */,
+				5868F4102A60FE9500AB5EDC /* Store */,
+				5868F40B2A60FAD000AB5EDC /* View */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		5868F40B2A60FAD000AB5EDC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5868F40C2A60FADA00AB5EDC /* SearchView.swift */,
+				5868F40E2A60FE8000AB5EDC /* SearchBarView.swift */,
+				5868F4122A60FFB600AB5EDC /* SearchListView.swift */,
+				5868F4142A60FFD200AB5EDC /* SearchResultView.swift */,
+				5868F4162A60FFF400AB5EDC /* SearchResultMoreView.swift */,
+				5868F4182A61001C00AB5EDC /* SearchDetailView.swift */,
+				5868F41A2A61003900AB5EDC /* DiaryAddView.swift */,
+				5868F41C2A61004E00AB5EDC /* DiaryAddResultView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5868F4102A60FE9500AB5EDC /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				5868F41E2A61006100AB5EDC /* SearchStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		5868F4112A60FE9F00AB5EDC /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				5868F4202A61007000AB5EDC /* SearchStoreProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		5868F4222A6100B400AB5EDC /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				5868F4232A6100F300AB5EDC /* MockProcessedFood.json */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		5868F4252A6101F800AB5EDC /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				585386CF2A66309300FD6707 /* Protocol */,
+				5868F4262A61020500AB5EDC /* Model */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5868F4262A61020500AB5EDC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5868F42B2A6102A300AB5EDC /* ProcessedFood.swift */,
+				5868F42D2A6102B900AB5EDC /* FreshFood.swift */,
+				5868F42F2A6102E800AB5EDC /* CookedFood.swift */,
+				5868F4312A6102FA00AB5EDC /* NutritionInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		58A7FA8B2A6109BD000AED80 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				58A7FA8C2A6109BD000AED80 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		58A7FA8C2A6109BD000AED80 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				58A7FA8D2A6109BD000AED80 /* MainTabView.swift */,
+				58A7FA8E2A6109BD000AED80 /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		58A7FA952A64D392000AED80 /* Scan */ = {
+			isa = PBXGroup;
+			children = (
+				58A7FA962A64D39A000AED80 /* View */,
+			);
+			path = Scan;
+			sourceTree = "<group>";
+		};
+		58A7FA962A64D39A000AED80 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				58A7FA972A64D3CF000AED80 /* CameraPermissionDialog.swift */,
+				585386CB2A654E2700FD6707 /* PermissionView.swift */,
+				585386CD2A6561A900FD6707 /* BarcodeInputView.swift */,
+			);
+			path = View;
 		488F67772A554DD000A405E8 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -267,6 +426,9 @@
 		65F8853B2A326CB400D151F1 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				5868F4252A6101F800AB5EDC /* Data */,
+				5868F4222A6100B400AB5EDC /* Mock */,
+				65F885502A327AE200D151F1 /* Scene */,
 				488F67772A554DD000A405E8 /* SignUp */,
 				48CB2E912A499A17003D8201 /* ResetPassword */,
 				8EF5C5B82A544E4A0025E589 /* UserInfo */,
@@ -295,6 +457,7 @@
 			isa = PBXGroup;
 			children = (
 				65F885162A2EA62000D151F1 /* Colors.xcassets */,
+				58A7FA912A610A1A000AED80 /* Color+WithHex.swift */,
 				65F8854B2A3275B000D151F1 /* Color+Primary.swift */,
 				655D9B8D2A39D815005E133E /* Color+Neutral.swift */,
 			);
@@ -307,6 +470,7 @@
 				8EF5C5DB2A544EE40025E589 /* View+CornerRadius.swift */,
 				8EF5C5DC2A544EE40025E589 /* View+hideKeyboard.swift */,
 				65F8854E2A32764900D151F1 /* View+LineHeightFont.swift */,
+				5868F4332A6103AC00AB5EDC /* CalendarHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -314,6 +478,9 @@
 		65F885502A327AE200D151F1 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				58A7FA952A64D392000AED80 /* Scan */,
+				58A7FA8B2A6109BD000AED80 /* Main */,
+				5868F40A2A60FAC600AB5EDC /* Search */,
 				8EE137732A4B04AE00A0D665 /* Login */,
 				65F885512A327AE800D151F1 /* Splash */,
 				8FF279712A5CD63C003B325F /* DietDiary */,
@@ -457,7 +624,7 @@
 		A526DDB62A092B0300B682BF = {
 			isa = PBXGroup;
 			children = (
-				8EE137742A4B06A400A0D665 /* Config.xcconfig */,
+				5868F4082A60FA2600AB5EDC /* Config.xcconfig */,
 				A526DDC12A092B0300B682BF /* DiningCoach */,
 				A526DDC02A092B0300B682BF /* Products */,
 			);
@@ -511,6 +678,7 @@
 				A51E1C392A40606800E4EBA3 /* KakaoSDK */,
 				8ECF90EB2A4EF6B500069225 /* GoogleSignIn */,
 				8ECF90ED2A4EF6B500069225 /* GoogleSignInSwift */,
+				5868F4362A6103F000AB5EDC /* Kingfisher */,
 			);
 			productName = DiningCoach;
 			productReference = A526DDBF2A092B0300B682BF /* DiningCoach.app */;
@@ -543,6 +711,7 @@
 			packageReferences = (
 				A51E1C382A40606800E4EBA3 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
 				8ECF90EA2A4EF6B500069225 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				5868F4352A6103F000AB5EDC /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = A526DDC02A092B0300B682BF /* Products */;
 			projectDirPath = "";
@@ -561,8 +730,10 @@
 				65F885282A2EA91B00D151F1 /* Pretendard-ExtraLight.otf in Resources */,
 				65F8852B2A2EA91B00D151F1 /* Pretendard-Bold.otf in Resources */,
 				A526DDCA2A092B0400B682BF /* Preview Assets.xcassets in Resources */,
+				5868F4242A6100F300AB5EDC /* MockProcessedFood.json in Resources */,
 				655D9B762A354C03005E133E /* launchScreenLogo.png in Resources */,
 				65F885272A2EA91B00D151F1 /* Pretendard-Light.otf in Resources */,
+				5868F4092A60FA2600AB5EDC /* Config.xcconfig in Resources */,
 				65F885242A2EA91B00D151F1 /* Pretendard-Thin.otf in Resources */,
 				65F885262A2EA91B00D151F1 /* Pretendard-SemiBold.otf in Resources */,
 				A526DDC72A092B0400B682BF /* Assets.xcassets in Resources */,
@@ -588,14 +759,25 @@
 				8EF5C5B32A544DBF0025E589 /* TermsAgreementView.swift in Sources */,
 				8EE1377B2A4B12B100A0D665 /* DCTextField.swift in Sources */,
 				8EF5C5C62A544E4A0025E589 /* HeightWeightInputView.swift in Sources */,
+				5868F4212A61007000AB5EDC /* SearchStoreProtocol.swift in Sources */,
+				58A7FA982A64D3CF000AED80 /* CameraPermissionDialog.swift in Sources */,
+				5868F4302A6102E800AB5EDC /* CookedFood.swift in Sources */,
 				8EF5C5DE2A544EE40025E589 /* View+hideKeyboard.swift in Sources */,
+				5868F4322A6102FA00AB5EDC /* NutritionInfo.swift in Sources */,
 				8EF5C5C82A544E4A0025E589 /* MedicalConditionInputView.swift in Sources */,
+				5868F4172A60FFF400AB5EDC /* SearchResultMoreView.swift in Sources */,
 				8EF5C5D92A544EC10025E589 /* SelectButton.swift in Sources */,
+				585386CE2A6561A900FD6707 /* BarcodeInputView.swift in Sources */,
+				5868F4192A61001C00AB5EDC /* SearchDetailView.swift in Sources */,
 				8ECF90E92A4EEBEB00069225 /* LoginButton.swift in Sources */,
 				A51E1C3D2A4061C800E4EBA3 /* AppDelegate.swift in Sources */,
+				5868F41B2A61003900AB5EDC /* DiaryAddView.swift in Sources */,
 				8EF5C5C22A544E4A0025E589 /* AllergyInputView.swift in Sources */,
+				5868F42E2A6102B900AB5EDC /* FreshFood.swift in Sources */,
 				8FAD691C2A5EA48500FBBFD6 /* DietRecordCalendar.swift in Sources */,
 				8EF5C5C12A544E4A0025E589 /* ExerciseSleepInputView.swift in Sources */,
+				5868F40D2A60FADA00AB5EDC /* SearchView.swift in Sources */,
+				58A7FA8F2A6109BD000AED80 /* MainTabView.swift in Sources */,
 				65F8854C2A3275B000D151F1 /* Color+Primary.swift in Sources */,
 				8F1FDC312A60D7CA00FCB49C /* DietRecordDetailImageList.swift in Sources */,
 				8FE820702A5D27F600FA4560 /* DietRecordCard.swift in Sources */,
@@ -609,20 +791,28 @@
 				8EE137782A4B09FB00A0D665 /* LoginView.swift in Sources */,
 				655D9B962A39DBED005E133E /* DCButton+Style.swift in Sources */,
 				A51E1C372A405DDF00E4EBA3 /* LoginStore.swift in Sources */,
+				58A7FA902A6109BD000AED80 /* MainView.swift in Sources */,
+				5868F4132A60FFB600AB5EDC /* SearchListView.swift in Sources */,
+				A526DDC52A092B0300B682BF /* ContentView.swift in Sources */,
+				5868F41F2A61006100AB5EDC /* SearchStore.swift in Sources */,
 				488F67792A554DE800A405E8 /* SignUpView.swift in Sources */,
 				A526DDC52A092B0300B682BF /* ContentView.swift in Sources */,
 				48CB2E992A4A04A2003D8201 /* FinishResetPasswordView.swift in Sources */,
 				8EF5C5B42A544DBF0025E589 /* SigninCompleteView.swift in Sources */,
+				58A7FA922A610A1A000AED80 /* Color+WithHex.swift in Sources */,
 				8FE820762A5D2C1000FA4560 /* DietStatistics.swift in Sources */,
 				A51E1C432A406A4800E4EBA3 /* RegistrationStore.swift in Sources */,
 				8EF5C5C32A544E4A0025E589 /* UserInfoCompleteView.swift in Sources */,
+				5868F4342A6103AC00AB5EDC /* CalendarHelper.swift in Sources */,
 				65F8854F2A32764900D151F1 /* View+LineHeightFont.swift in Sources */,
+				5868F4152A60FFD200AB5EDC /* SearchResultView.swift in Sources */,
 				8EF5C5C52A544E4A0025E589 /* PreferredFoodInputView.swift in Sources */,
 				655D9B922A39DA0C005E133E /* DCButton.swift in Sources */,
 				8FF279762A5CD7D4003B325F /* DietRecordStore.swift in Sources */,
 				8FE820722A5D280F00FA4560 /* DietRecordModel.swift in Sources */,
 				8FF279732A5CD724003B325F /* DietRecordView.swift in Sources */,
 				655D9B8E2A39D815005E133E /* Color+Neutral.swift in Sources */,
+				5868F42C2A6102A300AB5EDC /* ProcessedFood.swift in Sources */,
 				8FF2555C2A60559500C8D0A5 /* RemoveAlert.swift in Sources */,
 				A526DDC32A092B0300B682BF /* DiningCoachApp.swift in Sources */,
 				8F9D380C2A617ED900E05890 /* DietStatisticsView.swift in Sources */,
@@ -632,8 +822,12 @@
 				A51E1C462A406BAC00E4EBA3 /* Validation.swift in Sources */,
 				8EF5C5DA2A544EC10025E589 /* CheckButton.swift in Sources */,
 				655D9B942A39DA47005E133E /* DCButtonStyle.swift in Sources */,
+				5868F40F2A60FE8000AB5EDC /* SearchBarView.swift in Sources */,
+				585386CC2A654E2700FD6707 /* PermissionView.swift in Sources */,
 				48CB2E972A49B0D1003D8201 /* ResetPasswordView.swift in Sources */,
 				8EF5C5DD2A544EE40025E589 /* View+CornerRadius.swift in Sources */,
+				5868F41D2A61004E00AB5EDC /* DiaryAddResultView.swift in Sources */,
+				585386D12A6630B000FD6707 /* FoodProtocol.swift in Sources */,
 				8FF26A1B2A64E1DF00149972 /* FoodAddictionView.swift in Sources */,
 				8F1FDC332A60D81F00FCB49C /* DietRecordDetailDiary.swift in Sources */,
 			);
@@ -644,7 +838,6 @@
 /* Begin XCBuildConfiguration section */
 		A526DDCB2A092B0400B682BF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8EE137742A4B06A400A0D665 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -705,7 +898,6 @@
 		};
 		A526DDCC2A092B0400B682BF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8EE137742A4B06A400A0D665 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -760,15 +952,16 @@
 		};
 		A526DDCE2A092B0400B682BF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8EE137742A4B06A400A0D665 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DiningCoach/DiningCoach.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DiningCoach/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = D8Z3QRBB63;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "DiningCoach/Supporting Files/Info.plist";
@@ -782,8 +975,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.DiningCoach;
+				PRODUCT_BUNDLE_IDENTIFIER = com.diningcoach.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "DiningCoach Development";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -795,15 +990,16 @@
 		};
 		A526DDCF2A092B0400B682BF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8EE137742A4B06A400A0D665 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DiningCoach/DiningCoach.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DiningCoach/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = D8Z3QRBB63;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "DiningCoach/Supporting Files/Info.plist";
@@ -817,8 +1013,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.DiningCoach;
+				PRODUCT_BUNDLE_IDENTIFIER = com.diningcoach.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "DiningCoach Development";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -852,6 +1050,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		5868F4352A6103F000AB5EDC /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		8ECF90EA2A4EF6B500069225 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
@@ -871,6 +1077,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		5868F4362A6103F000AB5EDC /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5868F4352A6103F000AB5EDC /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		8ECF90EB2A4EF6B500069225 /* GoogleSignIn */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8ECF90EA2A4EF6B500069225 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
