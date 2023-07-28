@@ -328,6 +328,8 @@
 				585386CD2A6561A900FD6707 /* BarcodeInputView.swift */,
 			);
 			path = View;
+            sourceTree = "<group>";
+        };
 		488F67772A554DD000A405E8 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -1101,3 +1103,4 @@
 	};
 	rootObject = A526DDB72A092B0300B682BF /* Project object */;
 }
+
